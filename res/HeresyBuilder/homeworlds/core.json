@@ -1,0 +1,15 @@
+[
+{
+  "code": "FERAL",
+  "name": "Feral World",
+  "description": "Feral worlds are planets where the dominant culture is trapped in a primitive state, often much lower technologically than that of other Imperial worlds. This can range from nomadic human tribes, with little more than spears and a mastery over fire, to once-advanced planets now reduced to barbarism from environmental catastrophes, xenos predations, or other worldshattering events. Natives are likely to have grown up without technology, and had to survive by hunting or farming with primitive tools and their own two hands. This makes feral worlders hardy, strong, tough, and able to survive in the worst of conditions. ",
+  "modifierOne": "Strength",
+  "modifierTwo": "Toughness",
+  "modifierNegative": "Influence",
+  "fateThreshold": 2,
+  "emperorsBlessing": 3,
+  "homeWorldBonus": "The Old Ways: In the hands of a feral world character, any Low-Tech weapon loses the Primitive quality (if it had it) and gains the Proven (3) quality. ",
+  "aptitude": "Toughness",
+  "wounds": "9+1d5"
+}
+]

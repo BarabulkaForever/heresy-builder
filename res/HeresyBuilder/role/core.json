@@ -1,0 +1,12 @@
+[
+{
+  "code": "ASSAS",
+  "name": "Assassin",
+  "description": "Even in a universe saturated with blood and death, there are those which turn murder into a sublime art form. The Assassin is such a being, spending their lives perfecting talents in the kill, rising to greater heights with each life they take. While many who serve the Emperor are proficient in battle, Assassins revel only in the act of killing and often care little for commonplace combat. Driven with either an unhealthy thirst for the blood of others or a cold detachment leaving them bereft of their humanity, they can come in a variety of forms, linked together only by their desire to deliver death in the most efficient or grandiose way possible. They are inevitably drawn to those organisations which revere killing as much as they do or are in need of such artful killers. Many join death cults, societies devoted to the act of murder. Others might be recruited to mysterious Imperial organisations devoted to the art of sanctioned killing. In all cases it is the desire to take life and develop the skills of doing so which defines the Assassin, a journey which will end only when they themselves succumb to death.",
+  "roleAptitude": ["Agility", "Fieldcraft", "Finesse", "Perception"],
+  "roleAptitudeToPick": [["Ballistic Skill", "Weapon Skill"]],
+  "roleTalent": [],
+  "roleTalentToPick": [["Jaded", "Leap Up"]],
+  "roleBonus": "Sure Kill: In addition to the normal uses of Fate points (see page 293), when an Assassin successfully hits with an attack, he may spend a Fate point to inflict additional damage equal to his degrees of success on the attack roll on the first hit the attack inflicts"
+}
+]

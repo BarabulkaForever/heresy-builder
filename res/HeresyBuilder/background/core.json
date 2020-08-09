@@ -1,0 +1,16 @@
+[
+{
+  "code": "ADMIN",
+  "name": "adeptusAdministratum",
+  "description": "Such is the size and scope of the Imperium that it takes an innumerable legion of scribes, officials, and bureaucrats to maintain it. Connected across the stars on a web of scribbled notes and secret data caches, the Administratum is a lumbering behemoth, churning at a speed only slightly higher than deathly rest as it ensures that every planet has paid its due and contributed to the Imperium’s continuation. Without the Administratum, the Imperium would dissolve into madness and mayhem. It would be cut off not only from those hidden hands that guide its wealth and resources, but also from its history and the centuries of secrets kept deep within the data vaults of the Imperium’s largest organisation ",
+  "startingSkills": ["Common Lore (Adeptus Administratum)", "Linguistics (High Gothic)", "Logic", "Scholastic Lore (Pick One)"],
+  "startingSkillsToPick": [["Commerce", "Medicae"]],
+  "startingTalents": [],
+  "startingTalentsToPick": [["Weapon Training (Las)", "Weapon Training (Solid Projectile)"]],
+  "startingEquipment": ["Imperial robes", "Autoquill", "Chrono", "Dataslate", "Medi-kit"],
+  "startingEquipmentToPick": [["Laspistol", "Stub automatic"]],
+  "backgroundBonus": "Master of Paperwork: An Adeptus Administratum character counts the Availability of all items as one level more available (Very Rare items count as Rare, Average items count as Common, etc.).",
+  "backgroundAptitude": [],
+  "backgroundAptitudeToPick": [["Knowledge", "Social"]]
+}
+]
