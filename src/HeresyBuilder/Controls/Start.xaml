@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="HeresyBuilder.Controls.Start"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HeresyBuilder.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="950">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.8}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Margin="{StaticResource ResourceKey=MenuMargin}" HorizontalAlignment="Center" FontSize="18"  Text="Welcome to Heresy Builder"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Button Height="180" Margin="10" Grid.Column="0" Grid.Row="0" Background="{StaticResource CardBackgroundBrush}">
+                                <Grid>
+                                    <Image Source="/Images/character-creation.png"/>
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="Create New Character"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="180" Margin="10" Grid.Column="0" Grid.Row="1" Background="{StaticResource CardBackgroundBrush}">
+                                <Grid>
+                                    <Image Source="/Images/character-import.png"/>
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="Import Character From File"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="180" Margin="10" Grid.Column="1" Grid.Row="0" Background="{StaticResource CardBackgroundBrush}">
+                                <Grid>
+                                    <Image Source="/Images/character-load.png"/>
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="Load Existing Character"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="180" Margin="10" Grid.Column="1" Grid.Row="1" Background="{StaticResource CardBackgroundBrush}">
+                                <Grid>
+                                    <Image Source="/Images/character-export.png"/>
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="Export Character To File"/>
+                                </Grid>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

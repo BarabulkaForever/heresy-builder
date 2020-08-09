@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HeresyBuilder.Pages
+namespace HeresyBuilder.Controls
 {
     /// <summary>
-    /// Interaction logic for Worlds.xaml
+    /// Interaction logic for Build.xaml
     /// </summary>
-    public partial class Worlds : Page
+    public partial class Build : UserControl
     {
-        public Worlds()
+        public Build()
         {
             InitializeComponent();
         }
