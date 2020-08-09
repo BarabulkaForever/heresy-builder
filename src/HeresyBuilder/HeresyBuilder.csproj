@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Background.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\World.cs" />
     <Compile Include="Pages\Worlds.xaml.cs">
       <DependentUpon>Worlds.xaml</DependentUpon>
