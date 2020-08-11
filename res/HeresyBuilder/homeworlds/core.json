@@ -11,5 +11,70 @@
   "homeWorldBonus": "The Old Ways: In the hands of a feral world character, any Low-Tech weapon loses the Primitive quality (if it had it) and gains the Proven (3) quality. ",
   "aptitude": "Toughness",
   "wounds": "9+1d5"
+},
+{
+  "code": "FORGE",
+  "name": "Forge World",
+  "description": "Forge worlds are the main armouries and assembly lines of the Imperium. On these densely-populated worlds, citizens toil endlessly to craft weaponry for the armies of the Emperor, their bodies often enhanced with technology so that they might better fulfil their tasks or survive the toxic conditions of the factories. The denizens are likely to have been born to do a specific task, like their parents before them and their children that will come after, focusing their entire lives on a single job. It is a rigid society from which few escape, where the great Machine Cult and Tech-Priest overlords enforce the construction and toil of the teeming billions working below.",
+  "modifierOne": "Intelligence",
+  "modifierTwo": "Toughness",
+  "modifierNegative": "Fellowship",
+  "fateThreshold": 3,
+  "emperorsBlessing": 8,
+  "homeWorldBonus": "Omnissiah’s Chosen: A forge world character starts with either the Technical Knock or Weapon-Tech talent.",
+  "aptitude": "Intelligence",
+  "wounds":"8+1d5"
+},
+{
+  "code": "HIGHBORN",
+  "name": "Highborn",
+  "description": "Highborn are the elite of Imperial worlds, the nobles, princes, and lords of cities, systems, and worlds who rule over boundless populations alongside other equally-privileged scions. To be born into such a setting is to have been given the best the planet has to offer, raised apart from the struggling ranks of Mankind, and destined to take on positions of great import and power. These luxuries might be the finest pelts and grox meat of a feudal world, or the most potent of narcotics and offworld delights on a mainstay hive world. To be a highborn is also to enter into a world of deadly politics and ancient feuds, where children grow up with terrible enemies and sleep knowing there are those that would cut their throats for a taste of their hereditary position. Highborn often live their lives apart from the rest of their world, sometimes never leaving the high castles, spire cities, and sky palaces far above the swarming masses. They are content in the knowledge that they are the instruments of Imperial dominance on their world and the voice of the Emperor to their people, and anything that would disrupt such a state is unthinkable anathema.",
+  "modifierOne": "Fellowship",
+  "modifierTwo": "Influence",
+  "modifierNegative": "Toughness",
+  "fateThreshold": 4,
+  "emperorsBlessing": 10,
+  "homeWorldBonus": "Breeding Counts: Any time a highborn character would reduce his Influence, he reduces it by 1 less (to a minimum reduction of 1).",
+  "aptitude": "Fellowship",
+  "wounds":"9+1d5"
+},
+{
+  "code": "HIVE",
+  "name": "Hive World",
+  "description": "Hive worlders exist in cities that reach kilometres into the sky from the wasted surface of toxic, hostile environments, ruined through many centuries of industry. Sealed off from the planet outside, they live stacked on hundreds of levels, each one packed with millions of souls working, eating, and dying without ever venturing beyond the steel caverns of their birth. To be a hive worlder is to have grown up among overpopulation and artifice, where the sun is only a myth. Unfortunates know only a desperate existence, barely surviving in the dank depths far below the surface, in underworlds where the very air cannot be counted on from one day to the next. For a hive worlder, his life is but one cog in a gigantic citymachine, living and dying in the same few cubic kilometres in which he was born.",
+  "modifierOne": "Agility",
+  "modifierTwo": "Perception",
+  "modifierNegative": "Willpower",
+  "fateThreshold": 2,
+  "emperorsBlessing": 6,
+  "homeWorldBonus": "Teeming Masses in Metal Mountains: A hive world character ignores crowds for purposes of movement, treating them as open terrain. When in enclosed spaces, he also gains a +20 bonus to Navigate (Surface) tests.",
+  "aptitude": "Perception",
+  "wounds":"8+1d5"
+},
+{
+  "code": "SHRINE",
+  "name": "Shrine World",
+  "description": "Shrine worlders grow up on worlds that the Imperium has deemed holy places, where the Cult of the Emperor’s power is omnipresent. While their birthplace might range from cluttered, decaying cities to scattered farmlands, or their planet from a green paradise to a forbidding rock, the power of the Emperor saturates it. Perhaps some great deed was committed here, a bold hero turning back the alien tide, or because it is the resting place for a saint with a hallowed grave dominating the surface of the world and drawing pilgrims from far and wide to gaze upon its glory. While all citizens of the Imperium are taught to venerate the glory of the Emperor in one form or another, it is the shrine worlders who perhaps have the greatest understanding and reverence of the teachings of the Imperial Cult.",
+  "modifierOne": "Fellowship",
+  "modifierTwo": "Willpower",
+  "modifierNegative": "Perception",
+  "fateThreshold": 3,
+  "emperorsBlessing": 6,
+  "homeWorldBonus": "Faith in the Creed: Whenever a shrine world character spends a Fate point, he rolls 1d10. On a result of 1, the character’s total number of Fate points is not reduced.",
+  "aptitude": "Willpower",
+  "wounds":"7+1d5"
+},
+{
+  "code": "VOIDBORN",
+  "name": "Voidborn",
+  "description": "Voidborn spend their lives in the expanses of space, growing up on ancient orbital stations, generation vessels, merchant freighters, or remote asteroid outposts. They spend much of their lives without the stability of a real world beneath their feet, knowing the cold, deadly grasp of empty space is only a few metres of bulkhead away. This makes them exceptionally skilled when it comes to living on voidships and space stations, more so than any who have spent their lives crawling around in the dirt of a world. It also often makes them strange even amidst other Imperial subjects, tall and willowy, hairless, or with large dark eyes. Living so close to the still blackness of the void also touches their souls. There is something deeply odd about the voidborn, something intangible that lurks below the surface, writhing in the dark like the Warp lurks below space itself, waiting and watching for its moment to surface. ",
+  "modifierOne": "Intelligence",
+  "modifierTwo": "Willpower",
+  "modifierNegative": "Strength",
+  "fateThreshold": 3,
+  "emperorsBlessing": 5,
+  "homeWorldBonus": "Child of the Dark: A voidborn character starts with the Strong Minded talent, and gains a +30 bonus to tests for moving in a zero gravity environment.",
+  "aptitude": "Intelligence",
+  "wounds":"7+1d5"
 }
 ]
