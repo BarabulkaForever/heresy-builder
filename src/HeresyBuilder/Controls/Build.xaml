@@ -9,7 +9,10 @@
              d:DesignHeight="700" d:DesignWidth="950">
     <Grid>
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.8}">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            
+            <materialDesign:
+            
+            <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Top">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>
@@ -53,7 +56,7 @@
                         </Grid>
                     </StackPanel>
                 </Grid>
-            </StackPanel>
+            </StackPanel>-->
         </materialDesign:TransitioningContent>
     </Grid>
 </UserControl>
