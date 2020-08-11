@@ -8,5 +8,75 @@
   "roleTalent": [],
   "roleTalentToPick": [["Jaded", "Leap Up"]],
   "roleBonus": "Sure Kill: In addition to the normal uses of Fate points (see page 293), when an Assassin successfully hits with an attack, he may spend a Fate point to inflict additional damage equal to his degrees of success on the attack roll on the first hit the attack inflicts"
+},
+{
+  "code": "CHIRU",
+  "name": "Chirurgeon",
+  "description": "The secrets of the flesh are closely-guarded lore within the Imperium. Just as the Adeptus Mechanicus jealously protects the rites and rituals governing its technology, so too do others hoard knowledge about the human form. Chirurgeons have been ushered into these hidden ways, peeling back the skin of biological science to gaze upon its wet, raw, beating organs. They see the understanding of the blessed form of Man and other biologics as paramount to life, either to preserve it or control it, and can become obsessed with perfecting their understanding of such matters. Some may come from the ranks of the Adeptus Mechanicus Biologis, others serving as Imperial Guard medicae or Adepta Sororitas Sisters of the Orders Hospitaller. Some may have operated as unguilded hab-docs, feral shaman-healers, or personal medilords to spire rulers. Their abilities place them in a position of great power within the Imperium, gifted as they are with the talent to either heal or harm depending on their own whims and those of their lords. As such, a good Chirurgeon can always find a place as a torturer or excoriator, his ability to cause pain a vital commodity within the hierarchy of Imperial society. More than a talent for torture or a skill at mending mangled bodies, the Chirurgeon is defined by his thirst for knowledge and a drive for experimentation, often at the expense of his patients and their wellbeing. It is an obsessive drive that can lead to great discovery and triumph, but also to the creation of abominations which were never meant to be",
+  "roleAptitude": ["Fieldcraft", " Intelligence", " Knowledge", "Strength","Toughness"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Resistance (Pick One)", "Takedown"]],
+  "roleBonus": "Dedicated Healer: In addition to the normal uses of Fate points , when a Chirurgeon character fails a test to provide First Aid, he can spend a Fate point to automatically succeed instead with the degrees of success equal to his Intelligence bonus"
+},
+{
+  "code": "DESPERA",
+  "name": "Desperado",
+  "description": "Every world has men and women that live out on its fringes or survive by their skills with a gun, selling their talents to those in need of a bit more muscle with no questions asked. Desperados are a motley group, comprising scum, bounty hunters, slavers, pirates, and renegades, all people who exist on the border or beyond the law. They can be charmers using roguish appeal to further their latest con, or harsh men who know nothing but violence. Most are singular individuals who know no allegiance other than the current best offer. Having found a talent for shaking down the rich and poor alike, some drift between semi-legitimate jobs as bodyguards and enforcers to outright theft and murder. Those that survive long enough become adept at sensing danger, dealing with others of their kind and knowing well when to cut and run. They can also become talented gunslingers, frequently using their weapons to protect their lives or take the lives of those in their way. Desperados are defined by their selfish natures and scorn for authority, choosing the path of the outlaw if it means living free and getting a quick score to see them though another day",
+  "roleAptitude": ["Agility", "Ballistic Skill", "Defence", "Fellowship", "Finesse"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Catfall", "Quick Draw"]],
+  "roleBonus": "Move and Shoot: Once per round, after performing a Move action, a Desperado character may perform a single Standard Attack with a Pistol weapon he is currently wielding as a Free Action"
+},
+{
+  "code": "HIERO",
+  "name": "Hierophant",
+  "description": "The Cult of the Emperor exists throughout the Imperium. The glory of the master of Mankind is found in the teachings of the Ministorum, the ancient secrets of the Machine God, and a million more faiths all linked to the veneration of the blessed Emperor. Hierophants are those dedicated to the Imperial Creed, as priests and confessors, clerics and wise men, or as orators and demagogues spreading His word and enforcing the tenets of the faith upon the teeming masses of humanity. As men of the Emperor, there is an aspect of the divine in all Hierophants, a spark of fervent conviction that drives them against the darkness and keeps the spirit of the Imperium alive even as it crumbles from without and within. With fire and swift justice, the Hierophant stands with ten thousand years of faith at his back, ready to strike down any who would oppose him and his god. He is defined above all else by his certitude and his relationship to the Emperor; this is his shield and his sword against the enemies of the Imperium, and where others succumb to doubt and fear, the Hierophant charges on, the word of the Emperor on his lips and an unshakable truth in his heart.",
+  "roleAptitude": ["Fellowship", "Offence, Social", "Toughness", "Willpower"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Double Team", "Hatred"]],
+  "roleBonus": "Sway the Masses: In addition to the normal uses of Fate points , a Hierophant character may spend a Fate point to automatically succeed at a Charm, Command, or Intimidate skill test with a number of degrees of success equal to his Willpower bonus."
+},
+{
+  "code": "MYSTIC",
+  "name": "Mystic",
+  "description": "Millennia of human evolution have given rise to whole generations of psykers within the Imperium, gifted souls with a talent for manipulating potent yet unpredictable power. Mystics are those the Warp has touched in some way, gaining a measure of control over its unnatural tides and a glimmer of insight into its use. Either as Primaris Psykers, primitive Warp-seers, or renegade sorcerers, Mystics represents Mankind’s connection to the Sea of Souls and the powers and denizens which dwell within. Their cursed gifts lead many of them to view all things as interconnected. Even the slightest occurrence can be seen as signs from beyond, and technology as an unreliable prop against the terrors unseen. To even glimpse what exists beyond the veil is to see the fragile nature of reality, and know of horrors no ordinary Imperial citizen can be allowed to see. The Immaterium and its use can offer a man salvation when he needs it most, a weapon to use against his enemies, or a glimpse of the future to guide his actions. However, like the ancient Terran sea of old, it is unpredictable, untameable, and can change in an instant. This is the peril that all Mystics must live with, the knowledge that for all the power their gifts might bring and the position it might grant them, eventually it will likely destroy them. Mystics are defined by their connection to the Warp, providing them with knowledge beyond that which man was meant to know, and of humanity’s only true defence against the terrible entities which hungrily wait across this gulf in reality.",
+  "roleAptitude": ["Defence", "Intelligence", "Knowledge", "Perception","Willpower"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Resistance (Psychic Powers)", "Warp Sense"]],
+  "roleBonus": "Stare into the Warp: A Mystic character starts the game with the Psyker elite advance. It is recommended that a character who wishes to be a Mystic have a Willpower of at least 35."
+},
+{
+  "code": "SAGE",
+  "name": "Sage",
+  "description": "Such is the unimaginable depth of information the Imperium deals with that only Acolytes specially trained or augmented to understand can hope to use it with any degree of skill. Sages are talented individuals known by many names, such as Autosavants, Lexmechanics, and Calculus Logi. They are often members of the Adeptus Administratum or Adeptus Mechanicus, and trusted with the storing and cataloguing of huge amounts of data. Comprising millions of worlds and billions of souls, the Imperium exists in many ways only on the yellowing parchments of a scrivener’s tally sheets, dusty dataslates piled in forgotten shelves, and gigantic data-crypts larger than many cities. Sages record, store, and navigate the mountains of data the Imperium accumulates each day. They can see patterns that others cannot, making connections to either retrieve or uncover data considered lost or unattainable, and translating it into useful knowledge for those around them. It is a process that takes great mental strength and skill, and often the implanted aid of artificial cogitator arrays or logis circuits that provide swifter reasoning and retention of facts. Sages have the ability to access the thousands of years of sorted Imperial data to find missing secrets, or making leaps of logic to identify them when they remain elusive.",
+  "roleAptitude": ["Intelligence", "Knowledge", "Perception", "Tech", "Willpower"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Ambidextrous", "Clues from the Crowds"]],
+  "roleBonus": "Quest for Knowledge: In addition to the normal uses of Fate points, a Sage character may spend a Fate point to automatically succeed at a Logic or any Lore skill test with a number of degrees of success equal to his Intelligence bonus."
+},
+{
+  "code": "SEEKER",
+  "name": "Seeker",
+  "description": "An Acolyte that treads the path of the Seeker is driven by the hunt, relentless in his investigations. Where others might choose easy violence or give up the pursuit, the Seeker sees signs and clues to the passage of the prey, whether it is an individual fleeing from Imperial justice, or a secret hidden behind a web of lies. He can obsess over the unknown, never resting until a puzzle is solved or a chase completed. Sometimes the mystery or the manhunt can become more important to him than the actual eradication of a revealed heresy or capture of an escaped psyker, and he loses interest once he arrives at a solution or detains his prey. A Seeker is a natural detective and interrogator, ferreting out the truth wherever it might hide among the byzantine power structures of the Imperium and its labyrinth of cities and societies. Where others find only dead ends and false leads, the Seeker uses his perceptive senses and keen insight to discover vital clues, decipher plots, and resolve mysteries. It is this attention and obsession with detail which defines the Seeker, and whether or not he uses it to become a hunter or investigator, it continually haunts him, pushing him on to uncover the next truth, unravel the next lie, and catch the most elusive of prey. ",
+  "roleAptitude": ["Fellowship", "Intelligence", "Perception", "Social", "Keen IntuitionTech"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Keen Intuition", "Disarm"]],
+  "roleBonus": "Nothing Escapes My Sight: In addition to the normal uses of Fate points, a Seeker character may spend a Fate point to automatically succeed at an Awareness or Inquiry skill test with a number of degrees of success equal to his Perception bonus"
+},
+{
+  "code": "WAR",
+  "name": "Warrior",
+  "description": "The one constant of life in the 41st Millennium is war. Ravenous xenos and hostile powers besiege the Imperium on all sides, and every facet of industry is turned to supporting armed combat. A Warrior is the result of this constant conflict, either drawn from the frontlines or worlds racked with violence. One might be an Imperial Guardsman scarred by long years on a cursed alien battlefield, a brutal Arbitrator tempered by the mean streets of his home world, or a ganger eking out a living in the foul underhive. He has become inured to the sight of bloody wounds and the crack of lasgun fire. For a Warrior, life is conflict, and most solutions can be found through the direct and brutal application of force, usually at his own hands. In every case, he is a skilled fighter with an extensive understanding of the nature of battle. He is also a survivor, having lived long enough to learn a thing or two about getting out alive from even the most violent of situations. A Warrior has a talent for combat, and finds it his most effective means of resolving matters; chainsword and hand cannon are his most reliable forms of communication. He leaves a battle ragged but alive, his foes lying in pools of blood. As few targets of Inquisitorial investigation shy away from violent confrontation, a Warrior makes for an invaluable Acolyte, even though he can rarely guarantee anyone’s survival but his own.",
+  "roleAptitude": ["Ballistic Skill", "Defence", "Offence", "Strength", "Weapon Skill"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Iron Jaw", "Rapid Reload"]],
+  "roleBonus": "Expert at Violence: In addition to the normal uses of Fate points, after making a successful attack test, but before determining hits, a Warrior character may spend a Fate point to substitute his Weapon Skill (for melee) or Ballistic Skill (for ranged) bonus for the degrees of success scored on the attack test"
 }
 ]
