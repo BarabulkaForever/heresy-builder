@@ -8,14 +8,14 @@
         mc:Ignorable="d"
         Background="#fee7b1"
         Title="MainWindow" Height="700" Width="1200">
-    <Grid Background="#FFFEEAAA">
+    <Grid Background="{StaticResource BackgroundBrush}">
         <Grid Margin="250 0 0 0">
-            <Grid x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Grid x:Name="GridPrincipal" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
         </Grid>
-        
-        <Grid Width="250" HorizontalAlignment="Left" Grid.Column="0" Background="#FF222222">
+
+        <Grid Width="250" HorizontalAlignment="Left" Grid.Column="0" Background="{StaticResource CardBackgroundBrush}">
             <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.2}">
-                <Grid x:Name="GridCursor" Margin="0 100 0 0" Background="#FF0069C0" Width="10" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top"/>
+                <Grid x:Name="GridCursor" Margin="0 100 0 0" Background="{StaticResource BackgroundBrush}" Width="10" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top"/>
             </materialDesign:TransitioningContent>
             <ListView x:Name="ListViewMenu" Margin="0 100 0 0" Foreground="LightGray" Background="#FF222222" FontFamily="Champagne &amp; Limousines" FontSize="18" SelectionChanged="ListViewMenu_SelectionChanged" SelectedIndex="0">
                 <ListViewItem Height="60">

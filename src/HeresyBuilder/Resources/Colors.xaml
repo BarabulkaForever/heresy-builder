@@ -2,8 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:HeresyBuilder.Resources">
     <!-- Colors -->
-    <Color x:Key="CardBackgroundColor">#6a4415</Color>
+    <Color x:Key="CardBackgroundColor">#c88719</Color>
+    <Color x:Key="BackgroundColor">#FFFEEAAA</Color>
     
     <!-- Brashes -->
     <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource CardBackgroundColor}"/>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
 </ResourceDictionary>

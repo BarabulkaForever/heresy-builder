@@ -9,9 +9,39 @@
              d:DesignHeight="700" d:DesignWidth="950">
     <Grid>
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.8}">
-            
-            <materialDesign:
-            
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <materialDesign:ColorZone
+                    Grid.Row="0"
+                    Mode="PrimaryMid"
+                    HorizontalAlignment="Stretch">
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="2">
+                        <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            IsChecked="True"
+                            Content="FIRST" />
+                        <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            IsChecked="False"
+                            Content="SECOND" />
+                        <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Content="THIRD" />
+                    </StackPanel>
+                </materialDesign:ColorZone>
+                <Grid Grid.Row="1" x:Name="TabMenuContent" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
             <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Top">
                 <Grid>
                     <Grid.ColumnDefinitions>
