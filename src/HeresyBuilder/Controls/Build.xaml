@@ -26,7 +26,8 @@
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"
                             IsChecked="True"
-                            Content="FIRST" />
+                            Click="NavigateToHomeworlds"
+                            Content="HOME WORLD" />
                         <RadioButton
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"

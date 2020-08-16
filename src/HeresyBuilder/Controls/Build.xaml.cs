@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HeresyBuilder.Controls.BuildControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,24 @@ namespace HeresyBuilder.Controls
     /// </summary>
     public partial class Build : UserControl
     {
+
+        private HomeworldsView homeworldsView; 
+
         public Build()
         {
             InitializeComponent();
+            NavigateToHomeworlds(this, null);
+        }
+
+        private void NavigateToHomeworlds(object sender, RoutedEventArgs e)
+        {
+            if (e == null)
+            {
+                homeworldsView = new HomeworldsView();
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(homeworldsView);
         }
     }
 }
