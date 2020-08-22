@@ -32,7 +32,20 @@
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"
                             IsChecked="False"
-                            Content="SECOND" />
+                            Click="NavigateToBackground"
+                            Content="BACKGROUND" />
+                        <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            IsChecked="False"
+                            Click="NavigateToRole"
+                            Content="ROLE" />
+                        <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Content="THIRD" />
                         <RadioButton
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"

@@ -75,16 +75,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\BuildControls\BackgroundsView.xaml.cs">
+      <DependentUpon>BackgroundsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BuildControls\HomeworldsView.xaml.cs">
       <DependentUpon>HomeworldsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BuildControls\RoleView.xaml.cs">
+      <DependentUpon>RoleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Services\FileAccessService.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\BackgroundsViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\HomeWorldViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\RolesViewModel.cs" />
     <Page Include="Controls\Build.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\BuildControls\BackgroundsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BuildControls\HomeworldsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BuildControls\RoleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

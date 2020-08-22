@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace HeresyBuilder.ViewModels.BuildViewModels
 {
-    public class HomeWorldViewModel : BaseViewModel
+    public class RolesViewModel : BaseViewModel
     {
 
         private FileAccessService _fileAccessService;
-        private ObservableCollection<World> _homeworlds;
-        private World _homeworld;
+        private ObservableCollection<Role> _roles;
+        private Role _role;
 
-        public HomeWorldViewModel()
+        public RolesViewModel()
         {
             _fileAccessService = new FileAccessService();
             Init();
@@ -24,33 +24,33 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
 
         private void Init()
         {
-            Homeworlds = new ObservableCollection<World>(_fileAccessService.GetHomeworlds());
-            Homeworld = Homeworlds.FirstOrDefault();
+            Roles = new ObservableCollection<Role>(_fileAccessService.GetRoles());
+            Role = Roles.FirstOrDefault();
         }
 
-        public ObservableCollection<World> Homeworlds 
+        public ObservableCollection<Role> Roles
         {
             get
             {
-                return _homeworlds;
+                return _roles;
             }
             set
             {
-                _homeworlds = value;
-                SetPropertyChanged(nameof(Homeworlds));
+                _roles = value;
+                SetPropertyChanged(nameof(Roles));
             }
         }
 
-        public World Homeworld 
+        public Role Role
         {
             get
             {
-                return _homeworld;
+                return _role;
             }
             set
             {
-                _homeworld = value;
-                SetPropertyChanged(nameof(Homeworld));
+                _role = value;
+                SetPropertyChanged(nameof(Role));
             }
         }
     }

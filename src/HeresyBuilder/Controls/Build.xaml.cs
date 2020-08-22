@@ -23,6 +23,8 @@ namespace HeresyBuilder.Controls
     {
 
         private HomeworldsView homeworldsView; 
+        private BackgroundsView backgroundsView; 
+        private RoleView roleView; 
 
         public Build()
         {
@@ -32,13 +34,35 @@ namespace HeresyBuilder.Controls
 
         private void NavigateToHomeworlds(object sender, RoutedEventArgs e)
         {
-            if (e == null)
+            if (homeworldsView == null)
             {
                 homeworldsView = new HomeworldsView();
             }
 
             TabMenuContent.Children.Clear();
             TabMenuContent.Children.Add(homeworldsView);
+        }
+
+        private void NavigateToBackground(object sender, RoutedEventArgs e)
+        {
+            if (backgroundsView == null)
+            {
+                backgroundsView = new BackgroundsView();
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(backgroundsView);
+        }
+
+        private void NavigateToRole(object sender, RoutedEventArgs e)
+        {
+            if (roleView == null)
+            {
+                roleView = new RoleView();
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(roleView);
         }
     }
 }

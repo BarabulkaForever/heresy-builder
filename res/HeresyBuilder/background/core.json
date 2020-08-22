@@ -40,12 +40,12 @@
   "startingTrait": [],
   "startingEquipment": ["Laspistol"],
   "startingEquipmentToPick": [["Staf", "Whip"],[" Light flak cloak","Flak vest"],["Micro-bead","Psy focus"]],
-  "backgroundBonus": ["The Constant Threat: When the character or an ally within 10 metres triggers a roll on Table 6–2: Psychic Phenomenon, the Adeptus Astra Telepathica character can increase or decrease the result by amount equal to his Willpower bonus.","Tested on Terra: If the character takes the Psyker elite advance during character creation, he also gains the Sanctioned trait."],
+  "backgroundBonus": "The Constant Threat: When the character or an ally within 10 metres triggers a roll on Table 6–2: Psychic Phenomenon, the Adeptus Astra Telepathica character can increase or decrease the result by amount equal to his Willpower bonus. Tested on Terra: If the character takes the Psyker elite advance during character creation, he also gains the Sanctioned trait.",
   "backgroundAptitude": [],
   "backgroundAptitudeToPick": [["Defence", "Psyker"]]
 },
 {
-  "code": "MECHANIC",
+  "code": "ADMECH",
   "name": "Adeptus Mechanicus",
   "description": "Much of Mankind’s mastery over technology has been forgotten, and what remains are closely guarded secrets, held in jealous hands of the Adeptus Mechanicus. Wrapped up in superstitious beliefs and rites, the knowledge of how to operate the Imperium’s most advanced devices falls to these followers of the Machine God. The Adeptus Mechanicus guards and oversees the ancient knowledge and the mysteries of making technology function, for even its dogmatic and superstitious understandings are far beyond those of anyone else in the Imperium. They embrace technology to such a degree that they try to transcend the flesh of their bodies with the purity of metal. To those outside the Mechanicum, they can appear unfeeling and emotionless, more akin to their blessed machines than to other humans, and most would welcome such views.",
   "startingSkills": ["Common Lore (Adeptus Mechanicus)", "Logic", "Security", "Tech-Use"],

@@ -65,7 +65,7 @@
   "wounds":"7+1d5"
 },
 {
-  "code": "VOIDBORN",
+  "code": "VOID",
   "name": "Voidborn",
   "description": "Voidborn spend their lives in the expanses of space, growing up on ancient orbital stations, generation vessels, merchant freighters, or remote asteroid outposts. They spend much of their lives without the stability of a real world beneath their feet, knowing the cold, deadly grasp of empty space is only a few metres of bulkhead away. This makes them exceptionally skilled when it comes to living on voidships and space stations, more so than any who have spent their lives crawling around in the dirt of a world. It also often makes them strange even amidst other Imperial subjects, tall and willowy, hairless, or with large dark eyes. Living so close to the still blackness of the void also touches their souls. There is something deeply odd about the voidborn, something intangible that lurks below the surface, writhing in the dark like the Warp lurks below space itself, waiting and watching for its moment to surface. ",
   "modifierOne": "Intelligence",
