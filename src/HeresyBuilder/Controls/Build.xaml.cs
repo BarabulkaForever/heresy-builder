@@ -1,4 +1,7 @@
 ﻿using HeresyBuilder.Controls.BuildControls;
+using HeresyBuilder.Singleton;
+using HeresyBuilder.ViewModels;
+using HeresyBuilder.ViewModels.BuildViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +28,7 @@ namespace HeresyBuilder.Controls
         private HomeworldsView homeworldsView; 
         private BackgroundsView backgroundsView; 
         private RoleView roleView; 
+        private CharacteristicsView characteristicsView; 
 
         public Build()
         {
@@ -36,7 +40,7 @@ namespace HeresyBuilder.Controls
         {
             if (homeworldsView == null)
             {
-                homeworldsView = new HomeworldsView();
+                homeworldsView = new HomeworldsView(this);
             }
 
             TabMenuContent.Children.Clear();
@@ -47,7 +51,7 @@ namespace HeresyBuilder.Controls
         {
             if (backgroundsView == null)
             {
-                backgroundsView = new BackgroundsView();
+                backgroundsView = new BackgroundsView(this);
             }
 
             TabMenuContent.Children.Clear();
@@ -58,11 +62,54 @@ namespace HeresyBuilder.Controls
         {
             if (roleView == null)
             {
-                roleView = new RoleView();
+                roleView = new RoleView(this);
             }
 
             TabMenuContent.Children.Clear();
             TabMenuContent.Children.Add(roleView);
+        }
+
+        private void NavigateToCharacteristics(object sender, RoutedEventArgs e)
+        {
+            if (characteristicsView == null)
+            {
+                characteristicsView = new CharacteristicsView(this);
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(characteristicsView);
+        }
+
+        public void GoNext(BaseViewModel baseViewModel)
+        {
+            if (baseViewModel is HomeWorldViewModel)
+            {
+                NavigateToBackgroundTab.IsEnabled = true;
+                NavigateToBackgroundTab.IsChecked = true;
+                NavigateToBackground(this, null);
+                CurrentCharacterCreationData.Instance.World = (baseViewModel as HomeWorldViewModel).Homeworld;
+            }
+            else if (baseViewModel is BackgroundsViewModel)
+            {
+                NavigateToRoleTab.IsEnabled = true;
+                NavigateToRoleTab.IsChecked = true;
+                NavigateToRole(this, null);
+                CurrentCharacterCreationData.Instance.Background = (baseViewModel as BackgroundsViewModel).Background;
+            }
+            else if (baseViewModel is RolesViewModel)
+            {
+                NavigateToCharacteristicsTab.IsEnabled = true;
+                NavigateToCharacteristicsTab.IsChecked = true;
+                NavigateToCharacteristics(this, null);
+                CurrentCharacterCreationData.Instance.Role = (baseViewModel as RolesViewModel).Role;
+            }
+            else if (baseViewModel is CharacteristicsViewModel)
+            {
+                NavigateToCharacteristicsTab.IsEnabled = true;
+                NavigateToCharacteristicsTab.IsChecked = true;
+                NavigateToCharacteristics(this, null);
+                // CurrentCharacterCreationData.Instance.Characteristics = (baseViewModel as CharacteristicsViewModel).Characteristics;
+            }
         }
     }
 }

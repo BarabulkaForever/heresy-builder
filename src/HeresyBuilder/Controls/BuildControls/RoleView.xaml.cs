@@ -1,4 +1,5 @@
-﻿using HeresyBuilder.ViewModels.BuildViewModels;
+﻿using HeresyBuilder.ViewModels;
+using HeresyBuilder.ViewModels.BuildViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,17 @@ namespace HeresyBuilder.Controls.BuildControls
     /// </summary>
     public partial class RoleView : UserControl
     {
-        public RoleView()
+        private Build _build;
+        public RoleView(Build build)
         {
             InitializeComponent();
             DataContext = new RolesViewModel();
+            _build = build;
+        }
+
+        private void NextClick(object sender, RoutedEventArgs e)
+        {
+            _build.GoNext(DataContext as BaseViewModel);
         }
     }
 }

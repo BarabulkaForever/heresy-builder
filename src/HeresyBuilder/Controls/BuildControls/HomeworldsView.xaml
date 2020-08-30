@@ -32,50 +32,64 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ScrollViewer Grid.Column="1" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto">
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-                <Grid Grid.Column="1" Background="{StaticResource CardBackgroundBrush}">
-                    <Image Grid.Row="0" Source="{Binding Homeworld.Code}"/>
-                    <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="{Binding Homeworld.Name}"/>
-                </Grid>
-                <TextBlock 
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontSize="12" Margin="10"
-                    Foreground="White"
-                    TextWrapping="Wrap" 
-                    Text="{Binding Homeworld.Description}"/>
-                <Separator Background="{StaticResource BackgroundBrush}"/>
-                <TextBlock 
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="12" Margin="5"
-                    Foreground="White"
-                    TextWrapping="Wrap" 
-                    Text="{Binding Homeworld.Modifiers}"/>
-                <TextBlock 
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="12" Margin="5"
-                    Foreground="White"
-                    TextWrapping="Wrap" 
-                    Text="{Binding Homeworld.FateAndWounds}"/>
-                <TextBlock 
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="12" Margin="5"
-                    Foreground="White"
-                    TextWrapping="Wrap" 
-                    Text="{Binding Homeworld.AptitudeWithText}"/>
-                <Separator Background="{StaticResource BackgroundBrush}"/>
-                <TextBlock 
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="12" Margin="10"
-                    Foreground="White"
-                    TextWrapping="Wrap" 
-                    Text="{Binding Homeworld.HomeWorldBonus}"/>
-            </StackPanel>
-        </ScrollViewer>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid Grid.Column="1" Background="{StaticResource CardBackgroundBrush}">
+                        <Image Grid.Row="0" Source="{Binding Homeworld.Code}"/>
+                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="{Binding Homeworld.Name}"/>
+                    </Grid>
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="12" Margin="10"
+                        Foreground="White"
+                        TextWrapping="Wrap" 
+                        Text="{Binding Homeworld.Description}"/>
+                    <Separator Background="{StaticResource BackgroundBrush}"/>
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="12" Margin="5"
+                        Foreground="White"
+                        TextWrapping="Wrap" 
+                        Text="{Binding Homeworld.Modifiers}"/>
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="12" Margin="5"
+                        Foreground="White"
+                        TextWrapping="Wrap" 
+                        Text="{Binding Homeworld.FateAndWounds}"/>
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="12" Margin="5"
+                        Foreground="White"
+                        TextWrapping="Wrap" 
+                        Text="{Binding Homeworld.AptitudeWithText}"/>
+                    <Separator Background="{StaticResource BackgroundBrush}"/>
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="12" Margin="10"
+                        Foreground="White"
+                        TextWrapping="Wrap" 
+                        Text="{Binding Homeworld.HomeWorldBonus}"/>
+                </StackPanel>
+            </ScrollViewer>
+            <Button 
+                Grid.Row="1" 
+                Style="{StaticResource MaterialDesignRaisedDarkButtonWithRightAngle}"
+                Foreground="White"
+                Height="60" 
+                Click="NextClick"
+                FontSize="18"
+                Content="Next >"/>
+        </Grid>
     </Grid>
 </UserControl>

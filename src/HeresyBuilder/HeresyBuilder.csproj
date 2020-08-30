@@ -78,15 +78,26 @@
     <Compile Include="Controls\BuildControls\BackgroundsView.xaml.cs">
       <DependentUpon>BackgroundsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BuildControls\CharacteristicsView.xaml.cs">
+      <DependentUpon>CharacteristicsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BuildControls\HomeworldsView.xaml.cs">
       <DependentUpon>HomeworldsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\BuildControls\RoleView.xaml.cs">
       <DependentUpon>RoleView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Enums\Characteristic.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Implementations\CustomCommand.cs" />
+    <Compile Include="Models\Characteristics.cs" />
     <Compile Include="Services\FileAccessService.cs" />
+    <Compile Include="Singleton\CurrentCharacterCreationData.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\BackgroundsViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\CharacteristicsViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\CharacteristicViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\HomeWorldViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\RolesViewModel.cs" />
     <Page Include="Controls\Build.xaml">
@@ -94,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BuildControls\BackgroundsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BuildControls\CharacteristicsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -23,29 +23,36 @@
                         Orientation="Horizontal"
                         Margin="2">
                         <RadioButton
+                            x:Name="NavigateToHomeworldsTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"
                             IsChecked="True"
                             Click="NavigateToHomeworlds"
                             Content="HOME WORLD" />
                         <RadioButton
-                            Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
-                            IsChecked="False"
-                            Click="NavigateToBackground"
-                            Content="BACKGROUND" />
-                        <RadioButton
-                            Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
-                            IsChecked="False"
-                            Click="NavigateToRole"
-                            Content="ROLE" />
-                        <RadioButton
+                            x:Name="NavigateToBackgroundTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"
                             IsChecked="False"
                             IsEnabled="False"
-                            Content="THIRD" />
+                            Click="NavigateToBackground"
+                            Content="BACKGROUND" />
+                        <RadioButton
+                            x:Name="NavigateToRoleTab"
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Click="NavigateToRole"
+                            Content="ROLE" />
+                        <RadioButton
+                            x:Name="NavigateToCharacteristicsTab"
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Click="NavigateToCharacteristics"
+                            Content="CHARACTERISTICS" />
                         <RadioButton
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"

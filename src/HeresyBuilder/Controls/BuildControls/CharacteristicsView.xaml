@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="HeresyBuilder.Controls.BuildControls.CharacteristicsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HeresyBuilder.Controls.BuildControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="950" Height="620">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView HorizontalContentAlignment="Left" Grid.Column="0" ItemsSource="{Binding Characteristics}" HorizontalAlignment="Left">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Focusable" Value="false"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Margin="5" HorizontalContentAlignment="Stretch" Grid.Column="0" FontSize="16" Content="{Binding Name}"/>
+                        <Label Margin="5" HorizontalContentAlignment="Right" Grid.Column="1" FontSize="16" FontWeight="Bold" Content="{Binding CharacteristicValue}"/>
+                        <Button Margin="5" HorizontalContentAlignment="Stretch" Grid.Column="2" Content="Roll" Command="{Binding RollCommand}" />
+                        <Label Margin="5" HorizontalContentAlignment="Stretch" Grid.Column="3" FontSize="16" Foreground="Black" Content="{Binding Description}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <!--Right pannel content-->
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="12" Margin="10"
+                        Foreground="White"
+                        TextWrapping="Wrap" 
+                        Text="You can roll all characteristics or enter them manually."/>
+                    <Separator Background="{StaticResource BackgroundBrush}" Margin="10"/>
+                    <Button Content="Roll characteristics" Margin="10" Style="{StaticResource MaterialDesignFlatLightBgButton}"/>
+                    <Button Content="Enter characteristics manually" Margin="10" Style="{StaticResource MaterialDesignFlatLightBgButton}"/>
+                </StackPanel>
+            </ScrollViewer>
+            <Button 
+                Grid.Row="1" 
+                Style="{StaticResource MaterialDesignRaisedDarkButtonWithRightAngle}"
+                Click="NextClick"
+                Foreground="White"
+                Height="60" 
+                FontSize="18"
+                Content="Next >"/>
+        </Grid>
+    </Grid>
+</UserControl>

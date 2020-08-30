@@ -18,17 +18,16 @@ using System.Windows.Shapes;
 namespace HeresyBuilder.Controls.BuildControls
 {
     /// <summary>
-    /// Interaction logic for BackgroundsView.xaml
+    /// Interaction logic for CharacteristicsView.xaml
     /// </summary>
-    public partial class BackgroundsView : UserControl
+    public partial class CharacteristicsView : UserControl
     {
         private Build _parrent;
-
-        public BackgroundsView(Build parrent)
+        public CharacteristicsView(Build parrent)
         {
             InitializeComponent();
-            DataContext = new BackgroundsViewModel();
-            this._parrent = parrent;
+            DataContext = new CharacteristicsViewModel();
+            _parrent = parrent;
         }
 
         private void NextClick(object sender, RoutedEventArgs e)
