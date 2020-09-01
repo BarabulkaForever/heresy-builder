@@ -4,38 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HeresyBuilder.Controls.BuildControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="VisibleIfTrueConverter" />
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListView HorizontalContentAlignment="Left" Grid.Column="0" ItemsSource="{Binding Characteristics}" HorizontalAlignment="Left">
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="Focusable" Value="false"/>
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-            <ListView.ItemTemplate>
+        <ListBox HorizontalContentAlignment="Stretch" Width="620" Grid.Column="0" ItemsSource="{Binding Characteristics}" Grid.RowSpan="2">
+            <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid HorizontalAlignment="Stretch">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="6*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Margin="5" HorizontalContentAlignment="Stretch" Grid.Column="0" FontSize="16" Content="{Binding Name}"/>
-                        <Label Margin="5" HorizontalContentAlignment="Right" Grid.Column="1" FontSize="16" FontWeight="Bold" Content="{Binding CharacteristicValue}"/>
-                        <Button Margin="5" HorizontalContentAlignment="Stretch" Grid.Column="2" Content="Roll" Command="{Binding RollCommand}" />
-                        <Label Margin="5" HorizontalContentAlignment="Stretch" Grid.Column="3" FontSize="16" Foreground="Black" Content="{Binding Description}"/>
+                        <Label Margin="5" Grid.Column="0" VerticalAlignment="Center" FontSize="16" Content="{Binding Name}"/>
+                        <Label Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" FontSize="16" FontWeight="Bold" Content="{Binding CharacteristicValue}" Visibility="{Binding IsRollMode, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <TextBox Margin="5" Grid.Column="1" VerticalAlignment="Center" MaxLength="2" Visibility="{Binding IsManualEnterMode, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <Button Margin="5" Grid.Column="2" VerticalAlignment="Center" Content="Roll" IsEnabled="{Binding CanRoll}" Command="{Binding RollCommand}" Visibility="{Binding IsRollMode, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <Button Margin="5" Grid.Column="2" VerticalAlignment="Center" Content="Reroll" IsEnabled="{Binding CanReroll}" Command="{Binding RerollCommand}" Visibility="{Binding ShowReroll, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <TextBlock Margin="5" Grid.Column="3" VerticalAlignment="Center" FontSize="16" Foreground="Black" TextWrapping="WrapWithOverflow" Text="{Binding Description}"/>
                     </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Grid Grid.Column="1">
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.RowSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="60"/>
@@ -46,13 +44,13 @@
                     <TextBlock 
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
-                        FontSize="12" Margin="10"
+                        FontSize="18" Margin="10"
                         Foreground="White"
                         TextWrapping="Wrap" 
                         Text="You can roll all characteristics or enter them manually."/>
                     <Separator Background="{StaticResource BackgroundBrush}" Margin="10"/>
-                    <Button Content="Roll characteristics" Margin="10" Style="{StaticResource MaterialDesignFlatLightBgButton}"/>
-                    <Button Content="Enter characteristics manually" Margin="10" Style="{StaticResource MaterialDesignFlatLightBgButton}"/>
+                    <Button Content="Roll characteristics" Margin="10" IsEnabled="{Binding IsRollStatusChangePossible}" Style="{StaticResource MaterialDesignFlatLightBgButton}" Command="{Binding SwitchToRollModeCommand}" />
+                    <Button Content="Enter characteristics manually" Margin="10" IsEnabled="{Binding IsRollStatusChangePossible}" Style="{StaticResource MaterialDesignFlatLightBgButton}" Command="{Binding SwitchToManualEnterModeCommand}"/>
                 </StackPanel>
             </ScrollViewer>
             <Button 

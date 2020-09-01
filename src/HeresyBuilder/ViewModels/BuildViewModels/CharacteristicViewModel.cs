@@ -17,15 +17,43 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
         private CharacteristicsViewModel parrent;
 
         private int characteristicValue;
+        private bool _canRoll = true;
 
         public CharacteristicViewModel(Characteristic characteristic, CharacteristicsViewModel parrent)
         {
             this.characteristic = characteristic;
             this.parrent = parrent;
             RollCommand = new CustomCommand(_ => Roll());
+            RerollCommand = new CustomCommand(_ => Reroll());
+            parrent.PropertyChanged += ParrentPropertyChanged;
+        }
+
+        private void ParrentPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(parrent.IsRollMode) || e.PropertyName == nameof(parrent.IsManualEnterMode))
+            {
+                SetPropertyChanged(nameof(IsManualEnterMode));
+                SetPropertyChanged(nameof(IsRollMode));
+            }
+            else if (e.PropertyName == nameof(parrent.HaveReroll)) 
+            {
+                SetPropertyChanged(nameof(HaveReroll));
+                SetPropertyChanged(nameof(ShowReroll));
+            }
+            else if (e.PropertyName == nameof(parrent.ShowReroll)) 
+            {
+                SetPropertyChanged(nameof(ShowReroll));
+            }
         }
 
         public ICommand RollCommand { get; set; }
+        public ICommand RerollCommand { get; set; }
+
+        private void Reroll()
+        {
+            parrent.HaveReroll = false;
+            Roll();
+        }
 
         private void Roll()
         {
@@ -57,6 +85,18 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             {
                 CharacteristicValue = 20 + random.Next(1, 10) + random.Next(1, 10);
             }
+            CanRoll = false;
+            parrent.SetPropertyChanged(nameof(parrent.ShowReroll));
+        }
+
+        public bool IsManualEnterMode
+        {
+            get { return parrent.IsManualEnterMode; }
+        }
+
+        public bool IsRollMode
+        {
+            get { return parrent.IsRollMode; }
         }
 
         public string Name 
@@ -85,6 +125,43 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             get
             {
                 return characteristic.GetDescription();
+            }
+        }
+
+        public bool CanRoll
+        {
+            get 
+            {
+                return _canRoll; 
+            }
+            set
+            {
+                _canRoll = value;
+                SetPropertyChanged(nameof(CanRoll));
+            }
+        }
+
+        public bool HaveReroll 
+        {
+            get 
+            {
+                if (CanRoll)
+                {
+                    return false;
+                }
+                return parrent.HaveReroll; 
+            }
+        }
+
+        public bool ShowReroll
+        {
+            get 
+            {
+                if (CanRoll)
+                {
+                    return false;
+                }
+                return parrent.ShowReroll; 
             }
         }
     }

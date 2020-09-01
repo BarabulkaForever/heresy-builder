@@ -13,7 +13,6 @@
         </Grid.ColumnDefinitions>
         <ListBox 
             Grid.Column="0" 
-            Name="listBox1" 
             ItemsSource="{Binding Backgrounds}" 
             SelectedItem="{Binding Background, Mode=TwoWay}">
             <ListBox.ItemsPanel>
