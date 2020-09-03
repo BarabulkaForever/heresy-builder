@@ -107,6 +107,14 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             }
         }
 
+        public Characteristic Characteristic
+        {
+            get
+            {
+                return characteristic;
+            }
+        }
+
         public int CharacteristicValue
         {
             get

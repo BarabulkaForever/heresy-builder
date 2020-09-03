@@ -54,11 +54,12 @@
                             Click="NavigateToCharacteristics"
                             Content="CHARACTERISTICS" />
                         <RadioButton
+                            x:Name="NavigateToAptitudesTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"
                             IsChecked="False"
                             IsEnabled="False"
-                            Content="THIRD" />
+                            Content="APTITUDES" />
                     </StackPanel>
                 </materialDesign:ColorZone>
                 <Grid Grid.Row="1" x:Name="TabMenuContent" HorizontalAlignment="Center" VerticalAlignment="Center"/>

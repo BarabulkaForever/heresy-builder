@@ -1,6 +1,7 @@
 ﻿using HeresyBuilder.Enums;
 using HeresyBuilder.Implementations;
 using HeresyBuilder.Models;
+using HeresyBuilder.Singleton;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -112,6 +113,14 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             }
         }
 
+        public bool Valid
+        {
+            get 
+            {
+                return Characteristics.Where(x => x.CharacteristicValue > 22 && x.CharacteristicValue <= 40).Count() > 0;
+            }
+        }
+
         public bool ShowReroll
         {
             get 
@@ -129,6 +138,55 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
                     return true;
                 }
             }
+        }
+
+        public void SaveCharacteristics()
+        {
+            CurrentCharacterCreationData.Instance.Characteristics = new Characteristics();
+
+            Characteristics.ForEach(x => 
+            {
+                if (x.Characteristic == Characteristic.WeaponSkill)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.WeaponSkill = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.BallisticSkill)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.BallisticSkill = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Strength)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Strength = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Toughness)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Toughness = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Agility)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Agility = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Intelligence)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Intelligence = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Perception)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Perception = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Willpower)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Willpower = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Fellowship)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Fellowship = x.CharacteristicValue;
+                }
+                else if (x.Characteristic == Characteristic.Influence)
+                {
+                    CurrentCharacterCreationData.Instance.Characteristics.Influence = x.CharacteristicValue;
+                }
+            });
         }
     }
 }

@@ -33,16 +33,16 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.RowSpan="2">
+        <Grid HorizontalAlignment="Stretch" Grid.Column="1" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
             <ScrollViewer Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto">
-                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                <StackPanel HorizontalAlignment="Stretch">
                     <!--Right pannel content-->
                     <TextBlock 
-                        HorizontalAlignment="Left"
+                        HorizontalAlignment="Stretch"
                         VerticalAlignment="Top"
                         FontSize="18" Margin="10"
                         Foreground="White"

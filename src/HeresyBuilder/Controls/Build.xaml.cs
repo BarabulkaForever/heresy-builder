@@ -29,6 +29,7 @@ namespace HeresyBuilder.Controls
         private BackgroundsView backgroundsView; 
         private RoleView roleView; 
         private CharacteristicsView characteristicsView; 
+        private AptitudesView aptitudesView; 
 
         public Build()
         {
@@ -80,6 +81,17 @@ namespace HeresyBuilder.Controls
             TabMenuContent.Children.Add(characteristicsView);
         }
 
+        private void NavigateToAptitudes(object sender, RoutedEventArgs e)
+        {
+            if (aptitudesView == null)
+            {
+                aptitudesView = new AptitudesView(this);
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(aptitudesView);
+        }
+
         public void GoNext(BaseViewModel baseViewModel)
         {
             if (baseViewModel is HomeWorldViewModel)
@@ -105,10 +117,13 @@ namespace HeresyBuilder.Controls
             }
             else if (baseViewModel is CharacteristicsViewModel)
             {
-                NavigateToCharacteristicsTab.IsEnabled = true;
-                NavigateToCharacteristicsTab.IsChecked = true;
-                NavigateToCharacteristics(this, null);
-                // CurrentCharacterCreationData.Instance.Characteristics = (baseViewModel as CharacteristicsViewModel).Characteristics;
+                if ((baseViewModel as CharacteristicsViewModel).Valid)
+                {
+                    NavigateToAptitudesTab.IsEnabled = true;
+                    NavigateToAptitudesTab.IsChecked = true;
+                    (baseViewModel as CharacteristicsViewModel).SaveCharacteristics();
+                    NavigateToAptitudes(this, null);
+                }
             }
         }
     }

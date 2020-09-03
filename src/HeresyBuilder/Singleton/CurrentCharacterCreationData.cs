@@ -34,5 +34,7 @@ namespace HeresyBuilder.Singleton
         public Role Role { get; set; }
 
         public Characteristics Characteristics { get; set; }
+
+        public List<string> Aptitudes { get; set; }
     }
 }
