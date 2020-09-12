@@ -44,16 +44,16 @@ namespace HeresyBuilder.Models
                 var statickSkills = string.Join(", ", RoleAptitude);
                 var dynamicSkills = "";
 
-                foreach (var skillsSet in RoleAptitudeToPick)
+                foreach (var aptitude in RoleAptitudeToPick)
                 {
                     if (dynamicSkills.Length > 0)
                     {
-                        string[] asd = { dynamicSkills, string.Join(" or ", skillsSet) };
+                        string[] asd = { dynamicSkills, string.Join(" or ", aptitude) };
                         dynamicSkills += string.Join(", ", asd);
                     }
                     else
                     {
-                        dynamicSkills = string.Join(" or ", skillsSet);
+                        dynamicSkills = string.Join(" or ", aptitude);
                     }
                 }
 
@@ -68,16 +68,16 @@ namespace HeresyBuilder.Models
                 var statickSkills = string.Join(", ", RoleTalent);
                 var dynamicSkills = "";
 
-                foreach (var skillsSet in RoleTalentToPick)
+                foreach (var tallent in RoleTalentToPick)
                 {
                     if (dynamicSkills.Length > 0)
                     {
-                        string[] asd = { dynamicSkills, string.Join(" or ", skillsSet) };
+                        string[] asd = { dynamicSkills, string.Join(" or ", tallent) };
                         dynamicSkills += string.Join(", ", asd);
                     }
                     else
                     {
-                        dynamicSkills = string.Join(" or ", skillsSet);
+                        dynamicSkills = string.Join(" or ", tallent);
                     }
                 }
 

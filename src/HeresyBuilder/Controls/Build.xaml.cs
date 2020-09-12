@@ -30,6 +30,9 @@ namespace HeresyBuilder.Controls
         private RoleView roleView; 
         private CharacteristicsView characteristicsView; 
         private AptitudesView aptitudesView; 
+        private TalentsView talentsView; 
+        private EquipmentView equipmentView; 
+        private SkillsView skillsView; 
 
         public Build()
         {
@@ -92,6 +95,39 @@ namespace HeresyBuilder.Controls
             TabMenuContent.Children.Add(aptitudesView);
         }
 
+        private void NavigateToTalents(object sender, RoutedEventArgs e)
+        {
+            if (talentsView == null)
+            {
+                talentsView = new TalentsView(this);
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(talentsView);
+        }
+
+        private void NavigateToEquipment(object sender, RoutedEventArgs e)
+        {
+            if (equipmentView == null)
+            {
+                equipmentView = new EquipmentView(this);
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(equipmentView);
+        }
+
+        private void NavigateToSkills(object sender, RoutedEventArgs e)
+        {
+            if (skillsView == null)
+            {
+                skillsView = new SkillsView(this);
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(skillsView);
+        }
+
         public void GoNext(BaseViewModel baseViewModel)
         {
             if (baseViewModel is HomeWorldViewModel)
@@ -123,6 +159,36 @@ namespace HeresyBuilder.Controls
                     NavigateToAptitudesTab.IsChecked = true;
                     (baseViewModel as CharacteristicsViewModel).SaveCharacteristics();
                     NavigateToAptitudes(this, null);
+                }
+            }
+            else if (baseViewModel is AptitudesViewModel)
+            {
+                if ((baseViewModel as AptitudesViewModel).Valid)
+                {
+                    NavigateToTalentsTab.IsEnabled = true;
+                    NavigateToTalentsTab.IsChecked = true;
+                    (baseViewModel as AptitudesViewModel).SaveAptitudes();
+                    NavigateToTalents(this, null);
+                }
+            }
+            else if (baseViewModel is TalentsViewModel)
+            {
+                if ((baseViewModel as TalentsViewModel).Valid)
+                {
+                    NavigateToEquipmentTab.IsEnabled = true;
+                    NavigateToEquipmentTab.IsChecked = true;
+                    (baseViewModel as TalentsViewModel).SaveTalents();
+                    NavigateToEquipment(this, null);
+                }
+            }
+            else if (baseViewModel is EquipmentViewModel)
+            {
+                if ((baseViewModel as EquipmentViewModel).Valid)
+                {
+                    NavigateToSkillsTab.IsEnabled = true;
+                    NavigateToSkillsTab.IsChecked = true;
+                    (baseViewModel as EquipmentViewModel).SaveItems();
+                    NavigateToSkills(this, null);
                 }
             }
         }

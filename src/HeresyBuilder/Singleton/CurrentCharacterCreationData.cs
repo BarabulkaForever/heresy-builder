@@ -36,5 +36,9 @@ namespace HeresyBuilder.Singleton
         public Characteristics Characteristics { get; set; }
 
         public List<string> Aptitudes { get; set; }
+
+        public List<string> Talents { get; set; }
+
+        public List<string> Items { get; set; }
     }
 }

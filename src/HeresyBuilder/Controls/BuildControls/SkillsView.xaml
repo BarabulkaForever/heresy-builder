@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="HeresyBuilder.Controls.BuildControls.AptitudesView"
+﻿<UserControl x:Class="HeresyBuilder.Controls.BuildControls.SkillsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,12 +14,12 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0" ItemsSource="{Binding Aptitudes}" Grid.RowSpan="2">
+        <ListBox Grid.Column="0" ItemsSource="{Binding Skills}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <Label Margin="5" VerticalAlignment="Center" FontSize="16" Content="{Binding Aptitude}" Visibility="{Binding IsAptitudesToShow, Converter={StaticResource VisibleIfTrueConverter}}"/>
-                        <ComboBox Margin="5" ItemsSource="{Binding Aptitudes}" FontSize="16" SelectedItem="{Binding Aptitude}" Visibility="{Binding IsAptitudesToSellect, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <Label Margin="5" VerticalAlignment="Center" FontSize="16" Content="{Binding Skill}" Visibility="{Binding IsSkillsToShow, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <ComboBox Margin="5" ItemsSource="{Binding Skills}" FontSize="16" SelectedItem="{Binding Skill}" Visibility="{Binding IsSkillsToSellect, Converter={StaticResource VisibleIfTrueConverter}}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -29,7 +29,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <ScrollViewer Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto">
+            <ScrollViewer Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                 <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
                     <!--Right pannel content-->
                     <TextBlock 
@@ -38,12 +38,13 @@
                         FontSize="18" Margin="10"
                         Foreground="White"
                         TextWrapping="Wrap" 
-                        Text="Aptitudes"/>
+                        Text="Skills"/>
+                    <!--TODO: Add description -->
                     <TextBlock 
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Top" Margin="10"
                         Foreground="White" TextWrapping="Wrap" 
-                        Text="DARK HERESY uses these various propensities as aptitudes during character creation. These represent tasks or abilities for which a character has a natural affinity, and can learn with greater ease than others. Characteristic, skill, and talent advances in the game have aptitudes linked to them, usually two (though especially rare abilities might have only one). Those advances sharing a character's aptitudes are easier for that character to learn, and thus cost fewer experience points to purchase. "/>
+                        Text="skulls"/>
                 </StackPanel>
             </ScrollViewer>
             <Button 

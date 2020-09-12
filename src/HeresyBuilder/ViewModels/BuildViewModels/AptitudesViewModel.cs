@@ -54,5 +54,21 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
                 SetPropertyChanged(nameof(Aptitudes));
             }
         }
+
+        public bool Valid
+        {
+            get
+            {
+                return Aptitudes.Where(x => string.IsNullOrEmpty(x.Aptitude)).Count() == 0;
+            }
+        }
+
+        public void SaveAptitudes()
+        {
+            if (Valid)
+            {
+                CurrentCharacterCreationData.Instance.Aptitudes = Aptitudes.Select(x => x.Aptitude).ToList();
+            }
+        }
     }
 }

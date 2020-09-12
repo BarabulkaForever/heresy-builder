@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="HeresyBuilder.Controls.BuildControls.AptitudesView"
+﻿<UserControl x:Class="HeresyBuilder.Controls.BuildControls.TalentsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,12 +14,12 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0" ItemsSource="{Binding Aptitudes}" Grid.RowSpan="2">
+        <ListBox Grid.Column="0" ItemsSource="{Binding Talents}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <Label Margin="5" VerticalAlignment="Center" FontSize="16" Content="{Binding Aptitude}" Visibility="{Binding IsAptitudesToShow, Converter={StaticResource VisibleIfTrueConverter}}"/>
-                        <ComboBox Margin="5" ItemsSource="{Binding Aptitudes}" FontSize="16" SelectedItem="{Binding Aptitude}" Visibility="{Binding IsAptitudesToSellect, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <Label Margin="5" VerticalAlignment="Center" FontSize="16" Content="{Binding Talent}" Visibility="{Binding IsTalentsToShow, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <ComboBox Margin="5" ItemsSource="{Binding Talents}" FontSize="16" SelectedItem="{Binding Talent}" Visibility="{Binding IsTalentsToSellect, Converter={StaticResource VisibleIfTrueConverter}}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -38,12 +38,12 @@
                         FontSize="18" Margin="10"
                         Foreground="White"
                         TextWrapping="Wrap" 
-                        Text="Aptitudes"/>
+                        Text="Talents"/>
                     <TextBlock 
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Top" Margin="10"
                         Foreground="White" TextWrapping="Wrap" 
-                        Text="DARK HERESY uses these various propensities as aptitudes during character creation. These represent tasks or abilities for which a character has a natural affinity, and can learn with greater ease than others. Characteristic, skill, and talent advances in the game have aptitudes linked to them, usually two (though especially rare abilities might have only one). Those advances sharing a character's aptitudes are easier for that character to learn, and thus cost fewer experience points to purchase. "/>
+                        Text="Each talent imparts a unique ability to characters possessing it. Once an Acolyte possesses a talent, it is always in effect. In most cases, the ability confers a bonus to certain tasks, or allows him to perform special actions not available to other characters. Talents differ from skills in that a player usually does not need to use an action or test to utilise the ability. In essence, once a character has a talent, his actions always benefit from that talent, unless noted otherwise. Specific details for the new abilities that a talent grants are described under the respective talent's entry, and unless otherwise stated in the talent description, a character can only possess and benefit from each talent once. "/>
                 </StackPanel>
             </ScrollViewer>
             <Button 

@@ -25,14 +25,16 @@
                         <RadioButton
                             x:Name="NavigateToHomeworldsTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
+                            FontSize="12"
+                            Padding="10,2"
                             IsChecked="True"
                             Click="NavigateToHomeworlds"
                             Content="HOME WORLD" />
                         <RadioButton
                             x:Name="NavigateToBackgroundTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
+                            FontSize="12"
+                            Padding="10,2"
                             IsChecked="False"
                             IsEnabled="False"
                             Click="NavigateToBackground"
@@ -40,7 +42,8 @@
                         <RadioButton
                             x:Name="NavigateToRoleTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
+                            FontSize="12"
+                            Padding="10,2"
                             IsChecked="False"
                             IsEnabled="False"
                             Click="NavigateToRole"
@@ -48,7 +51,8 @@
                         <RadioButton
                             x:Name="NavigateToCharacteristicsTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
+                            FontSize="12"
+                            Padding="10,2"
                             IsChecked="False"
                             IsEnabled="False"
                             Click="NavigateToCharacteristics"
@@ -56,10 +60,39 @@
                         <RadioButton
                             x:Name="NavigateToAptitudesTab"
                             Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
+                            FontSize="12"
+                            Padding="10,2"
                             IsChecked="False"
                             IsEnabled="False"
+                            Click="NavigateToAptitudes"
                             Content="APTITUDES" />
+                        <RadioButton
+                            x:Name="NavigateToTalentsTab"
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            FontSize="12"
+                            Padding="10,2"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Click="NavigateToTalents"
+                            Content="TALENTS" />
+                        <RadioButton
+                            x:Name="NavigateToEquipmentTab"
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            FontSize="12"
+                            Padding="10,2"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Click="NavigateToEquipment"
+                            Content="EQUIPMENT" />
+                        <RadioButton
+                            x:Name="NavigateToSkillsTab"
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            FontSize="12"
+                            Padding="10,2"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Click="NavigateToSkills"
+                            Content="SKILLS" />
                     </StackPanel>
                 </materialDesign:ColorZone>
                 <Grid Grid.Row="1" x:Name="TabMenuContent" HorizontalAlignment="Center" VerticalAlignment="Center"/>

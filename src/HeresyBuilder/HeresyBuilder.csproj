@@ -84,11 +84,20 @@
     <Compile Include="Controls\BuildControls\CharacteristicsView.xaml.cs">
       <DependentUpon>CharacteristicsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BuildControls\EquipmentView.xaml.cs">
+      <DependentUpon>EquipmentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BuildControls\HomeworldsView.xaml.cs">
       <DependentUpon>HomeworldsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\BuildControls\RoleView.xaml.cs">
       <DependentUpon>RoleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildControls\SkillsView.xaml.cs">
+      <DependentUpon>SkillsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildControls\TalentsView.xaml.cs">
+      <DependentUpon>TalentsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Enums\Characteristic.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
@@ -103,8 +112,14 @@
     <Compile Include="ViewModels\BuildViewModels\BackgroundsViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\CharacteristicsViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\CharacteristicViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\EquipmentViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\HomeWorldViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\RolesViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\SkillsViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\SkillViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\TalentsViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\TalentViewModel.cs" />
     <Page Include="Controls\Build.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,11 +136,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\BuildControls\EquipmentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BuildControls\HomeworldsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BuildControls\RoleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BuildControls\SkillsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BuildControls\TalentsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
