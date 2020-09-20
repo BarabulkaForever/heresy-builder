@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="HeresyBuilder.Controls.BuildControls.WoundsAndFatePointsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HeresyBuilder.Controls.BuildControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="VisibleIfTrueConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10">
+            <TextBlock Margin="10" Text="Wounds" FontSize="18" />
+            <TextBlock Margin="10" Text="{Binding BaseWoundsString}" />
+
+            <Button Margin="10" Content="{Binding RollAdditionalWoundsButtonText}" 
+                    Command="{Binding RollAdditionalWoundsCommand}" 
+                    IsEnabled="{Binding ShouldRollAdditionalWounds}" />
+
+            <TextBlock Margin="10" Text="{Binding TotalWoundsStrings}" FontSize="18" FontWeight="Bold" />
+
+
+
+            <TextBlock Margin="10" Text="Fate Threshold" FontSize="18" />
+            <TextBlock Margin="10" Text="{Binding BaseFateThreshold}" />
+            <TextBlock Margin="10" Text="{Binding EmperorsBlessing}" />
+
+            <Button Margin="10"
+                    Content="{Binding EmperorsBlessingButtonText}" 
+                    Command="{Binding EmperorsBlessingCommand}" 
+                    IsEnabled="{Binding ShouldRollEmperorsBlessing}" />
+
+            <TextBlock Margin="10" Text="{Binding TotalFateThreshold}" FontSize="18" FontWeight="Bold" />
+        </StackPanel>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                    <!--Right pannel content-->
+                    <TextBlock 
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Top"
+                        FontSize="18" Margin="10"
+                        Foreground="White"
+                        TextWrapping="Wrap" 
+                        Text="Wounds And Fate Points"/>
+                    <!--TODO: Add description -->
+                    <TextBlock 
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Top" Margin="10"
+                        Foreground="White" TextWrapping="Wrap" 
+                        Text="Wounds are your character's hitpoints. Once you reach that number, you begin taking Critical Damage - which is very, very bad. Your homeworld determines your base number of Wounds, which then has a die roll applied to it to give you the character's starting number. Fate Points represent your character's favor with the Emperor, their luck, or some other innate characteristic which allows them to triumph where others would be doomed to failure. Fate Points may be spent on a variety of things; at the beginning of each session of play, the character's Fate Points are refilled up to their Fate Threshold, which is what will be determined here."/>
+                </StackPanel>
+            </ScrollViewer>
+            <Button 
+                Grid.Row="1" 
+                Style="{StaticResource MaterialDesignRaisedDarkButtonWithRightAngle}"
+                Click="NextClick"
+                Foreground="White"
+                Height="60" 
+                FontSize="18"
+                Content="Next >"/>
+        </Grid>
+    </Grid>
+</UserControl>

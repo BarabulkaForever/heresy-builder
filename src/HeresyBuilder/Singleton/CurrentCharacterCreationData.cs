@@ -40,5 +40,7 @@ namespace HeresyBuilder.Singleton
         public List<string> Talents { get; set; }
 
         public List<string> Items { get; set; }
+
+        public List<string> Skills { get; set; }
     }
 }

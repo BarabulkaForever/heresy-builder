@@ -52,11 +52,11 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             }
         }
 
-        public void SaveTalents()
+        public void SaveSkills()
         {
             if (Valid)
             {
-                CurrentCharacterCreationData.Instance.Items = Skills.Select(x => x.Skill).ToList();
+                CurrentCharacterCreationData.Instance.Skills = Skills.Select(x => x.Skill).ToList();
             }
         }
     }

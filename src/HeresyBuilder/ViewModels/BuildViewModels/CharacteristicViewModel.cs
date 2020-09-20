@@ -63,9 +63,9 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             {
                 var intList = new List<int>() 
                 {
-                    random.Next(1, 10),
-                    random.Next(1, 10),
-                    random.Next(1, 10)
+                    random.Next(1, 11),
+                    random.Next(1, 11),
+                    random.Next(1, 11)
                 };
                 intList.Sort();
                 CharacteristicValue = intList[1] + intList[2] + 20;
@@ -74,16 +74,16 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             {
                 var intList = new List<int>()
                 {
-                    random.Next(1, 10),
-                    random.Next(1, 10),
-                    random.Next(1, 10)
+                    random.Next(1, 11),
+                    random.Next(1, 11),
+                    random.Next(1, 11)
                 };
                 intList.Sort();
                 CharacteristicValue = intList[0] + intList[1] + 20;
             }
             else
             {
-                CharacteristicValue = 20 + random.Next(1, 10) + random.Next(1, 10);
+                CharacteristicValue = 20 + random.Next(1, 11) + random.Next(1, 11);
             }
             CanRoll = false;
             parrent.SetPropertyChanged(nameof(parrent.ShowReroll));

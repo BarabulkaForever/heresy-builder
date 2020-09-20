@@ -93,6 +93,15 @@
                             IsEnabled="False"
                             Click="NavigateToSkills"
                             Content="SKILLS" />
+                        <RadioButton
+                            x:Name="NavigateToWoundsAndFatePointsTab"
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            FontSize="12"
+                            Padding="10,2"
+                            IsChecked="False"
+                            IsEnabled="False"
+                            Click="NavigateToWoundsAndFatePoints"
+                            Content="WOUNDS AND F.P." />
                     </StackPanel>
                 </materialDesign:ColorZone>
                 <Grid Grid.Row="1" x:Name="TabMenuContent" HorizontalAlignment="Center" VerticalAlignment="Center"/>

@@ -99,6 +99,9 @@
     <Compile Include="Controls\BuildControls\TalentsView.xaml.cs">
       <DependentUpon>TalentsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BuildControls\WoundsAndFatePointsView.xaml.cs">
+      <DependentUpon>WoundsAndFatePointsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Enums\Characteristic.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -120,6 +123,7 @@
     <Compile Include="ViewModels\BuildViewModels\SkillViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\TalentsViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\TalentViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\WoundsAndFatePointsViewModel.cs" />
     <Page Include="Controls\Build.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BuildControls\TalentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BuildControls\WoundsAndFatePointsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -33,6 +33,7 @@ namespace HeresyBuilder.Controls
         private TalentsView talentsView; 
         private EquipmentView equipmentView; 
         private SkillsView skillsView; 
+        private WoundsAndFatePointsView woundsAndFatePointsView; 
 
         public Build()
         {
@@ -128,6 +129,17 @@ namespace HeresyBuilder.Controls
             TabMenuContent.Children.Add(skillsView);
         }
 
+        private void NavigateToWoundsAndFatePoints(object sender, RoutedEventArgs e)
+        {
+            if (woundsAndFatePointsView == null)
+            {
+                woundsAndFatePointsView = new WoundsAndFatePointsView(this);
+            }
+
+            TabMenuContent.Children.Clear();
+            TabMenuContent.Children.Add(woundsAndFatePointsView);
+        }
+
         public void GoNext(BaseViewModel baseViewModel)
         {
             if (baseViewModel is HomeWorldViewModel)
@@ -189,6 +201,16 @@ namespace HeresyBuilder.Controls
                     NavigateToSkillsTab.IsChecked = true;
                     (baseViewModel as EquipmentViewModel).SaveItems();
                     NavigateToSkills(this, null);
+                }
+            }
+            else if (baseViewModel is SkillsViewModel)
+            {
+                if ((baseViewModel as SkillsViewModel).Valid)
+                {
+                    NavigateToWoundsAndFatePointsTab.IsEnabled = true;
+                    NavigateToWoundsAndFatePointsTab.IsChecked = true;
+                    (baseViewModel as SkillsViewModel).SaveSkills();
+                    NavigateToWoundsAndFatePoints(this, null);
                 }
             }
         }
