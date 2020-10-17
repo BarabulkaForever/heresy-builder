@@ -9,8 +9,9 @@ namespace HeresyBuilder.Models
 {
     public class Background
     {
-        private string _code;
-        public string Code
+        public string Code { get; set; }
+
+        public string Url
         {
             get
             {
@@ -18,13 +19,10 @@ namespace HeresyBuilder.Models
                 var heresyBuilderPath = Path.Combine(path, "HeresyBuilder");
                 var homeworldsPath = Path.Combine(heresyBuilderPath, "background");
                 var imagesPath = Path.Combine(homeworldsPath, "images");
-                return Path.Combine(imagesPath, _code.ToLower() + ".png");
-            }
-            set
-            {
-                _code = value;
+                return Path.Combine(imagesPath, Code.ToLower() + ".png");
             }
         }
+
 
         public string Name { get; set; }
 

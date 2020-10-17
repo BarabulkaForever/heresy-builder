@@ -11,20 +11,17 @@ namespace HeresyBuilder.Models
 {
     public class World
     {
-        private string _code;
-        public string Code 
-        { 
+        public string Code { get; set; }
+
+        public string Url
+        {
             get
             {
                 var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 var heresyBuilderPath = Path.Combine(path, "HeresyBuilder");
                 var homeworldsPath = Path.Combine(heresyBuilderPath, "homeworlds");
                 var imagesPath = Path.Combine(homeworldsPath, "images");
-                return Path.Combine(imagesPath, _code.ToLower() + ".png");
-            }
-            set 
-            {
-                _code = value;
+                return Path.Combine(imagesPath, Code.ToLower() + ".png");
             }
         }
 

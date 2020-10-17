@@ -24,7 +24,7 @@
                 <DataTemplate>
                     <!--<Button Height="180" Margin="10" Background="{StaticResource CardBackgroundBrush}">-->
                     <Grid Height="180" Width="280" Margin="10" Background="{StaticResource CardBackgroundBrush}">
-                        <Image Source="{Binding Code}"/>
+                        <Image Source="{Binding Url}"/>
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="{Binding Name}"/>
                     </Grid>
                     <!--</Button>-->

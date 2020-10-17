@@ -27,6 +27,8 @@ namespace HeresyBuilder.Singleton
             }
         }
 
+        public string Name { get; set; }
+
         public Background Background { get; set; }
 
         public World World { get; set; }
@@ -42,5 +44,29 @@ namespace HeresyBuilder.Singleton
         public List<string> Items { get; set; }
 
         public List<string> Skills { get; set; }
+
+        public int TotalWounds { get; set; }
+
+        public int TotalFateThreshold { get; set; }
+
+        public Character ToCharacter()
+        {
+            var character = new Character 
+            {
+                Name = Name,
+                WorldCode = World.Code,
+                BackgroundCode = Background.Code,
+                RoleCode = Role.Code,
+                Characteristics = Characteristics,
+                Aptitudes = Aptitudes,
+                Items = Items,
+                Skills = Skills,
+                Talents = Talents,
+                TotalFateThreshold = TotalFateThreshold,
+                TotalWounds = TotalWounds
+            };
+
+            return character;
+        }
     }
 }

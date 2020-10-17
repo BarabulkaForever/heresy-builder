@@ -1,7 +1,11 @@
 ﻿using HeresyBuilder.Controls.BuildControls;
+using HeresyBuilder.Controls.Dialogs;
+using HeresyBuilder.Services;
 using HeresyBuilder.Singleton;
 using HeresyBuilder.ViewModels;
 using HeresyBuilder.ViewModels.BuildViewModels;
+using HeresyBuilder.ViewModels.DialogViewMoldels;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,12 +37,14 @@ namespace HeresyBuilder.Controls
         private TalentsView talentsView; 
         private EquipmentView equipmentView; 
         private SkillsView skillsView; 
-        private WoundsAndFatePointsView woundsAndFatePointsView; 
+        private WoundsAndFatePointsView woundsAndFatePointsView;
+        private FileAccessService _fileAccessService;
 
         public Build()
         {
             InitializeComponent();
             NavigateToHomeworlds(this, null);
+            _fileAccessService = new FileAccessService();
         }
 
         private void NavigateToHomeworlds(object sender, RoutedEventArgs e)
@@ -140,6 +146,24 @@ namespace HeresyBuilder.Controls
             TabMenuContent.Children.Add(woundsAndFatePointsView);
         }
 
+        private void ShowSaveDialog(object sender, RoutedEventArgs e)
+        {
+            var view = new SaveDialog { DataContext = new SaveDialogViewModel() };
+
+            DialogHost.Show(view, "RootDialog", new DialogClosingEventHandler((s, args) => 
+            {
+                if (args.Parameter is bool)
+                {
+                    var resp = (bool) args.Parameter;
+                    if (resp)
+                    {
+                        CurrentCharacterCreationData.Instance.Name = (view.DataContext as SaveDialogViewModel).Name;
+                        SaveCharacter();
+                    }
+                }
+            }));
+        }
+
         public void GoNext(BaseViewModel baseViewModel)
         {
             if (baseViewModel is HomeWorldViewModel)
@@ -213,6 +237,21 @@ namespace HeresyBuilder.Controls
                     NavigateToWoundsAndFatePoints(this, null);
                 }
             }
+            else if (baseViewModel is WoundsAndFatePointsViewModel)
+            {
+                if ((baseViewModel as WoundsAndFatePointsViewModel).Valid)
+                {
+                    NavigateToWoundsAndFatePointsTab.IsEnabled = true;
+                    NavigateToWoundsAndFatePointsTab.IsChecked = true;
+                    (baseViewModel as WoundsAndFatePointsViewModel).Save();
+                    ShowSaveDialog(this, null);
+                }
+            }
+        }
+
+        private void SaveCharacter()
+        {
+            _fileAccessService.SaveCharacter();
         }
     }
 }

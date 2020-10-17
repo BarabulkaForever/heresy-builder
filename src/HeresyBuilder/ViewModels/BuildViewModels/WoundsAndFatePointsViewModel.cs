@@ -148,5 +148,23 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
                 }
             }
         }
+
+        public bool Valid
+        {
+            get
+            {
+                return _emperorsBlessingRoll != 0 && _additionalWounds != 0;
+            }
+        }
+
+        public void Save()
+        {
+            if (Valid)
+            {
+                var emperorsBlessing = (_emperorsBlessingRoll >= CurrentCharacterCreationData.Instance.World.EmperorsBlessing) ? 1 : 0;
+                CurrentCharacterCreationData.Instance.TotalFateThreshold = (CurrentCharacterCreationData.Instance.World.FateThreshold + emperorsBlessing);
+                CurrentCharacterCreationData.Instance.TotalWounds = (_additionalWounds + int.Parse(CurrentCharacterCreationData.Instance.World.Wounds.Split('+').First()));
+            }
+        }
     }
 }
