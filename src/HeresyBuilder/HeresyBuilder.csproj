@@ -113,6 +113,7 @@
     <Compile Include="Models\Characteristics.cs" />
     <Compile Include="Services\FileAccessService.cs" />
     <Compile Include="Singleton\CurrentCharacterCreationData.cs" />
+    <Compile Include="Singleton\CurrentCharacterData.cs" />
     <Compile Include="Validators\NotEmptyValidationRule.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\AptitudesViewModel.cs" />

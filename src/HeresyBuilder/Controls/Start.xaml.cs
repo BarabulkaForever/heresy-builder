@@ -24,5 +24,11 @@ namespace HeresyBuilder.Controls
         {
             InitializeComponent();
         }
+
+        private void CreateNewCharacter(object sender, RoutedEventArgs e)
+        {
+            MainWindow parentWindow = (MainWindow) Window.GetWindow(this);
+            parentWindow.MoveToCharacterCreation();
+        }
     }
 }

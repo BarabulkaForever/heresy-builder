@@ -24,6 +24,7 @@ namespace HeresyBuilder
         public MainWindow()
         {
             InitializeComponent();
+            ListViewMenu.SelectedIndex = 0;
         }
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -31,18 +32,15 @@ namespace HeresyBuilder
             int index = ListViewMenu.SelectedIndex;
             MoveCursorMenu(index);
 
-            switch (index)
+            if (index == 0)
             {
-                case 0:
-                    GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new Start());
-                    break;
-                case 1:
-                    GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new Build());
-                    break;
-                default:
-                    break;
+                GridPrincipal.Children.Clear();
+                GridPrincipal.Children.Add(new Start());
+            }
+            else if (index == 1) 
+            {
+                GridPrincipal.Children.Clear();
+                GridPrincipal.Children.Add(new Build());
             }
         }
 
@@ -50,6 +48,11 @@ namespace HeresyBuilder
         {
             TrainsitionigContentSlide.OnApplyTemplate();
             GridCursor.Margin = new Thickness(0, (100 + (60 * index)), 0, 0);
+        }
+
+        public void MoveToCharacterCreation()
+        {
+            ListViewMenu.SelectedIndex = 1;
         }
     }
 }

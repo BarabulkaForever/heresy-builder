@@ -40,7 +40,7 @@
             <ScrollViewer Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" VerticalScrollBarVisibility="Auto">
                 <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Grid Grid.Column="1" Background="{StaticResource CardBackgroundBrush}">
-                        <Image Grid.Row="0" Source="{Binding Homeworld.Code}"/>
+                        <Image Grid.Row="0" Source="{Binding Homeworld.Url}"/>
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="{Binding Homeworld.Name}"/>
                     </Grid>
                     <TextBlock 

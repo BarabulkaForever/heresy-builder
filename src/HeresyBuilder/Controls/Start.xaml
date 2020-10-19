@@ -26,7 +26,7 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-                            <Button Height="180" Margin="10" Grid.Column="0" Grid.Row="0" Background="{StaticResource CardBackgroundBrush}">
+                            <Button Height="180" Margin="10" Grid.Column="0" Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" Click="CreateNewCharacter">
                                 <Grid>
                                     <Image Source="/Images/character-creation.png"/>
                                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="Create New Character"/>

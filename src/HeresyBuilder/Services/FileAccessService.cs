@@ -112,5 +112,45 @@ namespace HeresyBuilder.Services
             var characterJsonPath = Path.Combine(characterPath, character.Name + ".json");
             File.WriteAllText(characterJsonPath, characterJson);
         }
+
+        public List<string> LoadCharacters()
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var heresyBuilderPath = Path.Combine(path, appPrefix);
+            var charactersPath = Path.Combine(heresyBuilderPath, charactersPrefix);
+            DirectoryInfo charactersDirectory = new DirectoryInfo(charactersPath);
+            var directories = charactersDirectory.GetDirectories(); 
+            List<string> characters = new List<string>();
+
+            foreach (var directory in directories)
+            {
+                characters.Add(directory.Name);
+            }
+
+            return characters;
+        }
+
+        public Character LoadCharacter(string name)
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var heresyBuilderPath = Path.Combine(path, appPrefix);
+            var charactersPath = Path.Combine(heresyBuilderPath, charactersPrefix);
+            var characterPath = Path.Combine(charactersPath, name);
+            DirectoryInfo charactersDirectory = new DirectoryInfo(characterPath);
+            FileInfo file = charactersDirectory.GetFiles("*.json").FirstOrDefault();
+
+            string str = "";
+            using (StreamReader sr = file.OpenText())
+            {
+                string stringBuffer = "";
+                while ((stringBuffer = sr.ReadLine()) != null)
+                {
+                    str += stringBuffer;
+                }
+            }
+
+            var character = JsonConvert.DeserializeObject<Character>(str);
+            return character;
+        }
     }
 }
