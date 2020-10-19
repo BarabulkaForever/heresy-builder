@@ -57,6 +57,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -102,6 +104,9 @@
     <Compile Include="Controls\BuildControls\WoundsAndFatePointsView.xaml.cs">
       <DependentUpon>WoundsAndFatePointsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Dialogs\LoadCharacterDialog.xaml.cs">
+      <DependentUpon>LoadCharacterDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Dialogs\SaveDialog.xaml.cs">
       <DependentUpon>SaveDialog.xaml</DependentUpon>
     </Compile>
@@ -130,6 +135,7 @@
     <Compile Include="ViewModels\BuildViewModels\TalentsViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\TalentViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\WoundsAndFatePointsViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewMoldels\LoadCharacterDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SaveDialogViewModel.cs" />
     <Page Include="Controls\Build.xaml">
       <SubType>Designer</SubType>
@@ -168,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BuildControls\WoundsAndFatePointsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dialogs\LoadCharacterDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

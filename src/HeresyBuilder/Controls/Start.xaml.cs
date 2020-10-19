@@ -1,4 +1,9 @@
-﻿using System;
+﻿using HeresyBuilder.Controls.Dialogs;
+using HeresyBuilder.Services;
+using HeresyBuilder.Singleton;
+using HeresyBuilder.ViewModels.DialogViewMoldels;
+using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +34,27 @@ namespace HeresyBuilder.Controls
         {
             MainWindow parentWindow = (MainWindow) Window.GetWindow(this);
             parentWindow.MoveToCharacterCreation();
+        }
+
+        private void LoadExistingCharacter(object sender, RoutedEventArgs e)
+        {
+            var view = new LoadCharacterDialog { DataContext = new LoadCharacterDialogViewModel() };
+
+            DialogHost.Show(view, "RootDialog", new DialogClosingEventHandler((s, args) =>
+            {
+                if (args.Parameter is bool)
+                {
+                    var resp = (bool)args.Parameter;
+                    if (resp)
+                    {
+                        var service = new FileAccessService();
+                        var characterName = (view.DataContext as LoadCharacterDialogViewModel).SellectedCharacter;
+                        var character = service.LoadCharacter(characterName);
+                        CurrentCharacterData.Instance.Character = character;
+                        // TODO: Add navigation to character view. Goodlack!!!!!!!!!!!!!!
+                    }
+                }
+            }));
         }
     }
 }

@@ -38,7 +38,7 @@
                                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="Import Character From File"/>
                                 </Grid>
                             </Button>
-                            <Button Height="180" Margin="10" Grid.Column="1" Grid.Row="0" Background="{StaticResource CardBackgroundBrush}">
+                            <Button Height="180" Margin="10" Grid.Column="1" Grid.Row="0" Background="{StaticResource CardBackgroundBrush}" Click="LoadExistingCharacter">
                                 <Grid>
                                     <Image Source="/Images/character-load.png"/>
                                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White" Text="Load Existing Character"/>
