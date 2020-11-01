@@ -1,4 +1,5 @@
 ﻿using HeresyBuilder.Controls;
+using HeresyBuilder.Singleton;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,14 @@ namespace HeresyBuilder
                 GridPrincipal.Children.Clear();
                 GridPrincipal.Children.Add(new Build());
             }
+            else if (index == 2)
+            {
+                if (CurrentCharacterData.Instance.Character != null)
+                {
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new Character());
+                }
+            }
         }
 
         private void MoveCursorMenu(int index)
@@ -53,6 +62,17 @@ namespace HeresyBuilder
         public void MoveToCharacterCreation()
         {
             ListViewMenu.SelectedIndex = 1;
+        }
+
+        public void MoveToCharacter()
+        {
+            ListViewMenu.SelectedIndex = 2;
+        }
+        
+        public void UnblockCharacterManagement()
+        {
+            BuildMenuItem.Focusable = false;
+            CharacterMenuItem.Focusable = true;
         }
     }
 }

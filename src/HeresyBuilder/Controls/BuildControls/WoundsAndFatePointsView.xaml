@@ -52,7 +52,6 @@
                         Foreground="White"
                         TextWrapping="Wrap" 
                         Text="Wounds And Fate Points"/>
-                    <!--TODO: Add description -->
                     <TextBlock 
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Top" Margin="10"

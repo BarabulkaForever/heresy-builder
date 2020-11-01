@@ -25,10 +25,16 @@
                             <TextBlock Text="Start" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
+                    <ListViewItem Height="60" x:Name="BuildMenuItem">
                         <StackPanel Orientation="Horizontal">
                             <!--<materialDesign:PackIcon Kind="FoodForkDrink" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>-->
                             <TextBlock Text="Build" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60" x:Name="CharacterMenuItem" Focusable="False">
+                        <StackPanel Orientation="Horizontal">
+                            <!--<materialDesign:PackIcon Kind="FoodForkDrink" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>-->
+                            <TextBlock Text="Character" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
                     <!--<ListViewItem Height="60">

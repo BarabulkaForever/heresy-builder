@@ -51,7 +51,9 @@ namespace HeresyBuilder.Controls
                         var characterName = (view.DataContext as LoadCharacterDialogViewModel).SellectedCharacter;
                         var character = service.LoadCharacter(characterName);
                         CurrentCharacterData.Instance.Character = character;
-                        // TODO: Add navigation to character view. Goodlack!!!!!!!!!!!!!!
+                        MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
+                        parentWindow.UnblockCharacterManagement();
+                        parentWindow.MoveToCharacter();
                     }
                 }
             }));
