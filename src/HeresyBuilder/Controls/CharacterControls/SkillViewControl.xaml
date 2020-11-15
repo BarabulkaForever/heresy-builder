@@ -14,10 +14,10 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Label Content="{Binding SkillName}" FontSize="14" Grid.Column="0" />
-        <CheckBox HorizontalAlignment="Center" IsEnabled="False" Grid.Column="1" IsChecked="{Binding IsLvlOne, Mode=OneWay}" />
-        <CheckBox HorizontalAlignment="Center" IsEnabled="False" Grid.Column="2" IsChecked="{Binding IsLvlTwo, Mode=OneWay}" />
-        <CheckBox HorizontalAlignment="Center" IsEnabled="False" Grid.Column="3" IsChecked="{Binding IsLvlThree, Mode=OneWay}" />
-        <CheckBox HorizontalAlignment="Center" IsEnabled="False" Grid.Column="4" IsChecked="{Binding IsLvlFour, Mode=OneWay}" />
+        <Label x:Name="SkillNameLabel" FontSize="14" Grid.Column="0" />
+        <CheckBox x:Name="IsLvlOneCheckBox" HorizontalAlignment="Center" IsEnabled="False" Grid.Column="1" />
+        <CheckBox x:Name="IsLvlTwoCheckBox" HorizontalAlignment="Center" IsEnabled="False" Grid.Column="2" />
+        <CheckBox x:Name="IsLvlThreeCheckBox" HorizontalAlignment="Center" IsEnabled="False" Grid.Column="3" />
+        <CheckBox x:Name="IsLvlFourCheckBox" HorizontalAlignment="Center" IsEnabled="False" Grid.Column="4" />
     </Grid>
 </UserControl>

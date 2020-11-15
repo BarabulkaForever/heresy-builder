@@ -117,11 +117,14 @@
       <DependentUpon>SaveDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Enums\Characteristic.cs" />
+    <Compile Include="Enums\SkillLevel.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Implementations\CustomCommand.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Characteristics.cs" />
+    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\Skills.cs" />
     <Compile Include="Services\FileAccessService.cs" />
     <Compile Include="Singleton\CurrentCharacterCreationData.cs" />
     <Compile Include="Singleton\CurrentCharacterData.cs" />
@@ -141,6 +144,7 @@
     <Compile Include="ViewModels\BuildViewModels\TalentsViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\TalentViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\WoundsAndFatePointsViewModel.cs" />
+    <Compile Include="ViewModels\CharacterViewModels\CharacterViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\LoadCharacterDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SaveDialogViewModel.cs" />
     <Page Include="Controls\Build.xaml">
@@ -271,7 +275,9 @@
     <Resource Include="Images\character-import.png" />
     <Resource Include="Images\character-export.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Converter\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

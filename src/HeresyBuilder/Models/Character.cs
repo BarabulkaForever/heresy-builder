@@ -24,7 +24,7 @@ namespace HeresyBuilder.Models
 
         public List<string> Items { get; set; }
 
-        public List<string> Skills { get; set; }
+        public Skills Skills { get; set; }
 
         public int TotalWounds { get; set; }
 

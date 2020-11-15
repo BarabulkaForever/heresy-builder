@@ -60,7 +60,7 @@ namespace HeresyBuilder.Singleton
                 Characteristics = Characteristics,
                 Aptitudes = Aptitudes,
                 Items = Items,
-                Skills = Skills,
+                Skills = new Skills(Skills),
                 Talents = Talents,
                 TotalFateThreshold = TotalFateThreshold,
                 TotalWounds = TotalWounds
