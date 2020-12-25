@@ -152,5 +152,59 @@ namespace HeresyBuilder.Services
             var character = JsonConvert.DeserializeObject<Character>(str);
             return character;
         }
+
+        public List<SkillAdvancement> LoadSkills()
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var heresyBuilderPath = Path.Combine(path, appPrefix);
+            var advancementPath = Path.Combine(heresyBuilderPath, "advancement");
+            DirectoryInfo directory = new DirectoryInfo(advancementPath);
+            FileInfo[] Files = directory.GetFiles("skills.json"); //Getting Text files
+            List<SkillAdvancement> skillAdvancements = new List<SkillAdvancement>();
+
+            foreach (FileInfo file in Files)
+            {
+                string str = "";
+                using (StreamReader sr = file.OpenText())
+                {
+                    string stringBuffer = "";
+                    while ((stringBuffer = sr.ReadLine()) != null)
+                    {
+                        str += stringBuffer;
+                    }
+                }
+                var newSkillAdvancements = JsonConvert.DeserializeObject<List<SkillAdvancement>>(str);
+                skillAdvancements.AddRange(newSkillAdvancements);
+            }
+
+            return skillAdvancements;
+        }
+
+        public List<SkillAdvancement> LoadTalents()
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var heresyBuilderPath = Path.Combine(path, appPrefix);
+            var advancementPath = Path.Combine(heresyBuilderPath, "advancement");
+            DirectoryInfo directory = new DirectoryInfo(advancementPath);
+            FileInfo[] Files = directory.GetFiles("skills.json"); //Getting Text files
+            List<SkillAdvancement> skillAdvancements = new List<SkillAdvancement>();
+
+            foreach (FileInfo file in Files)
+            {
+                string str = "";
+                using (StreamReader sr = file.OpenText())
+                {
+                    string stringBuffer = "";
+                    while ((stringBuffer = sr.ReadLine()) != null)
+                    {
+                        str += stringBuffer;
+                    }
+                }
+                var newSkillAdvancements = JsonConvert.DeserializeObject<List<SkillAdvancement>>(str);
+                skillAdvancements.AddRange(newSkillAdvancements);
+            }
+
+            return skillAdvancements;
+        }
     }
 }

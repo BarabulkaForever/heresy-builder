@@ -63,7 +63,9 @@ namespace HeresyBuilder.Singleton
                 Skills = new Skills(Skills),
                 Talents = Talents,
                 TotalFateThreshold = TotalFateThreshold,
-                TotalWounds = TotalWounds
+                TotalWounds = TotalWounds,
+                XPToSpend = 1000,
+                XPSpended = 0
             };
 
             return character;

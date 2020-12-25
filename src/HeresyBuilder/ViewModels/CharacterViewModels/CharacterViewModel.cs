@@ -61,6 +61,30 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
             }
         }
 
+        public string XPToSpend
+        {
+            get
+            {
+                return Character.XPToSpend.ToString();
+            }
+        }
+
+        public string XPSpended
+        {
+            get
+            {
+                return Character.XPSpended.ToString();
+            }
+        }
+
+        public string TotalXP
+        {
+            get
+            {
+                return (Character.XPSpended + Character.XPToSpend).ToString();
+            }
+        }
+
         #endregion
 
         #region Characteristics
@@ -427,7 +451,7 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
 
         #endregion
 
-        #region Skills
+        #region Talents
 
         public List<string> Talents
         {
@@ -438,5 +462,12 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
         }
 
         #endregion
+
+        public void AddXP(int newXP)
+        {
+            Character.XPToSpend += newXP;
+            SetPropertyChanged(nameof(XPToSpend));
+            SetPropertyChanged(nameof(TotalXP));
+        }
     }
 }

@@ -107,8 +107,14 @@
     <Compile Include="Controls\Character.xaml.cs">
       <DependentUpon>Character.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CharacterControls\SkillEditControl.xaml.cs">
+      <DependentUpon>SkillEditControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CharacterControls\SkillViewControl.xaml.cs">
       <DependentUpon>SkillViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\AddXPDialog.xaml.cs">
+      <DependentUpon>AddXPDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Dialogs\LoadCharacterDialog.xaml.cs">
       <DependentUpon>LoadCharacterDialog.xaml</DependentUpon>
@@ -116,14 +122,23 @@
     <Compile Include="Controls\Dialogs\SaveDialog.xaml.cs">
       <DependentUpon>SaveDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Dialogs\SkillsAdvancement.xaml.cs">
+      <DependentUpon>SkillsAdvancement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Enums\Characteristic.cs" />
+    <Compile Include="Enums\ContainsAptitudes.cs" />
     <Compile Include="Enums\SkillLevel.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\SkillHelper.cs" />
     <Compile Include="Implementations\CustomCommand.cs" />
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Prerequisites\CharacteristicPrerequisites.cs" />
     <Compile Include="Models\Characteristics.cs" />
+    <Compile Include="Models\Prerequisites\Prerequisites.cs" />
+    <Compile Include="Models\Prerequisites\SkillPrerequisites.cs" />
     <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\SkillAdvancement.cs" />
     <Compile Include="Models\Skills.cs" />
     <Compile Include="Services\FileAccessService.cs" />
     <Compile Include="Singleton\CurrentCharacterCreationData.cs" />
@@ -147,6 +162,7 @@
     <Compile Include="ViewModels\CharacterViewModels\CharacterViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\LoadCharacterDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SaveDialogViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewMoldels\SkillsAdvancementViewModel.cs" />
     <Page Include="Controls\Build.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,7 +207,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\CharacterControls\SkillEditControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\CharacterControls\SkillViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dialogs\AddXPDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -200,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialogs\SaveDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dialogs\SkillsAdvancement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

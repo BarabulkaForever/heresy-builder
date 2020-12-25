@@ -30,5 +30,9 @@ namespace HeresyBuilder.Models
 
         public int TotalFateThreshold { get; set; }
 
+        public int XPToSpend { get; set; }
+
+        public int XPSpended { get; set; }
+
     }
 }

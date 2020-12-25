@@ -1,5 +1,8 @@
 ﻿using HeresyBuilder.Controls.CharacterControls;
+using HeresyBuilder.Controls.Dialogs;
 using HeresyBuilder.ViewModels.CharacterViewModels;
+using HeresyBuilder.ViewModels.DialogViewMoldels;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,6 +84,42 @@ namespace HeresyBuilder.Controls
                     Content = talant,
                 });
             }
+        }
+
+        private void ShowAdvansment(object sender, RoutedEventArgs e)
+        {
+            var view = new SkillsAdvancement();
+
+            DialogHost.Show(view, "RootDialog", new DialogClosingEventHandler((s, args) =>
+            {
+                if (args.Parameter is bool)
+                {
+                    var resp = (bool)args.Parameter;
+                    if (resp)
+                    {
+                        // TODO save skills
+                    }
+                }
+            }));
+        }
+
+        private void AddXP(object sender, RoutedEventArgs e)
+        {
+            var view = new AddXPDialog();
+
+            DialogHost.Show(view, "RootDialog", new DialogClosingEventHandler((s, args) =>
+            {
+                if (args.Parameter is bool)
+                {
+                    var resp = (bool)args.Parameter;
+                    if (resp)
+                    {
+                        int newXp = 0;
+                        int.TryParse(view.NewXP.Text, out newXp);
+                        viewModel.AddXP(newXp);
+                    }
+                }
+            }));
         }
     }
 }

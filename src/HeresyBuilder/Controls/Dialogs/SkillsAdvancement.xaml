@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="HeresyBuilder.Controls.Dialogs.SkillsAdvancement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:local="clr-namespace:HeresyBuilder.Controls.Dialogs"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:charactercontrols="clr-namespace:HeresyBuilder.Controls.CharacterControls"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid Margin="16">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="8*" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock FontWeight="Bold" FontSize="14" Grid.Row="0">Upgrade your skill.</TextBlock>
+
+        <StackPanel Grid.Row="1" Height="474" Width="538" >
+            <ScrollViewer  Height="474" Width="538"  VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+                <Grid  Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Content="SKILLS" />
+                    <StackPanel Margin="10" Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+                        <charactercontrols:SkillEditControl SkillName="Acrobatics (Ag)" SpecialSkills="no" SkillLevel="{Binding Acrobatics, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Athletics (S)" SpecialSkills="no" SkillLevel="{Binding Athletics, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Awareness (Per)" SpecialSkills="no" SkillLevel="{Binding Awareness, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Charm (Fel)" SpecialSkills="no" SkillLevel="{Binding Charm, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Command (Fel)" SpecialSkills="no" SkillLevel="{Binding Command, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Commerce (Int)" SpecialSkills="no" SkillLevel="{Binding Commerce, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Deceive (Fel)" SpecialSkills="no" SkillLevel="{Binding Deceive, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Dodge (Ag)" SpecialSkills="no" SkillLevel="{Binding Dodge, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Inquiry (Fel)" SpecialSkills="no" SkillLevel="{Binding Inquiry, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Interrogation (WP)" SpecialSkills="no" SkillLevel="{Binding Interrogation, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Intimidate (S)" SpecialSkills="no" SkillLevel="{Binding Intimidate, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Logic (Int)" SpecialSkills="no" SkillLevel="{Binding Logic, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Medicae (Int)" SpecialSkills="no" SkillLevel="{Binding Medicae, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Parry (WS)" SpecialSkills="no" SkillLevel="{Binding Parry, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Psyniscience (Per)" SpecialSkills="no" SkillLevel="{Binding Psyniscience, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Scrutiny (Per)" SpecialSkills="no" SkillLevel="{Binding Scrutiny, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Security (Int)" SpecialSkills="no" SkillLevel="{Binding Security, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Sleight of Hand (Ag)" SpecialSkills="no" SkillLevel="{Binding SleightOfHand, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Stealth (Ag)" SpecialSkills="no" SkillLevel="{Binding Stealth, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Survival (Per)" SpecialSkills="no" SkillLevel="{Binding Survival, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Tech-Use (Int)" SpecialSkills="no" SkillLevel="{Binding TechUse, Mode=OneWay}"/>
+                    </StackPanel>
+                    <StackPanel Margin="10" Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                        <Label Content="Navigate" FontWeight="Bold" FontSize="16"/>
+                        <charactercontrols:SkillEditControl SkillName="Surface" SpecialSkills="Navigate" SkillLevel="{Binding NavigateSurface, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Stellar" SpecialSkills="Navigate" SkillLevel="{Binding NavigateStellar, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Warp" SpecialSkills="Navigate" SkillLevel="{Binding NavigateWarp, Mode=OneWay}"/>
+                        <Separator />
+                        <Label Content="Operate" FontWeight="Bold" FontSize="16"/>
+                        <charactercontrols:SkillEditControl SkillName="Aeronautica" SpecialSkills="Operate" SkillLevel="{Binding OperateAeronautica, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Surface" SpecialSkills="Operate" SkillLevel="{Binding OperateSurface, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Voidship" SpecialSkills="Operate" SkillLevel="{Binding OperateVoidship, Mode=OneWay}"/>
+                        <Separator />
+                        <Label Content="Linguistics" FontWeight="Bold" FontSize="16"/>
+                        <StackPanel x:Name="LinguisticsStackPanel" Margin="0" Orientation="Vertical"/>
+                        <Separator />
+                        <Label Content="Trade" FontWeight="Bold" FontSize="16"/>
+                        <StackPanel x:Name="TradeStackPanel" Margin="0" Orientation="Vertical"/>
+                        <Separator />
+                        <Label HorizontalAlignment="Center" Content="Lore" FontWeight="Bold" FontSize="24"/>
+                        <Separator />
+                        <Label Content="Common" FontWeight="Bold" FontSize="16"/>
+                        <StackPanel x:Name="CommonLoreStackPanel" Margin="0" Orientation="Vertical"/>
+                        <Separator />
+                        <Label Content="Scholastic" FontWeight="Bold" FontSize="16"/>
+                        <StackPanel x:Name="ScholasticLoreStackPanel" Margin="0" Orientation="Vertical"/>
+                        <Separator />
+                        <Label Content="Forbidden" FontWeight="Bold" FontSize="16"/>
+                        <StackPanel x:Name="ForbiddenLoreStackPanel" Margin="0" Orientation="Vertical"/>
+                        <Separator />
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </StackPanel>
+        
+        <TextBlock Grid.Row="2" Margin="8" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Text="{Binding XPToSpendText}"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Button IsEnabled="{Binding CanAccept}" IsDefault="True" Style="{DynamicResource MaterialDesignFlatButton}"
+                    Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
+                <Button.CommandParameter>
+                    <system:Boolean>True</system:Boolean>
+                </Button.CommandParameter>
+                ACCEPT
+            </Button>
+            <Button IsCancel="True" Margin="8 0 0 0" Style="{DynamicResource MaterialDesignFlatButton}"
+                    Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
+                <Button.CommandParameter>
+                    <system:Boolean>False</system:Boolean>
+                </Button.CommandParameter>
+                CANCEL
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
