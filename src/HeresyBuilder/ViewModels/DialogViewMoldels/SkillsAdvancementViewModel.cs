@@ -2,6 +2,7 @@
 using HeresyBuilder.Models;
 using HeresyBuilder.Services;
 using HeresyBuilder.Singleton;
+using HeresyBuilder.ViewModels.CharacterViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace HeresyBuilder.ViewModels.DialogViewMoldels
 {
     public class SkillsAdvancementViewModel : BaseViewModel
     {
-        private Character Character { get; set; }
+        public Character Character { get; set; }
         private FileAccessService _fileAccessService;
         private int _XPToSpend;
         private int _spendedXP;
@@ -25,7 +26,7 @@ namespace HeresyBuilder.ViewModels.DialogViewMoldels
 
         private void Init()
         {
-            Character = CurrentCharacterData.Instance.Character;
+            Character = CurrentCharacterData.Instance.Character.Clone();
 
             XPToSpend = Character.XPToSpend;
         }
@@ -59,6 +60,14 @@ namespace HeresyBuilder.ViewModels.DialogViewMoldels
             SetPropertyChanged(nameof(XPToSpend));
             SetPropertyChanged(nameof(XPToSpendText));
         } 
+
+        public int SpendedXP
+        {
+            get
+            {
+                return _spendedXP;
+            }
+        }
 
         public bool CanSpendXP(int xp)
         {
@@ -420,45 +429,55 @@ namespace HeresyBuilder.ViewModels.DialogViewMoldels
             }
         }
 
-        public List<Skill> Linguistics
+        public List<SkillInListViewModel> Linguistics
         {
             get
             {
-                return Character.Skills.Linguistics;
+                var vmList = new List<SkillInListViewModel>();
+                Character.Skills.Linguistics.ForEach(x => vmList.Add(new SkillInListViewModel(this, x)));
+                return vmList;
             }
         }
 
-        public List<Skill> Trade
+        public List<SkillInListViewModel> Trade
         {
             get
             {
-                return Character.Skills.Trade;
+                var vmList = new List<SkillInListViewModel>();
+                Character.Skills.Trade.ForEach(x => vmList.Add(new SkillInListViewModel(this, x)));
+                return vmList;
             }
         }
 
         // Lore
-        public List<Skill> CommonLore
+        public List<SkillInListViewModel> CommonLore
         {
             get
             {
-                return Character.Skills.CommonLore;
+                var vmList = new List<SkillInListViewModel>();
+                Character.Skills.CommonLore.ForEach(x => vmList.Add(new SkillInListViewModel(this, x)));
+                return vmList;
             }
         }
 
 
-        public List<Skill> ScholasticLore
+        public List<SkillInListViewModel> ScholasticLore
         {
             get
             {
-                return Character.Skills.ScholasticLore;
+                var vmList = new List<SkillInListViewModel>();
+                Character.Skills.ScholasticLore.ForEach(x => vmList.Add(new SkillInListViewModel(this, x)));
+                return vmList;
             }
         }
 
-        public List<Skill> ForbiddenLore
+        public List<SkillInListViewModel> ForbiddenLore
         {
             get
             {
-                return Character.Skills.ForbiddenLore;
+                var vmList = new List<SkillInListViewModel>();
+                Character.Skills.ForbiddenLore.ForEach(x => vmList.Add(new SkillInListViewModel(this, x)));
+                return vmList;
             }
         }
 

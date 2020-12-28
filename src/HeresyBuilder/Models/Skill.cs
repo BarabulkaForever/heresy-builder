@@ -1,4 +1,5 @@
 ﻿using HeresyBuilder.Enums;
+using HeresyBuilder.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

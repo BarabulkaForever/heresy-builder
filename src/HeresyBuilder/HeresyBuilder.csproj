@@ -113,6 +113,9 @@
     <Compile Include="Controls\CharacterControls\SkillViewControl.xaml.cs">
       <DependentUpon>SkillViewControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CharacterControls\AddSkillView.xaml.cs">
+      <DependentUpon>AddSkillView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Dialogs\AddXPDialog.xaml.cs">
       <DependentUpon>AddXPDialog.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,7 @@
     <Compile Include="ViewModels\BuildViewModels\TalentViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\WoundsAndFatePointsViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\CharacterViewModel.cs" />
+    <Compile Include="ViewModels\CharacterViewModels\SkillInListViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\LoadCharacterDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SaveDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SkillsAdvancementViewModel.cs" />
@@ -212,6 +216,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\CharacterControls\SkillViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CharacterControls\AddSkillView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

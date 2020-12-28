@@ -42,38 +42,48 @@ namespace HeresyBuilder.Controls.CharacterControls
         public string SkillName
         {
             get { return (string)GetValue(SkillNameProperty); }
-            set { SetValue(SkillNameProperty, value); }
+            set 
+            { 
+                SetValue(SkillNameProperty, value);
+                SkillNameChanged(this);
+            }
         }
 
-        static void OnSkillNameChanged(DependencyObject obj,
+        static void OnSkillNameChanged(DependencyObject sender,
         DependencyPropertyChangedEventArgs args)
         {
-            if (SkillNameChanged != null)
-                SkillNameChanged(obj);
+            SkillViewControl c = sender as SkillViewControl;
+            if (c.SkillNameChanged != null)
+                c.SkillNameChanged(sender);
         }
 
         public delegate void SkillNameChangeHandler(object sender);
-        public static SkillNameChangeHandler SkillNameChanged;
+        public SkillNameChangeHandler SkillNameChanged;
 
 
         public static readonly DependencyProperty SkillLevelProperty =
             DependencyProperty.Register("SkillLevel", typeof(int), typeof(SkillViewControl), new PropertyMetadata(OnSkillLevelChanged));
 
-        static void OnSkillLevelChanged(DependencyObject obj,
+        static void OnSkillLevelChanged(DependencyObject sender,
         DependencyPropertyChangedEventArgs args)
         {
-            if (SkillLevelChanged != null)
-                SkillLevelChanged(obj);
+            SkillViewControl c = sender as SkillViewControl;
+            if (c.SkillLevelChanged != null)
+                c.SkillLevelChanged(sender);
         }
 
         public delegate void SkillLevelChangeHandler(object sender);
-        public static SkillLevelChangeHandler SkillLevelChanged;
+        public SkillLevelChangeHandler SkillLevelChanged;
 
 
         public int SkillLevel
         {
             get { return (int)GetValue(SkillLevelProperty); }
-            set { SetValue(SkillLevelProperty, value); }
+            set 
+            {
+                SetValue(SkillLevelProperty, value);
+                SkillLevelChanged(this);
+            }
         }
 
         public bool IsLvlOne

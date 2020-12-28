@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,5 +35,9 @@ namespace HeresyBuilder.Models
 
         public int XPSpended { get; set; }
 
+        public Character Clone()
+        {
+            return JsonConvert.DeserializeObject<Character>(JsonConvert.SerializeObject(this));
+        }
     }
 }

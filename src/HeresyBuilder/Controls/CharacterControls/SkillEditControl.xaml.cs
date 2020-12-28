@@ -1,5 +1,6 @@
 ﻿using HeresyBuilder.Enums;
 using HeresyBuilder.Helpers;
+using HeresyBuilder.ViewModels.CharacterViewModels;
 using HeresyBuilder.ViewModels.DialogViewMoldels;
 using System;
 using System.Collections.Generic;
@@ -26,11 +27,13 @@ namespace HeresyBuilder.Controls.CharacterControls
         public SkillEditControl()
         {
             InitializeComponent();
+
             SkillNameChanged += new SkillNameChangeHandler((object sender) =>
             {
                 this.SkillNameLabel.Content = this.SkillName;
                 LoadSkillPrise();
             });
+
             SkillLevelChanged += new SkillLevelChangeHandler((object sender) =>
             {
                 this.IsLvlOneCheckBox.IsChecked = this.IsLvlOne;
@@ -46,6 +49,7 @@ namespace HeresyBuilder.Controls.CharacterControls
                 {
                     this.IsLvlFourCheckBox.IsEnabled = false;
                 }
+
                 if (this.IsLvlTwo && !this.IsLvlThree)
                 {
                     this.IsLvlThreeCheckBox.IsEnabled = true;
@@ -54,6 +58,7 @@ namespace HeresyBuilder.Controls.CharacterControls
                 {
                     this.IsLvlThreeCheckBox.IsEnabled = false;
                 }
+
                 if (this.IsLvlOne && !this.IsLvlTwo)
                 {
                     this.IsLvlTwoCheckBox.IsEnabled = true;
@@ -62,6 +67,7 @@ namespace HeresyBuilder.Controls.CharacterControls
                 {
                     this.IsLvlTwoCheckBox.IsEnabled = false;
                 } 
+
                 if (!this.IsLvlOne) 
                 {
                     this.IsLvlOneCheckBox.IsEnabled = true;
@@ -70,6 +76,7 @@ namespace HeresyBuilder.Controls.CharacterControls
                 {
                     this.IsLvlOneCheckBox.IsEnabled = false;
                 }
+
                 LoadSkillPrise();
             });
             SpecialSkillsChanged += new SpecialSkillsChangeHandler((object sender) => {
@@ -83,58 +90,77 @@ namespace HeresyBuilder.Controls.CharacterControls
         public string SkillName
         {
             get { return (string)GetValue(SkillNameProperty); }
-            set { SetValue(SkillNameProperty, value); }
+            set 
+            {
+                SetValue(SkillNameProperty, value);
+                SkillNameChanged(this);
+            }
         }
 
-        static void OnSkillNameChanged(DependencyObject obj,
+        static void OnSkillNameChanged(DependencyObject sender,
         DependencyPropertyChangedEventArgs args)
         {
-            if (SkillNameChanged != null)
-                SkillNameChanged(obj);
+            SkillEditControl c = sender as SkillEditControl;
+            if (c.SkillNameChanged != null)
+                c.SkillNameChanged(sender);
         }
 
         public delegate void SkillNameChangeHandler(object sender);
-        public static SkillNameChangeHandler SkillNameChanged;
+        public SkillNameChangeHandler SkillNameChanged;
 
 
         public static readonly DependencyProperty SkillLevelProperty =
             DependencyProperty.Register("SkillLevel", typeof(int), typeof(SkillEditControl), new PropertyMetadata(OnSkillLevelChanged));
 
-        static void OnSkillLevelChanged(DependencyObject obj,
+        static void OnSkillLevelChanged(DependencyObject sender,
         DependencyPropertyChangedEventArgs args)
         {
-            if (SkillLevelChanged != null)
-                SkillLevelChanged(obj);
+            SkillEditControl c = sender as SkillEditControl;
+            if (c.SkillLevelChanged != null)
+                c.SkillLevelChanged(sender);
         }
 
         public delegate void SkillLevelChangeHandler(object sender);
-        public static SkillLevelChangeHandler SkillLevelChanged;
+        public SkillLevelChangeHandler SkillLevelChanged;
 
 
         public int SkillLevel
         {
             get { return (int)GetValue(SkillLevelProperty); }
-            set { SetValue(SkillLevelProperty, value); }
+            set 
+            {
+                SetValue(SkillLevelProperty, value);
+                SkillLevelChanged(this);
+                if (DataContext is SkillInListViewModel)
+                {
+                    (DataContext as SkillInListViewModel).Level = (SkillLevel) value;
+                }
+            }
         }
 
         public static readonly DependencyProperty SpecialSkillsProperty =
             DependencyProperty.Register("SpecialSkills", typeof(string), typeof(SkillEditControl), new PropertyMetadata(OnSpecialSkillsChanged));
 
-        static void OnSpecialSkillsChanged(DependencyObject obj,
+        static void OnSpecialSkillsChanged(DependencyObject sender,
         DependencyPropertyChangedEventArgs args)
         {
-            if (SpecialSkillsChanged != null)
-                SpecialSkillsChanged(obj);
+            SkillEditControl c = sender as SkillEditControl;
+            if (c.SpecialSkillsChanged != null)
+                c.SpecialSkillsChanged(c);
         }
 
         public delegate void SpecialSkillsChangeHandler(object sender);
-        public static SpecialSkillsChangeHandler SpecialSkillsChanged;
+        public SpecialSkillsChangeHandler SpecialSkillsChanged;
 
 
         public string SpecialSkills
         {
             get { return (string)GetValue(SpecialSkillsProperty); }
-            set { SetValue(SpecialSkillsProperty, value); }
+            set 
+            { 
+                SetValue(SpecialSkillsProperty, value);
+                SpecialSkillsChanged(this);
+            }
         }
 
         public bool IsLvlOne
@@ -205,7 +231,15 @@ namespace HeresyBuilder.Controls.CharacterControls
         {
             if ((sender as CheckBox).IsEnabled)
             {
-                var vm = DataContext as SkillsAdvancementViewModel;
+                SkillsAdvancementViewModel vm;
+                if (DataContext is SkillsAdvancementViewModel)
+                {
+                    vm = DataContext as SkillsAdvancementViewModel;
+                }
+                else
+                {
+                    vm = (DataContext as SkillInListViewModel).Parrent;
+                }
                 var price = int.Parse(SkillPrice.Content as string);
                 if (vm.CanSpendXP(price))
                 {

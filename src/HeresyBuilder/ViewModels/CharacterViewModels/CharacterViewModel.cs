@@ -466,7 +466,18 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
         public void AddXP(int newXP)
         {
             Character.XPToSpend += newXP;
+
             SetPropertyChanged(nameof(XPToSpend));
+            SetPropertyChanged(nameof(TotalXP));
+        }
+
+        public void SpendXP(int spendXP)
+        {
+            Character.XPToSpend -= spendXP;
+            Character.XPSpended += spendXP;
+
+            SetPropertyChanged(nameof(XPToSpend));
+            SetPropertyChanged(nameof(XPSpended));
             SetPropertyChanged(nameof(TotalXP));
         }
     }

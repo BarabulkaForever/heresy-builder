@@ -1,5 +1,6 @@
 ﻿using HeresyBuilder.Controls.CharacterControls;
 using HeresyBuilder.Controls.Dialogs;
+using HeresyBuilder.Singleton;
 using HeresyBuilder.ViewModels.CharacterViewModels;
 using HeresyBuilder.ViewModels.DialogViewMoldels;
 using MaterialDesignThemes.Wpf;
@@ -30,60 +31,8 @@ namespace HeresyBuilder.Controls
         {
             InitializeComponent();
             DataContext = viewModel = new CharacterViewModel();
-
-            foreach(var skill in viewModel.Linguistics)
-            {
-                LinguisticsStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int) skill.Level,
-                });
-            }
-
-            foreach (var skill in viewModel.Trade)
-            {
-                TradeStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            foreach (var skill in viewModel.CommonLore)
-            {
-                CommonLoreStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            foreach (var skill in viewModel.ScholasticLore)
-            {
-                ScholasticLoreStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            foreach (var skill in viewModel.ForbiddenLore)
-            {
-                ForbiddenLoreStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            foreach (var talant in viewModel.Talents)
-            {
-                TalentsStackPanel.Children.Add(new Label
-                {
-                    FontSize = 14,
-                    Content = talant,
-                });
-            }
+            LoadSkills();
+            LoadTallents();
         }
 
         private void ShowAdvansment(object sender, RoutedEventArgs e)
@@ -98,6 +47,14 @@ namespace HeresyBuilder.Controls
                     if (resp)
                     {
                         // TODO save skills
+                        var newCharacterData = (view.DataContext as SkillsAdvancementViewModel);
+
+                        CurrentCharacterData.Instance.Character.Skills = newCharacterData.Character.Skills;
+
+                        DataContext = null;
+                        DataContext = viewModel;
+                        viewModel.SpendXP(newCharacterData.SpendedXP);
+                        LoadSkills();
                     }
                 }
             }));
@@ -120,6 +77,73 @@ namespace HeresyBuilder.Controls
                     }
                 }
             }));
+        }
+
+        private void LoadSkills()
+        {
+            LinguisticsStackPanel.Children.Clear();
+            foreach (var skill in viewModel.Linguistics)
+            {
+                LinguisticsStackPanel.Children.Add(new SkillViewControl
+                {
+                    SkillName = skill.Name,
+                    SkillLevel = (int)skill.Level,
+                });
+            }
+
+            TradeStackPanel.Children.Clear();
+            foreach (var skill in viewModel.Trade)
+            {
+                TradeStackPanel.Children.Add(new SkillViewControl
+                {
+                    SkillName = skill.Name,
+                    SkillLevel = (int)skill.Level,
+                });
+            }
+
+            CommonLoreStackPanel.Children.Clear();
+            foreach (var skill in viewModel.CommonLore)
+            {
+                CommonLoreStackPanel.Children.Add(new SkillViewControl
+                {
+                    SkillName = skill.Name,
+                    SkillLevel = (int)skill.Level,
+                });
+            }
+
+            ScholasticLoreStackPanel.Children.Clear();
+            foreach (var skill in viewModel.ScholasticLore)
+            {
+                ScholasticLoreStackPanel.Children.Add(new SkillViewControl
+                {
+                    SkillName = skill.Name,
+                    SkillLevel = (int)skill.Level,
+                });
+            }
+
+            ForbiddenLoreStackPanel.Children.Clear();
+            foreach (var skill in viewModel.ForbiddenLore)
+            {
+                ForbiddenLoreStackPanel.Children.Add(new SkillViewControl
+                {
+                    SkillName = skill.Name,
+                    SkillLevel = (int)skill.Level,
+                });
+            }
+
+        }
+
+        private void LoadTallents()
+        {
+            TalentsStackPanel.Children.Clear();
+            foreach (var talant in viewModel.Talents)
+            {
+                TalentsStackPanel.Children.Add(new Label
+                {
+                    FontSize = 14,
+                    Content = talant,
+                });
+            }
         }
     }
 }

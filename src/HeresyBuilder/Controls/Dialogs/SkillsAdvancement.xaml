@@ -33,61 +33,101 @@
                     <Label HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Content="SKILLS" />
                     <StackPanel Margin="10" Orientation="Vertical" Grid.Row="1" Grid.Column="0">
                         <charactercontrols:SkillEditControl SkillName="Acrobatics (Ag)" SpecialSkills="no" SkillLevel="{Binding Acrobatics, Mode=TwoWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Athletics (S)" SpecialSkills="no" SkillLevel="{Binding Athletics, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Awareness (Per)" SpecialSkills="no" SkillLevel="{Binding Awareness, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Charm (Fel)" SpecialSkills="no" SkillLevel="{Binding Charm, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Command (Fel)" SpecialSkills="no" SkillLevel="{Binding Command, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Commerce (Int)" SpecialSkills="no" SkillLevel="{Binding Commerce, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Deceive (Fel)" SpecialSkills="no" SkillLevel="{Binding Deceive, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Dodge (Ag)" SpecialSkills="no" SkillLevel="{Binding Dodge, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Inquiry (Fel)" SpecialSkills="no" SkillLevel="{Binding Inquiry, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Interrogation (WP)" SpecialSkills="no" SkillLevel="{Binding Interrogation, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Intimidate (S)" SpecialSkills="no" SkillLevel="{Binding Intimidate, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Logic (Int)" SpecialSkills="no" SkillLevel="{Binding Logic, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Medicae (Int)" SpecialSkills="no" SkillLevel="{Binding Medicae, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Parry (WS)" SpecialSkills="no" SkillLevel="{Binding Parry, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Psyniscience (Per)" SpecialSkills="no" SkillLevel="{Binding Psyniscience, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Scrutiny (Per)" SpecialSkills="no" SkillLevel="{Binding Scrutiny, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Security (Int)" SpecialSkills="no" SkillLevel="{Binding Security, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Sleight of Hand (Ag)" SpecialSkills="no" SkillLevel="{Binding SleightOfHand, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Stealth (Ag)" SpecialSkills="no" SkillLevel="{Binding Stealth, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Survival (Per)" SpecialSkills="no" SkillLevel="{Binding Survival, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Tech-Use (Int)" SpecialSkills="no" SkillLevel="{Binding TechUse, Mode=OneWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Athletics (S)" SpecialSkills="no" SkillLevel="{Binding Athletics, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Awareness (Per)" SpecialSkills="no" SkillLevel="{Binding Awareness, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Charm (Fel)" SpecialSkills="no" SkillLevel="{Binding Charm, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Command (Fel)" SpecialSkills="no" SkillLevel="{Binding Command, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Commerce (Int)" SpecialSkills="no" SkillLevel="{Binding Commerce, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Deceive (Fel)" SpecialSkills="no" SkillLevel="{Binding Deceive, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Dodge (Ag)" SpecialSkills="no" SkillLevel="{Binding Dodge, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Inquiry (Fel)" SpecialSkills="no" SkillLevel="{Binding Inquiry, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Interrogation (WP)" SpecialSkills="no" SkillLevel="{Binding Interrogation, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Intimidate (S)" SpecialSkills="no" SkillLevel="{Binding Intimidate, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Logic (Int)" SpecialSkills="no" SkillLevel="{Binding Logic, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Medicae (Int)" SpecialSkills="no" SkillLevel="{Binding Medicae, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Parry (WS)" SpecialSkills="no" SkillLevel="{Binding Parry, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Psyniscience (Per)" SpecialSkills="no" SkillLevel="{Binding Psyniscience, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Scrutiny (Per)" SpecialSkills="no" SkillLevel="{Binding Scrutiny, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Security (Int)" SpecialSkills="no" SkillLevel="{Binding Security, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Sleight of Hand (Ag)" SpecialSkills="no" SkillLevel="{Binding SleightOfHand, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Stealth (Ag)" SpecialSkills="no" SkillLevel="{Binding Stealth, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Survival (Per)" SpecialSkills="no" SkillLevel="{Binding Survival, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Tech-Use (Int)" SpecialSkills="no" SkillLevel="{Binding TechUse, Mode=TwoWay}"/>
                     </StackPanel>
                     <StackPanel Margin="10" Orientation="Vertical" Grid.Row="1" Grid.Column="1">
                         <Label Content="Navigate" FontWeight="Bold" FontSize="16"/>
-                        <charactercontrols:SkillEditControl SkillName="Surface" SpecialSkills="Navigate" SkillLevel="{Binding NavigateSurface, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Stellar" SpecialSkills="Navigate" SkillLevel="{Binding NavigateStellar, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Warp" SpecialSkills="Navigate" SkillLevel="{Binding NavigateWarp, Mode=OneWay}"/>
-                        <Separator />
+                        <charactercontrols:SkillEditControl SkillName="Surface" SpecialSkills="Navigate" SkillLevel="{Binding NavigateSurface, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Stellar" SpecialSkills="Navigate" SkillLevel="{Binding NavigateStellar, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Warp" SpecialSkills="Navigate" SkillLevel="{Binding NavigateWarp, Mode=TwoWay}"/>
+                        
+                        <Separator  Margin="0 10" />
                         <Label Content="Operate" FontWeight="Bold" FontSize="16"/>
-                        <charactercontrols:SkillEditControl SkillName="Aeronautica" SpecialSkills="Operate" SkillLevel="{Binding OperateAeronautica, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Surface" SpecialSkills="Operate" SkillLevel="{Binding OperateSurface, Mode=OneWay}"/>
-                        <charactercontrols:SkillEditControl SkillName="Voidship" SpecialSkills="Operate" SkillLevel="{Binding OperateVoidship, Mode=OneWay}"/>
-                        <Separator />
-                        <Label Content="Linguistics" FontWeight="Bold" FontSize="16"/>
+                        <charactercontrols:SkillEditControl SkillName="Aeronautica" SpecialSkills="Operate" SkillLevel="{Binding OperateAeronautica, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Surface" SpecialSkills="Operate" SkillLevel="{Binding OperateSurface, Mode=TwoWay}"/>
+                        <charactercontrols:SkillEditControl SkillName="Voidship" SpecialSkills="Operate" SkillLevel="{Binding OperateVoidship, Mode=TwoWay}"/>
+                        
+                        <Separator Margin="0 10" />
+                        <Grid Margin="0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="Linguistics" FontWeight="Bold" FontSize="16"/>
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Grid.Column="1" Content="+" Foreground="White" Click="AddLinguistics" Height="26" Width="26" HorizontalAlignment="Right"/>
+                        </Grid>
                         <StackPanel x:Name="LinguisticsStackPanel" Margin="0" Orientation="Vertical"/>
-                        <Separator />
-                        <Label Content="Trade" FontWeight="Bold" FontSize="16"/>
+                        
+                        <Separator Margin="0 10" />
+                        <Grid Margin="0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Trade" FontWeight="Bold" FontSize="16"/>
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Grid.Column="1" Content="+" Foreground="White" Click="AddTrade" Height="26" Width="26" HorizontalAlignment="Right"/>
+                        </Grid>
                         <StackPanel x:Name="TradeStackPanel" Margin="0" Orientation="Vertical"/>
-                        <Separator />
+
+                        <Separator Margin="0 10" />
                         <Label HorizontalAlignment="Center" Content="Lore" FontWeight="Bold" FontSize="24"/>
-                        <Separator />
-                        <Label Content="Common" FontWeight="Bold" FontSize="16"/>
+
+                        <Separator Margin="0 10" />
+                        <Grid Margin="0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Common" FontWeight="Bold" FontSize="16"/>
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Grid.Column="1" Content="+" Foreground="White" Click="AddCommonLore" Height="26" Width="26" HorizontalAlignment="Right"/>
+                        </Grid>
                         <StackPanel x:Name="CommonLoreStackPanel" Margin="0" Orientation="Vertical"/>
-                        <Separator />
-                        <Label Content="Scholastic" FontWeight="Bold" FontSize="16"/>
+                        <Separator Margin="0 10" />
+                        <Grid Margin="0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Scholastic" FontWeight="Bold" FontSize="16"/>
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Grid.Column="1" Content="+" Foreground="White" Click="AddScholasticLore" Height="26" Width="26" HorizontalAlignment="Right"/>
+                        </Grid>
                         <StackPanel x:Name="ScholasticLoreStackPanel" Margin="0" Orientation="Vertical"/>
-                        <Separator />
-                        <Label Content="Forbidden" FontWeight="Bold" FontSize="16"/>
+                        <Separator Margin="0 10" />
+                        <Grid Margin="0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Forbidden" FontWeight="Bold" FontSize="16"/>
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Grid.Column="1" Content="+" Foreground="White" Click="AddForbiddenLore" Height="26" Width="26" HorizontalAlignment="Right"/>
+                        </Grid>
                         <StackPanel x:Name="ForbiddenLoreStackPanel" Margin="0" Orientation="Vertical"/>
-                        <Separator />
+                        <Separator Margin="0 10" />
                     </StackPanel>
                 </Grid>
             </ScrollViewer>
         </StackPanel>
-        
-        <TextBlock Grid.Row="2" Margin="8" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Text="{Binding XPToSpendText}"/>
+
+        <TextBlock Grid.Row="2" Margin="20 25 20 0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Text="{Binding XPToSpendText}"/>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal">
             <Button IsEnabled="{Binding CanAccept}" IsDefault="True" Style="{DynamicResource MaterialDesignFlatButton}"

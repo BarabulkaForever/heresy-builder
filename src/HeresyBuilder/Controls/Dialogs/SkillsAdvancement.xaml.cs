@@ -1,5 +1,6 @@
 ﻿using HeresyBuilder.Controls.CharacterControls;
 using HeresyBuilder.ViewModels.DialogViewMoldels;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,55 +29,209 @@ namespace HeresyBuilder.Controls.Dialogs
             InitializeComponent();
 
             DataContext = viewModel = new SkillsAdvancementViewModel();
+            LoadSkills();
+        }
 
+        public void LoadSkills()
+        {
+            LoadLinguistics();
+
+            LoadTrade();
+
+            LoadCommonLore();
+
+            LoadScholasticLore();
+
+            LoadForbiddenLore();
+        }
+
+        private void AddLinguistics(object sender, RoutedEventArgs e)
+        {
+            var view = new AddSkillView();
+            view.Done.Click += (s, arg) =>
+            {
+                viewModel.Character.Skills.Linguistics.Add(new Models.Skill
+                {
+                    Level = Enums.SkillLevel.UnKnown,
+                    Name = view.SkillName.Text
+                });
+                LoadLinguistics();
+                LinguisticsStackPanel.Children.Remove(view);
+            };
+
+            view.Clear.Click += (s, arg) =>
+            {
+                LinguisticsStackPanel.Children.Remove(view);
+            };
+
+            LinguisticsStackPanel.Children.Add(view);
+        }
+
+        public void LoadLinguistics()
+        {
+            LinguisticsStackPanel.Children.Clear();
             foreach (var skill in viewModel.Linguistics)
             {
-                LinguisticsStackPanel.Children.Add(new SkillEditControl
+                var view = new SkillEditControl
                 {
                     SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                    SpecialSkills = "Linguistics"
-                });
+                    SpecialSkills = "Linguistics",
+                    SkillLevel = (int)skill.Level
+                };
+                LinguisticsStackPanel.Children.Add(view);
+                view.DataContext = skill;
             }
+        }
 
+        private void AddTrade(object sender, RoutedEventArgs e)
+        {
+            var view = new AddSkillView();
+            view.Done.Click += (s, arg) =>
+            {
+                viewModel.Character.Skills.Trade.Add(new Models.Skill
+                {
+                    Level = Enums.SkillLevel.UnKnown,
+                    Name = view.SkillName.Text
+                });
+                LoadTrade();
+                TradeStackPanel.Children.Remove(view);
+            };
+
+            view.Clear.Click += (s, arg) =>
+            {
+                TradeStackPanel.Children.Remove(view);
+            };
+
+            TradeStackPanel.Children.Add(view);
+        }
+
+        public void LoadTrade()
+        {
+            TradeStackPanel.Children.Clear();
             foreach (var skill in viewModel.Trade)
             {
-                TradeStackPanel.Children.Add(new SkillEditControl
+                var view = new SkillEditControl
                 {
                     SkillName = skill.Name,
                     SkillLevel = (int)skill.Level,
                     SpecialSkills = "Trade"
-                });
+                };
+                TradeStackPanel.Children.Add(view);
+                view.DataContext = skill;
             }
+        }
 
+        private void AddCommonLore(object sender, RoutedEventArgs e)
+        {
+            var view = new AddSkillView();
+            view.Done.Click += (s, arg) =>
+            {
+                viewModel.Character.Skills.CommonLore.Add(new Models.Skill
+                {
+                    Level = Enums.SkillLevel.UnKnown,
+                    Name = view.SkillName.Text
+                });
+                LoadTrade();
+                CommonLoreStackPanel.Children.Remove(view);
+            };
+
+            view.Clear.Click += (s, arg) =>
+            {
+                CommonLoreStackPanel.Children.Remove(view);
+            };
+
+            CommonLoreStackPanel.Children.Add(view);
+        }
+
+        public void LoadCommonLore()
+        {
+            CommonLoreStackPanel.Children.Clear();
             foreach (var skill in viewModel.CommonLore)
             {
-                CommonLoreStackPanel.Children.Add(new SkillEditControl
+                var view = new SkillEditControl
                 {
                     SkillName = skill.Name,
                     SkillLevel = (int)skill.Level,
                     SpecialSkills = "Common Lore"
-                });
+                };
+                CommonLoreStackPanel.Children.Add(view);
+                view.DataContext = skill;
             }
+        }
 
+        private void AddScholasticLore(object sender, RoutedEventArgs e)
+        {
+            var view = new AddSkillView();
+            view.Done.Click += (s, arg) =>
+            {
+                viewModel.Character.Skills.ScholasticLore.Add(new Models.Skill
+                {
+                    Level = Enums.SkillLevel.UnKnown,
+                    Name = view.SkillName.Text
+                });
+                LoadTrade();
+                ScholasticLoreStackPanel.Children.Remove(view);
+            };
+
+            view.Clear.Click += (s, arg) =>
+            {
+                ScholasticLoreStackPanel.Children.Remove(view);
+            };
+
+            ScholasticLoreStackPanel.Children.Add(view);
+        }
+
+        public void LoadScholasticLore()
+        {
+            ScholasticLoreStackPanel.Children.Clear();
             foreach (var skill in viewModel.ScholasticLore)
             {
-                ScholasticLoreStackPanel.Children.Add(new SkillEditControl
+                var view = new SkillEditControl
                 {
                     SkillName = skill.Name,
                     SkillLevel = (int)skill.Level,
                     SpecialSkills = "Scholastic Lore"
-                });
+                };
+                ScholasticLoreStackPanel.Children.Add(view);
+                view.DataContext = skill;
             }
+        }
 
+        private void AddForbiddenLore(object sender, RoutedEventArgs e)
+        {
+            var view = new AddSkillView();
+            view.Done.Click += (s, arg) =>
+            {
+                viewModel.Character.Skills.ForbiddenLore.Add(new Models.Skill
+                {
+                    Level = Enums.SkillLevel.UnKnown,
+                    Name = view.SkillName.Text
+                });
+                LoadTrade();
+                ForbiddenLoreStackPanel.Children.Remove(view);
+            };
+
+            view.Clear.Click += (s, arg) =>
+            {
+                ForbiddenLoreStackPanel.Children.Remove(view);
+            };
+
+            ForbiddenLoreStackPanel.Children.Add(view);
+        }
+
+        public void LoadForbiddenLore()
+        {
+            ForbiddenLoreStackPanel.Children.Clear();
             foreach (var skill in viewModel.ForbiddenLore)
             {
-                ForbiddenLoreStackPanel.Children.Add(new SkillEditControl
+                var view = new SkillEditControl
                 {
                     SkillName = skill.Name,
                     SkillLevel = (int)skill.Level,
                     SpecialSkills = "Forbidden Lore"
-                });
+                };
+                ForbiddenLoreStackPanel.Children.Add(view);
+                view.DataContext = skill;
             }
         }
     }
