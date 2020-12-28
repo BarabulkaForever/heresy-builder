@@ -1,0 +1,220 @@
+[
+  {
+    "name": "Acrobatics",
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "General",
+    "Descriptors" : "Movement",
+    "AlternateCharacteristics" : "Strength"
+  },
+  {
+    "name": "Athletics",
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "General",
+    "Descriptors" : "Movement",
+    "AlternateCharacteristics" : "Toughness"
+  },
+  {
+    "name": "Awareness",
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Fieldcraft",
+    "Descriptors" : "",
+    "AlternateCharacteristics" : "Fellowship, Intelligence"
+  },
+  {
+    "name": "Charm",
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Social",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Influence"
+  },
+  {
+    "name": "Command",
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Leadership",
+    "Descriptors" : "Interaction",
+    "AlternateCharacteristics" : "Intelligence, Strength, Willpower"
+  },
+  {
+    "name": "Commerce",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Knowledge",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Fellowship"
+  },
+  {
+    "name": "Common Lore",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "General",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Fellowship",
+    "isSpecialist" : true
+  },
+  {
+    "name": "Deceive",
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Social",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Intelligence, Tech-Use"
+  },
+  {
+    "name": "Dodge",
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Defence",
+    "Descriptors" : "Combat, Movement",
+    "AlternateCharacteristics" : ""
+  },
+  {
+    "name": "Forbidden Lore",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Knowledge",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Fellowship",
+    "isSpecialist" : true
+  },
+  {
+    "name": "Inquiry",
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Social",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Intelligence, Perception"
+  },
+  {
+    "name": "Interrogation",
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Social",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Fellowship"
+  },
+  {
+    "name": "Intimidate",
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "Social",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Willpower"
+  },
+  {
+    "name": "Linguistics",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "General",
+    "Descriptors" : "",
+    "AlternateCharacteristics" : "Fellowship",
+    "isSpecialist" : true
+  },
+  {
+    "name": "Logic",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Knowledge",
+    "Descriptors" : "Investigation",
+    "AlternateCharacteristics" : "Agility"
+  },
+  {
+    "name": "Medicae",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Fieldcraft",
+    "Descriptors" : "Crafting",
+    "AlternateCharacteristics" : "Agility, Perception"
+  },
+  {
+    "name": "Navigate",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Fieldcraft",
+    "Descriptors" : "",
+    "AlternateCharacteristics" : "Perception",
+    "isSpecialist" : true
+  },
+  {
+    "name": "Operate",
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Fieldcraft",
+    "Descriptors" : "",
+    "AlternateCharacteristics" : "Intelligence",
+    "isSpecialist" : true
+  },
+  {
+    "name": "Parry",
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Defence",
+    "Descriptors" : "Combat",
+    "AlternateCharacteristics" : ""
+  },
+  {
+    "name": "Psyniscience",
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Psyker",
+    "Descriptors" : "",
+    "AlternateCharacteristics" : "Willpower"
+  },
+  {
+    "name": "Scholastic Lore",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Knowledge",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Fellowship",
+    "isSpecialist" : true
+  },
+  {
+    "name": "Scrutiny",
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "General",
+    "Descriptors" : "Interaction, Investigation",
+    "AlternateCharacteristics" : "Fellowship"
+  },
+  {
+    "name": "Security",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Tech",
+    "Descriptors" : "",
+    "AlternateCharacteristics" : "Agility"
+  },
+  {
+    "name": "Sleight of Hand",
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Knowledge",
+    "Descriptors" : "",
+    "AlternateCharacteristics" : "Intelligence"
+  },
+  {
+    "name": "Stealth",
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Fieldcraft",
+    "Descriptors" : "Movement",
+    "AlternateCharacteristics" : "Perception"
+  },
+  {
+    "name": "Survival",
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Fieldcraft",
+    "Descriptors" : "Crafting, Movement",
+    "AlternateCharacteristics" : "Agility, Intelligence"
+  },
+  {
+    "name": "Tech-Use",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Tech",
+    "Descriptors" : "Crafting, Investigation",
+    "AlternateCharacteristics" : "Agility"
+  },
+  {
+    "name": "Trade",
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "General",
+    "Descriptors" : "Crafting, Interaction",
+    "AlternateCharacteristics" : "Agility, Fellowship",
+    "isSpecialist" : true
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

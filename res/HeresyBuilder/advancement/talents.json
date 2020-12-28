@@ -1,0 +1,1527 @@
+[
+  {
+    "name": "Ambidextrous",
+    "prerequisites" : 
+    {
+      "Characteristic": [ {"name" : "Agility", "value" : 30} ],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Ballistic Skill",
+    "Benefit" : "Reduce penalties for using two weapons"
+  },
+  {
+    "name": "Blind Fighting",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Perception", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Fieldcraft",
+    "Benefit" : "Eliminates melee combat penalties for obscured vision"
+  },
+  {
+    "name": "Catfall",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Fieldcraft",
+    "Benefit" : " Reduce falling damage"
+  },
+  {
+    "name": "Clues from the Crowds",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Fellowship", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "General",
+    "Aptitude2" : "Social",
+    "Benefit" : "Can re-roll a test made to gather information from a group."
+  },
+  {
+    "name": "Die Hard",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 40 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Test Willpower to avoid Fatigue from Blood Loss. "
+  },
+  {
+    "name": "Disarm",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Force opponent to drop weapon. "
+  },
+  {
+    "name": "Double Team",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "General",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Gain additional +10 for outnumbering opponent"
+  },
+  {
+    "name": "Enemy",
+    "prerequisites" : 
+    {
+      "Characteristic": [{}],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "General",
+    "Aptitude2" : "Social",
+    "Benefit" : "An organization or group particularly despises the character."
+  },
+  {
+    "name": "Ferric Summons",
+    "prerequisites" : 
+    {
+      "Characteristic": [{}],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [ "Mechanicus Implants" ],
+      "Talents":[],
+      "Cybernetics": [ "Ferric Lure Implants" ],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Tech",
+    "Benefit" : "Can summon larger metallic objects."
+  },
+  {
+    "name": "Frenzy",
+    "prerequisites" : 
+    {
+      "Characteristic": [{}],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Enter psychotic rage to gain combat bonuses."
+  },
+  {
+    "name": "Iron Jaw",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Toughness", "value" : 40 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Toughness",
+    "Aptitude2" : "Defence",
+    "Benefit" : " Test Toughness to overcome Stunning. "
+  },
+  {
+    "name": "Jaded",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 40 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Defence",
+    "Benefit" : " Ignore mundane horrors. "
+  },
+  {
+    "name": "Keen Intuition",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 35 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Social",
+    "Benefit" : "Can retry Awareness test once with –10 modifier "
+  },
+  {
+    "name": "Leap Up",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "General",
+    "Benefit" : "Stand as a Free Action."
+  },
+  {
+    "name": "Nowhere to Hide",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Perception", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Can add DoS from the attack to reduce armour value of cover."
+  },
+  {
+    "name": "Peer",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Fellowship", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Social",
+    "Benefit" : "Character has good reputation amongst chosen group."
+  },
+  {
+    "name": "Quick Draw",
+    "prerequisites" : 
+    {
+      "Characteristic": [{  }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Draw weapon as Free Action."
+  },
+  {
+    "name": "Rapid Reload",
+    "prerequisites" : 
+    {
+      "Characteristic": [{  }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Fieldcraft",
+    "Benefit" : "Reduce reload time."
+  },
+  {
+    "name": "Resistance",
+    "prerequisites" : 
+    {
+      "Characteristic": [{  }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Toughness",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Gain +10 bonus to particular resistance test."
+  },
+  {
+    "name": "Sound Constitution",
+    "prerequisites" : 
+    {
+      "Characteristic": [{  }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Toughness",
+    "Aptitude2" : "General",
+    "Benefit" : "Gain an additional wound."
+  },
+  {
+    "name": "Takedown",
+    "prerequisites" : 
+    {
+      "Characteristic": [{  }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Make special attack to stun opponent."
+  },
+  {
+    "name": "Technical Knock",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Tech",
+    "Benefit" : "Un-jam gun as Half Action."
+  },
+  {
+    "name": "Warp Sense",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Perception", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [ { "name": "Psyniscience", "level": 1 } ],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 1
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Psyker",
+    "Benefit" : "Allows Psyniscience test as Free Action."
+  },
+  {
+    "name": "Weapon-Tech",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 40 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [ { "name": " Tech Use", "level": 2 } ],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Tech",
+    "Benefit" : "Increase potency of advanced weaponry."
+  },
+  {
+    "name": "Weapon Training",
+    "prerequisites" : 
+    {
+      "Characteristic": [{  }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 1,
+    "Aptitude1" : "General",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Use Weapon Group without penalty."
+  },
+  {
+    "name": "Armour-Monger",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 35 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [ { "name": "Tech-Use", "level": 1 }, { "name": "Trade (Armourer)", "level": 1 } ],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Tech",
+    "Benefit" : " Increase the efficacy of physical armour."
+  },
+  {
+    "name": "Battle Rage",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 35 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Frenzy"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "Defence",
+    "Benefit" : " Parry while frenzied."
+  },
+  {
+    "name": "Bulging Biceps",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Strength", "value" : 45 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Remove bracing requirement from Heavy weapons."
+  },
+  {
+    "name": "Combat Master",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 30 }],
+      "OneOffCharacteristics": [[]]  ,
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Defence",
+    "Benefit" : " Opponents get no bonus for outnumbering the character."
+  },
+  {
+    "name": "Constant Vigilance",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [
+        [
+          { "name" : "Intelligence", "value" : 35 },
+          { "name" : "Perception", "value" : 35 }
+        ]
+      ],
+      "Skills": [{ "name": "Awareness", "level": 2 }],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Can use Per or Int instead of Ag for Initiative rolls, and rolls two dice (picking higher) for the result."
+  },
+  {
+    "name": "Contact Network",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Cover-Up"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Leadership",
+    "Benefit" : "Use Fellowship instead of Influence for Requisition tests."
+  },
+  {
+    "name": "Coordinated Interrogation",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[{ "name" : "Strength", "value" : 40 }, { "name" : "Willpower", "value" : 40 }]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Clues from the Crowds"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Social",
+    "Benefit" : "+10 bonus to all Interrogate tests, additional +5 for others who also have Coordinated Interrogation."
+  },
+  {
+    "name": "Counter Attack",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Defence",
+    "Benefit" : " May attack after successful Parry."
+  },
+  {
+    "name": "Cover-Up",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Knowledge",
+    "Benefit" : "Can reduce Influence by 1 to gain 1d5 Subtlety."
+  },
+  {
+    "name": "Deny the Witch",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Defence",
+    "Benefit" : " Can use Willpower to Evade against psychic attacks."
+  },
+  {
+    "name": "Devastating Assault",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Offence",
+    "Benefit" : "A successful All Out Attack grants a second attack."
+  },
+  {
+    "name": "Double Tap",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Two-Weapon Wielder"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Finesse",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Successful first attack grants bonus to second attack."
+  },
+  {
+    "name": "Exotic Weapon Training",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Gain proficiency with one exotic weapon type."
+  },
+  {
+    "name": "Face in a Crowd",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Fellowship", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Clues from the Crowds"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Social",
+    "Benefit" : "Can use Fellowship instead of Agility when Shadowing."
+  },
+  {
+    "name": "Hard Target",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Defence",
+    "Benefit" : "–20 to hit character when he Charges or Runs."
+  },
+  {
+    "name": "Hardy",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Toughness", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Toughness",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Character always heals as if Lightly Damaged."
+  },
+  {
+    "name": "Hatred",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Social",
+    "Benefit" : "Gain +10 bonus to attack hated creatures."
+  },
+  {
+    "name": "Hip Shooting",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 40 }, { "name" : "Agility", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Characters may shoot when moving."
+  },
+  {
+    "name": "Independent Targeting",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Fire at multiple targets more than 10 metres apart."
+  },
+  {
+    "name": "Inescapable Attack(Melee)",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Perception", "value" : 35 }, { "name" : "Weapon Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Attacker imposes penalty on DoS from Evasion test equal to DoS his initial attack."
+  },
+  {
+    "name": "Inescapable Attack(Ranged)",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Perception", "value" : 35 },{ "name" : "Ballistic Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Attacker imposes penalty on DoS from Evasion test equal to DoS his initial attack."
+  },
+  {
+    "name": "Killing Strike",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Spend Fate point to make melee attacks unavoidable."
+  },
+  {
+    "name": "Luminen Shock",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": ["Mechanicus Implants"],
+      "Talents":[],
+      "Cybernetics": ["Luminen Capacitor"],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Tech",
+    "Benefit" : "Character can discharge energy in melee attack."
+  },
+  {
+    "name": "Maglev Transcendence",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": ["Mechanicus Implants"],
+      "Talents":[],
+      "Cybernetics": ["Maglev Coils"],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Tech",
+    "Benefit" : "Character can hover for longer periods of time."
+  },
+  {
+    "name": "Marksman",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "No penalties for firing at long or extreme range."
+  },
+  {
+    "name": "Mechadendrite Use",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": ["Mechanicus Implants"],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Tech",
+    "Benefit" : " Gain ability to use certain Mechadendrites."
+  },
+  {
+    "name": "Precision Killer(Melee)",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "No penalty to making Called Shot in Melee Combat."
+  },
+  {
+    "name": "Precision Killer(Ranged)",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "No penalty to making Called Shot in Ranged Combat."
+  },
+  {
+    "name": "Prosanguine",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": ["Mechanicus Implants"],
+      "Talents":[],
+      "Cybernetics": ["Autosanguine Implants"],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Toughness",
+    "Aptitude2" : "Tech",
+    "Benefit" : "Test to heal 1d5 damage."
+  },
+  {
+    "name": "Strong Minded",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 30 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Resistance (Psychic Powers)"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Defence",
+    "Benefit" : "May reroll failed WP tests to resist psychic powers."
+  },
+  {
+    "name": "Swift Attack",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 30 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "May make multiple melee attacks"
+  },
+  {
+    "name": "Two-Weapon Wielder(Melee)",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "May fight with two weapons."
+  },
+  {
+    "name": "Two-Weapon Wielder(Ranged)",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "May fight with two weapons."
+  },
+  {
+    "name": "Unarmed Specialist",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 35 }, { "name" : "Weapon Skill", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Ambidextrous"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "Offence",
+    "Benefit" : "When fighting unarmed, attacks hit as Deadly Natural Weapons and user can re-roll damage."
+  },
+  {
+    "name": "Warp Conduit",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Strong Minded"],
+      "Cybernetics": [],
+      "PsyRating" : 1
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Psyker",
+    "Benefit" : "Spend Fate point to add 1d5 to psy rating."
+  },
+  {
+    "name": "Whirlwind of Death",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill ", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Strong Minded"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 2,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Make one attack for each melee opponent."
+  },
+  {
+    "name": "Adamantium Faith",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 45 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Jaded", "Resistance (Fear)"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Reduces DoF from failed Pinning and Fear tests."
+  },
+  {
+    "name": "Assassin Strike",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Acrobatics"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Fieldcraft",
+    "Benefit" : "After melee attack, test Acrobatics to move."
+  },
+  {
+    "name": "Bastion of Iron Will",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Strong Minded"],
+      "Cybernetics": [],
+      "PsyRating" : 1
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Psyker",
+    "Benefit" : "Gain bonus for Opposed tests against psychic powers."
+  },
+  {
+    "name": "Blademaster",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 30 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Weapon Training"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Reroll missed attack, once per round."
+  },
+  {
+    "name": "Crushing Blow",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Add half WS bonus to damage inflicted in melee."
+  },
+  {
+    "name": "Deathdealer (Melee)",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill", "value" : 45 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Add Perception bonus to damage inflicted in combat."
+  },
+  {
+    "name": "Deathdealer(Ranged)",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 45 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Add Perception bonus to damage inflicted in combat."
+  },
+  {
+    "name": "Delicate Interrogation",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Fellowship", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Coordinated Interrogation"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Reduce Subtlety loss by 1d5 when conducting an investigation."
+  },
+  {
+    "name": "Eye of Vengeance",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Spend 1 Fate point to increase damage and penetration."
+  },
+  {
+    "name": "Favoured by the Warp",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 35 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Psyker",
+    "Benefit" : "Roll twice for Psychic Phenomena and choose result."
+  },
+  {
+    "name": "Flash of Insight",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Contact Network", "Coordinated Interrogation"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Perception",
+    "Aptitude2" : "Knowledge",
+    "Benefit" : "Spend 1 Fate point to reveal a clue."
+  },
+  {
+    "name": "Halo of Command",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Fellowship", "value" : 40 }, { "name" : "Willpower", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Fellowship",
+    "Aptitude2" : "Leadership",
+    "Benefit" : "Affect NPCs within 100xFelB metres with Social skills."
+  },
+  {
+    "name": "Hammer Blow",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Crushing Blow"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Make a thunderous strike with a melee weapon."
+  },
+  {
+    "name": "Infused Knowledge",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Intelligence", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [{ "name": "Lore(any)", "level": 1 }],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Knowledge",
+    "Benefit" : "Know a little bit about everything."
+  },
+  {
+    "name": "Lightning Attack",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Swift Attack"],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Weapon Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "Character may make many melee attacks with single roll."
+  },
+  {
+    "name": "Luminen Blast",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [ "Mechanicus Implants" ],
+      "Talents":["Luminen Shock"],
+      "Cybernetics": ["Luminen Capacitor"],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Tech",
+    "Benefit" : " May discharge stored energy as a ranged attack."
+  },
+  {
+    "name": "Mastery",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [{ "name": "Any", "level": 4 }],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Knowledge",
+    "Benefit" : "May spend Fate point to succeed on test."
+  },
+  {
+    "name": "Mighty Shot",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Offence",
+    "Benefit" : " Add half BS bonus to ranged damage rolls."
+  },
+  {
+    "name": "Never Die",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 50 }, { "name" : "Toughness", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Toughness",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Ignore penalties from Critical damage by spending Fate point."
+  },
+  {
+    "name": "Preternatural Speed",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Weapon Skill ", "value" : 40 }, { "name" : "Agility", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Double speed when charging."
+  },
+  {
+    "name": "Sprint",
+    "prerequisites" : 
+    {
+      "Characteristic": [],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Fieldcraft",
+    "Benefit" : "Move more quickly in combat."
+  },
+  {
+    "name": "Step Aside",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "OneOffTalents":[["Dodge", "Parry"]],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Agility",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Can make additional Dodge or Parry attempt."
+  },
+  {
+    "name": "Superior Chirurgeon",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [{ "name": "Medicae", "level": 2 }],
+      "Traits": [],
+      "Talents":[],
+      "OneOffTalents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Intelligence",
+    "Aptitude2" : "Fieldcraft",
+    "Benefit" : "Gain +20 to Medicae tests, bonuses to first aid tests."
+  },
+  {
+    "name": "Target Selection",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Ballistic Skill", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "OneOffTalents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Ballistic Skill",
+    "Aptitude2" : "Finesse",
+    "Benefit" : "May shoot into melee without penalty."
+  },
+  {
+    "name": "Thunder Charge",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Strength", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "OneOffTalents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Strength",
+    "Aptitude2" : "Offence",
+    "Benefit" : "Break enemies with armoured charge."
+  },
+  {
+    "name": "True Grit",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Toughness", "value" : 40 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":[],
+      "OneOffTalents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Toughness",
+    "Aptitude2" : "Defence",
+    "Benefit" : "Reduce Critical damage taken."
+  },
+  {
+    "name": "Two-Weapon Master",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Agility", "value" : 45 }],
+      "OneOffCharacteristics": [[{ "name" : "Ballistic Skill", "value" : 45 },{ "name" : "Weapon Skill", "value" : 45 }]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Ambidextrous", "Two-Weapon Wielder"],
+      "OneOffTalents":[],
+      "Cybernetics": [],
+      "PsyRating" : 0
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Finesse",
+    "Aptitude2" : "Offence",
+    "Benefit" : "No penalties when fighting with two singlehanded weapons."
+  },
+  {
+    "name": "Warp Lock",
+    "prerequisites" : 
+    {
+      "Characteristic": [{ "name" : "Willpower", "value" : 50 }],
+      "OneOffCharacteristics": [[]],
+      "Skills": [],
+      "Traits": [],
+      "Talents":["Strong Minded"],
+      "OneOffTalents":[],
+      "Cybernetics": [],
+      "PsyRating" : 1
+    },
+    "Tier" : 3,
+    "Aptitude1" : "Willpower",
+    "Aptitude2" : "Psyker",
+    "Benefit" : "Ignore Psychic Phenomenon once per session."
+  }
+]
