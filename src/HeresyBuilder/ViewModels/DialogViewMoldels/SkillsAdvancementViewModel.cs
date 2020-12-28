@@ -30,7 +30,9 @@ namespace HeresyBuilder.ViewModels.DialogViewMoldels
 
             XPToSpend = Character.XPToSpend;
         }
-        
+
+        #region XP
+
         public int XPToSpend
         {
             get
@@ -73,6 +75,8 @@ namespace HeresyBuilder.ViewModels.DialogViewMoldels
         {
             return XPToSpend >= xp;
         }
+
+        #endregion
 
         #region Skills
 

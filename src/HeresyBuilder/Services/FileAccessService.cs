@@ -180,14 +180,14 @@ namespace HeresyBuilder.Services
             return skillAdvancements;
         }
 
-        public List<SkillAdvancement> LoadTalents()
+        public List<TalentAdvancement> LoadTalents()
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var heresyBuilderPath = Path.Combine(path, appPrefix);
             var advancementPath = Path.Combine(heresyBuilderPath, "advancement");
             DirectoryInfo directory = new DirectoryInfo(advancementPath);
-            FileInfo[] Files = directory.GetFiles("skills.json"); //Getting Text files
-            List<SkillAdvancement> skillAdvancements = new List<SkillAdvancement>();
+            FileInfo[] Files = directory.GetFiles("talents.json"); //Getting Text files
+            List<TalentAdvancement> skillAdvancements = new List<TalentAdvancement>();
 
             foreach (FileInfo file in Files)
             {
@@ -200,7 +200,7 @@ namespace HeresyBuilder.Services
                         str += stringBuffer;
                     }
                 }
-                var newSkillAdvancements = JsonConvert.DeserializeObject<List<SkillAdvancement>>(str);
+                var newSkillAdvancements = JsonConvert.DeserializeObject<List<TalentAdvancement>>(str);
                 skillAdvancements.AddRange(newSkillAdvancements);
             }
 

@@ -79,6 +79,7 @@ namespace HeresyBuilder.Controls.CharacterControls
 
                 LoadSkillPrise();
             });
+
             SpecialSkillsChanged += new SpecialSkillsChangeHandler((object sender) => {
                 LoadSkillPrise();
             });

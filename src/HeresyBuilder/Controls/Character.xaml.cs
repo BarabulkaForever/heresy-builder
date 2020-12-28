@@ -35,7 +35,7 @@ namespace HeresyBuilder.Controls
             LoadTallents();
         }
 
-        private void ShowAdvansment(object sender, RoutedEventArgs e)
+        private void ShowSkillsAdvansment(object sender, RoutedEventArgs e)
         {
             var view = new SkillsAdvancement();
 
@@ -46,7 +46,6 @@ namespace HeresyBuilder.Controls
                     var resp = (bool)args.Parameter;
                     if (resp)
                     {
-                        // TODO save skills
                         var newCharacterData = (view.DataContext as SkillsAdvancementViewModel);
 
                         CurrentCharacterData.Instance.Character.Skills = newCharacterData.Character.Skills;
@@ -55,6 +54,30 @@ namespace HeresyBuilder.Controls
                         DataContext = viewModel;
                         viewModel.SpendXP(newCharacterData.SpendedXP);
                         LoadSkills();
+                    }
+                }
+            }));
+        }
+        private void ShowTalentsAdvansment(object sender, RoutedEventArgs e)
+        {
+            var view = new TalentsAdvancement();
+
+            DialogHost.Show(view, "RootDialog", new DialogClosingEventHandler((s, args) =>
+            {
+                if (args.Parameter is bool)
+                {
+                    var resp = (bool)args.Parameter;
+                    if (resp)
+                    {
+                        // TODO save talents
+                        var newCharacterData = (view.DataContext as TalentsAdvancementViewModel);
+
+                        CurrentCharacterData.Instance.Character.Talents = newCharacterData.Character.Talents;
+
+                        DataContext = null;
+                        DataContext = viewModel;
+                        viewModel.SpendXP(newCharacterData.SpendedXP);
+                        LoadTallents();
                     }
                 }
             }));

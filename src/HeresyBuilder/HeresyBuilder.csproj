@@ -128,6 +128,10 @@
     <Compile Include="Controls\Dialogs\SkillsAdvancement.xaml.cs">
       <DependentUpon>SkillsAdvancement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Dialogs\TalentsAdvancement.xaml.cs">
+      <DependentUpon>TalentsAdvancement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\ContainsAptitudesToColorConverter.cs" />
     <Compile Include="Enums\Characteristic.cs" />
     <Compile Include="Enums\ContainsAptitudes.cs" />
     <Compile Include="Enums\SkillLevel.cs" />
@@ -136,13 +140,14 @@
     <Compile Include="Helpers\SkillHelper.cs" />
     <Compile Include="Implementations\CustomCommand.cs" />
     <Compile Include="Models\Character.cs" />
-    <Compile Include="Models\Prerequisites\CharacteristicPrerequisites.cs" />
+    <Compile Include="Models\PrerequisitesModels\CharacteristicPrerequisites.cs" />
     <Compile Include="Models\Characteristics.cs" />
-    <Compile Include="Models\Prerequisites\Prerequisites.cs" />
-    <Compile Include="Models\Prerequisites\SkillPrerequisites.cs" />
+    <Compile Include="Models\PrerequisitesModels\Prerequisites.cs" />
+    <Compile Include="Models\PrerequisitesModels\SkillPrerequisites.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\SkillAdvancement.cs" />
     <Compile Include="Models\Skills.cs" />
+    <Compile Include="Models\TalentAdvancement.cs" />
     <Compile Include="Services\FileAccessService.cs" />
     <Compile Include="Singleton\CurrentCharacterCreationData.cs" />
     <Compile Include="Singleton\CurrentCharacterData.cs" />
@@ -164,9 +169,11 @@
     <Compile Include="ViewModels\BuildViewModels\WoundsAndFatePointsViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\CharacterViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\SkillInListViewModel.cs" />
+    <Compile Include="ViewModels\CharacterViewModels\TalentListViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\LoadCharacterDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SaveDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SkillsAdvancementViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewMoldels\TalentsAdvancementViewModel.cs" />
     <Page Include="Controls\Build.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -236,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialogs\SkillsAdvancement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dialogs\TalentsAdvancement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -311,9 +322,7 @@
     <Resource Include="Images\character-import.png" />
     <Resource Include="Images\character-export.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converter\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
