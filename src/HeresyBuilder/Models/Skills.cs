@@ -16,64 +16,53 @@ namespace HeresyBuilder.Models
 
         public Skills(List<string> skills)
         {
+            NormalSkills = new List<Skill>()
+            {
+                new Skill(){ Name = "Acrobatics", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Athletics", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Awareness", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Charm", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Command", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Commerce", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Deceive", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Dodge", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Inquiry", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Interrogation", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Intimidate", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Logic", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Medicae", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Parry", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Psyniscience", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Scrutiny", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Security", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Sleight Of Hand", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Stealth", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Survival", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Tech-Use", Level = SkillLevel.UnKnown }
+            };
+
+            Navigate = new List<Skill>()
+            {
+                new Skill(){ Name = "Surface", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Stellar", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Warp", Level = SkillLevel.UnKnown },
+            };
+
+            Operate = new List<Skill>()
+            {
+                new Skill(){ Name = "Aeronautica", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Surface", Level = SkillLevel.UnKnown },
+                new Skill(){ Name = "Voidship", Level = SkillLevel.UnKnown },
+            };
+
             Parse(skills);
         }
 
-        public SkillLevel Acrobatics { get; set; } = SkillLevel.UnKnown;
+        public List<Skill> NormalSkills { get; set; } 
 
-        public SkillLevel Athletics { get; set; } = SkillLevel.UnKnown;
+        public List<Skill> Navigate { get; set; }
 
-        public SkillLevel Awareness { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Charm { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Command { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Commerce { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Deceive { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Dodge { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Inquiry { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Interrogation { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Intimidate { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Logic { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Medicae { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Parry { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Psyniscience { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Scrutiny { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Security { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel SleightOfHand { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Stealth { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel Survival { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel TechUse { get; set; } = SkillLevel.UnKnown;
-
-        // Navigate 
-        public SkillLevel NavigateSurface { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel NavigateStellar { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel NavigateWarp { get; set; } = SkillLevel.UnKnown;
-
-        // Operate 
-        public SkillLevel OperateAeronautica { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel OperateSurface { get; set; } = SkillLevel.UnKnown;
-
-        public SkillLevel OperateVoidship { get; set; } = SkillLevel.UnKnown;
+        public List<Skill> Operate { get; set; } 
 
         public List<Skill> Linguistics { get; set; } = new List<Skill>();
 
@@ -90,115 +79,7 @@ namespace HeresyBuilder.Models
         {
             foreach (var skill in skills)
             {
-                if (skill.Contains("Acrobatics"))
-                {
-                    Acrobatics = SkillLevel.Known;
-                }
-                else if (skill.Contains("Athletics"))
-                {
-                    Athletics = SkillLevel.Known;
-                }
-                else if (skill.Contains("Awareness"))
-                {
-                    Awareness = SkillLevel.Known;
-                }
-                else if (skill.Contains("Charm"))
-                {
-                    Charm = SkillLevel.Known;
-                }
-                else if (skill.Contains("Command"))
-                {
-                    Command = SkillLevel.Known;
-                }
-                else if (skill.Contains("Commerce"))
-                {
-                    Commerce = SkillLevel.Known;
-                }
-                else if (skill.Contains("Deceive"))
-                {
-                    Deceive = SkillLevel.Known;
-                }
-                else if (skill.Contains("Dodge"))
-                {
-                    Dodge = SkillLevel.Known;
-                }
-                else if (skill.Contains("Inquiry"))
-                {
-                    Inquiry = SkillLevel.Known;
-                }
-                else if (skill.Contains("Interrogation"))
-                {
-                    Interrogation = SkillLevel.Known;
-                }
-                else if (skill.Contains("Intimidate"))
-                {
-                    Intimidate = SkillLevel.Known;
-                }
-                else if (skill.Contains("Logic"))
-                {
-                    Logic = SkillLevel.Known;
-                }
-                else if (skill.Contains("Medicae"))
-                {
-                    Medicae = SkillLevel.Known;
-                }
-                else if (skill.Contains("Parry"))
-                {
-                    Parry = SkillLevel.Known;
-                }
-                else if (skill.Contains("Psyniscience"))
-                {
-                    Psyniscience = SkillLevel.Known;
-                }
-                else if (skill.Contains("Scrutiny"))
-                {
-                    Scrutiny = SkillLevel.Known;
-                }
-                else if (skill.Contains("Security"))
-                {
-                    Security = SkillLevel.Known;
-                }
-                else if (skill.Contains("Sleight") && skill.Contains("Of") && skill.Contains("Hand"))
-                {
-                    SleightOfHand = SkillLevel.Known;
-                }
-                else if (skill.Contains("Stealth"))
-                {
-                    Stealth = SkillLevel.Known;
-                }
-                else if (skill.Contains("Survival"))
-                {
-                    Survival = SkillLevel.Known;
-                }
-                else if (skill.Contains("Tech") && skill.Contains("Use"))
-                {
-                    TechUse = SkillLevel.Known;
-                }
-                else if (skill.Contains("Surface") && skill.Contains("Navigate"))
-                {
-                    NavigateSurface = SkillLevel.Known;
-                }
-                else if (skill.Contains("Navigate") && skill.Contains("Stellar"))
-                {
-                    NavigateStellar = SkillLevel.Known;
-                }
-                else if (skill.Contains("Navigate") && skill.Contains("Warp"))
-                {
-                    NavigateWarp = SkillLevel.Known;
-                }
-                else if (skill.Contains("Operate") && skill.Contains("Aeronautica"))
-                {
-                    OperateAeronautica = SkillLevel.Known;
-                }
-                else if (skill.Contains("Operate") && skill.Contains("Surface"))
-                {
-                    OperateSurface = SkillLevel.Known;
-                }
-                else if (skill.Contains("Voidship") && skill.Contains("Operate"))
-                {
-                    OperateVoidship = SkillLevel.Known;
-                }
-                else if (skill.Contains("Linguistics"))
+                if (skill.Contains("Linguistics"))
                 {
                     Linguistics.Add(new Skill 
                     {
@@ -216,7 +97,6 @@ namespace HeresyBuilder.Models
                 }
                 else if (skill.Contains("Lore"))
                 {
-
                     if (skill.Contains("Common"))
                     {
                         CommonLore.Add(new Skill
@@ -241,6 +121,18 @@ namespace HeresyBuilder.Models
                             Level = SkillLevel.Known
                         });
                     }
+                }
+                else if (skill.Contains("Navigate"))
+                {
+                    Navigate.FirstOrDefault(x => skill.Contains(x.Name)).Level = SkillLevel.Known;
+                }
+                else if (skill.Contains("Operate"))
+                {
+                    Operate.FirstOrDefault(x => skill.Contains(x.Name)).Level = SkillLevel.Known;
+                }
+                else
+                {
+                    NormalSkills.FirstOrDefault(x => skill.Contains(x.Name)).Level = SkillLevel.Known;
                 }
             }
         }

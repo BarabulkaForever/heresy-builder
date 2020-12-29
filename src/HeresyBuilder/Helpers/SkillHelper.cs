@@ -22,7 +22,7 @@ namespace HeresyBuilder.Helpers
                 skillAdvancements = (new FileAccessService()).LoadSkills();
             }
 
-            var skillAdvancement = skillAdvancements.FirstOrDefault(x => x.Name.Contains(skillName));
+            var skillAdvancement = skillAdvancements.FirstOrDefault(x => x.Name.ToLower().Contains(skillName.ToLower()));
             var aptitudes = CurrentCharacterData.Instance.Character.Aptitudes;
 
             if (aptitudes.Contains(skillAdvancement.Aptitude1))

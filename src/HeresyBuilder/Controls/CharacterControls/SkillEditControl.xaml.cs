@@ -134,7 +134,7 @@ namespace HeresyBuilder.Controls.CharacterControls
                 SkillLevelChanged(this);
                 if (DataContext is SkillInListViewModel)
                 {
-                    (DataContext as SkillInListViewModel).Level = (SkillLevel) value;
+                    (DataContext as SkillInListViewModel).Level = value;
                 }
             }
         }

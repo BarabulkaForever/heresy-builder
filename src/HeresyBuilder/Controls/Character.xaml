@@ -103,57 +103,79 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Label HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Content="SKILLS" />
-                        <StackPanel Margin="10" Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-                            <charactercontrols:SkillViewControl SkillName="Acrobatics (Ag)" SkillLevel="{Binding Acrobatics, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Athletics (S)" SkillLevel="{Binding Athletics, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Awareness (Per)" SkillLevel="{Binding Awareness, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Charm (Fel)" SkillLevel="{Binding Charm, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Command (Fel)" SkillLevel="{Binding Command, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Commerce (Int)" SkillLevel="{Binding Commerce, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Deceive (Fel)" SkillLevel="{Binding Deceive, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Dodge (Ag)" SkillLevel="{Binding Dodge, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Inquiry (Fel)" SkillLevel="{Binding Inquiry, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Interrogation (WP)" SkillLevel="{Binding Interrogation, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Intimidate (S)" SkillLevel="{Binding Intimidate, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Logic (Int)" SkillLevel="{Binding Logic, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Medicae (Int)" SkillLevel="{Binding Medicae, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Parry (WS)" SkillLevel="{Binding Parry, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Psyniscience (Per)" SkillLevel="{Binding Psyniscience, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Scrutiny (Per)" SkillLevel="{Binding Scrutiny, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Security (Int)" SkillLevel="{Binding Security, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="SleightOfHand (Ag)" SkillLevel="{Binding SleightOfHand, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Stealth (Ag)" SkillLevel="{Binding Stealth, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Survival (Per)" SkillLevel="{Binding Survival, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Tech-Use (Int)" SkillLevel="{Binding TechUse, Mode=OneWay}"/>
-                        </StackPanel>
+                        <ItemsControl Margin="10" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding NormalSkills}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
                         <StackPanel Margin="10" Orientation="Vertical" Grid.Row="1" Grid.Column="1">
                             <Label Content="Navigate" FontWeight="Bold" FontSize="16"/>
-                            <charactercontrols:SkillViewControl SkillName="Surface" SkillLevel="{Binding NavigateSurface, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Stellar" SkillLevel="{Binding NavigateStellar, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Warp" SkillLevel="{Binding NavigateWarp, Mode=OneWay}"/>
+                            <ItemsControl Margin="0" ItemsSource="{Binding Navigate}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                             <Separator />
                             <Label Content="Operate" FontWeight="Bold" FontSize="16"/>
-                            <charactercontrols:SkillViewControl SkillName="Aeronautica" SkillLevel="{Binding OperateAeronautica, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Surface" SkillLevel="{Binding OperateSurface, Mode=OneWay}"/>
-                            <charactercontrols:SkillViewControl SkillName="Voidship" SkillLevel="{Binding OperateVoidship, Mode=OneWay}"/>
+                            <ItemsControl Margin="0" ItemsSource="{Binding Operate}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                             <Separator />
                             <Label Content="Linguistics" FontWeight="Bold" FontSize="16"/>
-                            <StackPanel x:Name="LinguisticsStackPanel" Margin="0" Orientation="Vertical"/>
+                            <ItemsControl Margin="0" ItemsSource="{Binding Linguistics}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                             <Separator />
                             <Label Content="Trade" FontWeight="Bold" FontSize="16"/>
-                            <StackPanel x:Name="TradeStackPanel" Margin="0" Orientation="Vertical"/>
+                            <ItemsControl Margin="0" ItemsSource="{Binding Trade}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                             <Separator />
                             <Label HorizontalAlignment="Center" Content="Lore" FontWeight="Bold" FontSize="24"/>
                             <Separator />
                             <Label Content="Common" FontWeight="Bold" FontSize="16"/>
-                            <StackPanel x:Name="CommonLoreStackPanel" Margin="0" Orientation="Vertical"/>
+                            <ItemsControl Margin="0" ItemsSource="{Binding CommonLore}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                             <Separator />
                             <Label Content="Scholastic" FontWeight="Bold" FontSize="16"/>
-                            <StackPanel x:Name="ScholasticLoreStackPanel" Margin="0" Orientation="Vertical"/>
+                            <ItemsControl Margin="0" ItemsSource="{Binding ScholasticLore}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                             <Separator />
                             <Label Content="Forbidden" FontWeight="Bold" FontSize="16"/>
-                            <StackPanel x:Name="ForbiddenLoreStackPanel" Margin="0" Orientation="Vertical"/>
-                            <Separator />
+                            <ItemsControl Margin="0" ItemsSource="{Binding ForbiddenLore}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <charactercontrols:SkillViewControl SkillName="{Binding Name}" SkillLevel="{Binding Level}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                         </StackPanel>
                     </Grid>
 

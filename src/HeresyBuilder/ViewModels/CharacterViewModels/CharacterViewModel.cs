@@ -188,263 +188,69 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
 
         #region Skills
 
-        public int Acrobatics 
-        { 
-            get 
-            {
-                return (int) Character.Skills.Acrobatics;    
-            }
-        }
-
-        public int Athletics 
-        {
-            get 
-            {
-                return (int) Character.Skills.Athletics;    
-            }
-        }
-
-        public int Awareness
+        public List<SkillInListViewModel> NormalSkills
         {
             get
             {
-                return (int) Character.Skills.Awareness;
+                return Character.Skills.NormalSkills.Select(x =>new SkillInListViewModel(null, x)).ToList();
             }
         }
 
-        public int Charm
+        public List<SkillInListViewModel> Operate
         {
             get
             {
-                return (int) Character.Skills.Charm;
+                return Character.Skills.Operate.Select(x => new SkillInListViewModel(null, x)).ToList();
             }
         }
 
-        public int Command
+        public List<SkillInListViewModel> Navigate
         {
             get
             {
-                return (int) Character.Skills.Command;
+                return Character.Skills.Navigate.Select(x => new SkillInListViewModel(null, x)).ToList();
             }
         }
 
-        public int Commerce
+        public List<SkillInListViewModel> Linguistics
         {
             get
             {
-                return (int) Character.Skills.Commerce;
+                return Character.Skills.Linguistics.Select(x => new SkillInListViewModel(null, x)).ToList();
             }
         }
 
-        public int Deceive
+        public List<SkillInListViewModel> Trade
         {
             get
             {
-                return (int) Character.Skills.Deceive;
-            }
-        }
-
-        public int Dodge
-        {
-            get
-            {
-                return (int) Character.Skills.Dodge;
-            }
-        }
-
-        public int Inquiry
-        {
-            get
-            {
-                return (int) Character.Skills.Inquiry;
-            }
-        }
-
-        public int Interrogation
-        {
-            get
-            {
-                return (int) Character.Skills.Interrogation;
-            }
-        }
-
-        public int Intimidate
-        {
-            get
-            {
-                return (int) Character.Skills.Intimidate;
-            }
-        }
-
-        public int Logic
-        {
-            get
-            {
-                return (int)Character.Skills.Logic;
-            }
-        }
-
-        public int Medicae
-        {
-            get
-            {
-                return (int)Character.Skills.Medicae;
-            }
-        }
-
-        public int Parry
-        {
-            get
-            {
-                return (int)Character.Skills.Parry;
-            }
-        }
-
-        public int Psyniscience
-        {
-            get
-            {
-                return (int)Character.Skills.Psyniscience;
-            }
-        }
-
-        public int Scrutiny
-        {
-            get
-            {
-                return (int)Character.Skills.Scrutiny;
-            }
-        }
-
-        public int Security
-        {
-            get
-            {
-                return (int)Character.Skills.Security;
-            }
-        }
-
-        public int SleightOfHand
-        {
-            get
-            {
-                return (int)Character.Skills.SleightOfHand;
-            }
-        }
-
-        public int Stealth
-        {
-            get
-            {
-                return (int)Character.Skills.Stealth;
-            }
-        }
-
-        public int Survival
-        {
-            get
-            {
-                return (int)Character.Skills.Survival;
-            }
-        }
-
-        public int TechUse
-        {
-            get
-            {
-                return (int)Character.Skills.TechUse;
-            }
-        }
-
-        // Navigate 
-        public int NavigateSurface
-        {
-            get
-            {
-                return (int)Character.Skills.NavigateSurface;
-            }
-        }
-
-        public int NavigateStellar
-        {
-            get
-            {
-                return (int)Character.Skills.NavigateStellar;
-            }
-        }
-
-        public int NavigateWarp
-        {
-            get
-            {
-                return (int)Character.Skills.NavigateWarp;
-            }
-        }
-
-        // Operate 
-        public int OperateAeronautica
-        {
-            get
-            {
-                return (int)Character.Skills.OperateAeronautica;
-            }
-        }
-
-        public int OperateSurface
-        {
-            get
-            {
-                return (int)Character.Skills.OperateSurface;
-            }
-        }
-
-        public int OperateVoidship
-        {
-            get
-            {
-                return (int)Character.Skills.OperateVoidship;
-            }
-        }
-
-        public List<Skill> Linguistics
-        {
-            get
-            {
-                return Character.Skills.Linguistics;
-            }
-        }
-
-        public List<Skill> Trade
-        {
-            get
-            {
-                return Character.Skills.Trade;
+                return Character.Skills.Trade.Select(x => new SkillInListViewModel(null, x)).ToList();
             }
         }
 
         // Lore
-        public List<Skill> CommonLore
+        public List<SkillInListViewModel> CommonLore
         {
             get
             {
-                return Character.Skills.CommonLore;
+                return Character.Skills.CommonLore.Select(x => new SkillInListViewModel(null, x)).ToList();
             }
         }
 
 
-        public List<Skill> ScholasticLore
+        public List<SkillInListViewModel> ScholasticLore
         {
             get
             {
-                return Character.Skills.ScholasticLore;
+                return Character.Skills.ScholasticLore.Select(x => new SkillInListViewModel(null, x)).ToList();
             }
         }
 
-        public List<Skill> ForbiddenLore
+        public List<SkillInListViewModel> ForbiddenLore
         {
             get
             {
-                return Character.Skills.ForbiddenLore;
+                return Character.Skills.ForbiddenLore.Select(x => new SkillInListViewModel(null, x)).ToList();
             }
         }
 

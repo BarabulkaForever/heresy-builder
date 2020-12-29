@@ -14,11 +14,11 @@ namespace HeresyBuilder.Models.PrerequisitesModels
         
         public List<SkillPrerequisites> Skills { get; set; }
         
+        public List<List<SkillPrerequisites>> OneOffSkills { get; set; }
+        
         public List<string> Traits { get; set; }
         
         public List<string> Talents { get; set; }
-        
-        public List<List<string>> OneOffTalents { get; set; }
         
         public List<string> Cybernetics { get; set; }
         

@@ -25,6 +25,10 @@ namespace HeresyBuilder.Models
 
         public List<string> Items { get; set; }
 
+        public List<string> Traits { get; set; } = new List<string>();//todo remuve after create traits.
+
+        public List<string> Cybernetics { get; set; }
+
         public Skills Skills { get; set; }
 
         public int TotalWounds { get; set; }
@@ -34,6 +38,8 @@ namespace HeresyBuilder.Models
         public int XPToSpend { get; set; }
 
         public int XPSpended { get; set; }
+
+        public int PsyRating { get; set; }
 
         public Character Clone()
         {

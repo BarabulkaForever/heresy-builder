@@ -34,15 +34,15 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
             }
         }
 
-        public SkillLevel Level 
+        public int Level 
         {
             get
             {
-                return _skill.Level;
+                return (int) _skill.Level;
             }
             set
             {
-                _skill.Level = value;
+                _skill.Level = (SkillLevel)value;
                 SetPropertyChanged(nameof(Level));
             }
         }

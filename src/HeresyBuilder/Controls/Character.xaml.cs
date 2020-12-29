@@ -31,7 +31,7 @@ namespace HeresyBuilder.Controls
         {
             InitializeComponent();
             DataContext = viewModel = new CharacterViewModel();
-            LoadSkills();
+            // LoadSkills();
             LoadTallents();
         }
 
@@ -53,7 +53,6 @@ namespace HeresyBuilder.Controls
                         DataContext = null;
                         DataContext = viewModel;
                         viewModel.SpendXP(newCharacterData.SpendedXP);
-                        LoadSkills();
                     }
                 }
             }));
@@ -102,59 +101,6 @@ namespace HeresyBuilder.Controls
             }));
         }
 
-        private void LoadSkills()
-        {
-            LinguisticsStackPanel.Children.Clear();
-            foreach (var skill in viewModel.Linguistics)
-            {
-                LinguisticsStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            TradeStackPanel.Children.Clear();
-            foreach (var skill in viewModel.Trade)
-            {
-                TradeStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            CommonLoreStackPanel.Children.Clear();
-            foreach (var skill in viewModel.CommonLore)
-            {
-                CommonLoreStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            ScholasticLoreStackPanel.Children.Clear();
-            foreach (var skill in viewModel.ScholasticLore)
-            {
-                ScholasticLoreStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-            ForbiddenLoreStackPanel.Children.Clear();
-            foreach (var skill in viewModel.ForbiddenLore)
-            {
-                ForbiddenLoreStackPanel.Children.Add(new SkillViewControl
-                {
-                    SkillName = skill.Name,
-                    SkillLevel = (int)skill.Level,
-                });
-            }
-
-        }
 
         private void LoadTallents()
         {

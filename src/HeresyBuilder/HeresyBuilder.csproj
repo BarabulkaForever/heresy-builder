@@ -137,6 +137,7 @@
     <Compile Include="Enums\SkillLevel.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\PrerequisitesHelper.cs" />
     <Compile Include="Helpers\SkillHelper.cs" />
     <Compile Include="Implementations\CustomCommand.cs" />
     <Compile Include="Models\Character.cs" />

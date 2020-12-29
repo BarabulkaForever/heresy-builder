@@ -1,4 +1,5 @@
 ﻿using HeresyBuilder.Enums;
+using HeresyBuilder.Helpers;
 using HeresyBuilder.Implementations;
 using HeresyBuilder.Models;
 using HeresyBuilder.ViewModels.DialogViewMoldels;
@@ -87,21 +88,7 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
         {
             get
             {
-                if (AlreadyKnown)
-                {
-                    return false;
-                }
-                else
-                {
-                    if (_parrent.CanSpendXP(CalculatePrice()))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
+                return !AlreadyKnown && _parrent.CanSpendXP(CalculatePrice()) && FitPrerequisites();
             }
         }
 
@@ -135,6 +122,11 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
                     return _talent.Tier == 1 ? 600 : _talent.Tier == 2 ? 900 : 1200;
                 }
             }
+        }
+
+        private bool FitPrerequisites()
+        {
+            return PrerequisitesHelper.Validate(_talent, _parrent.Character);
         }
 
         private void Purchase()
