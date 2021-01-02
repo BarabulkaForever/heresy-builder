@@ -1,7 +1,9 @@
-﻿using System;
+﻿using HeresyBuilder.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +29,19 @@ namespace HeresyBuilder.Extensions
                 }
             }
             return enumerationValue.ToString();
+        }
+
+        public static string GetShortName(this Enum value)
+        {
+            string output = null;
+            Type type = value.GetType();
+            FieldInfo fi = type.GetField(value.ToString());
+            ShortNameAttribute[] attrs = fi.GetCustomAttributes(typeof(ShortNameAttribute), false) as ShortNameAttribute[];
+            if (attrs.Length > 0)
+            {
+                output = attrs[0].Value;
+            }
+            return output;
         }
     }
 }

@@ -82,16 +82,16 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Label HorizontalAlignment="Center" Content="Characteristics" Grid.ColumnSpan="2" FontSize="24" />
-                        <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" FontSize="32" Content="{Binding WeaponSkill}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" FontSize="32" Content="{Binding BallisticSkill}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" FontSize="32" Content="{Binding Strength}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" FontSize="32" Content="{Binding Toughness}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0" FontSize="32" Content="{Binding Agility}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" FontSize="32" Content="{Binding Intelligence}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" FontSize="32" Content="{Binding Perception}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" FontSize="32" Content="{Binding Willpower}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" FontSize="32" Content="{Binding Fellowship}" />
-                        <Label HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" FontSize="32" Content="{Binding Influence}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding WeaponSkill}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding BallisticSkill}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Strength}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Toughness}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Agility}"/>
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Intelligence}"/>
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Perception}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Willpower}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Fellowship}" />
+                        <charactercontrols:CharacteristicViewControl HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" FontSize="32" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level}" CharacteristicValue="{Binding Value}" DataContext="{Binding Influence}" />
                     </Grid>
                     <Grid x:Name="SkillsContainer" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
                         <Grid.ColumnDefinitions>
@@ -240,8 +240,12 @@
                         Width="18"
                         Foreground="White"/>
                 </Button>
-                <Button ToolTip="Characteristics (TODO)" IsEnabled="False">
-                    3
+                <Button ToolTip="Characteristics" Click="ShowCharacteristicsAdvansment">
+                    <materialDesign:PackIcon
+                        Kind="Assignment"
+                        Height="18"
+                        Width="18"
+                        Foreground="White"/>
                 </Button>
                 <Button ToolTip="Elite Advanses (TODO)" IsEnabled="False">
                     4

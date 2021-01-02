@@ -8,24 +8,24 @@ namespace HeresyBuilder.Models
 {
     public class Characteristics
     {
-        public int WeaponSkill { get; set; }
+        public CharacteristicModel WeaponSkill { get; set; }
 
-        public int BallisticSkill { get; set; }
+        public CharacteristicModel BallisticSkill { get; set; }
 
-        public int Strength { get; set; }
+        public CharacteristicModel Strength { get; set; }
 
-        public int Toughness { get; set; }
+        public CharacteristicModel Toughness { get; set; }
 
-        public int Agility { get; set; }
+        public CharacteristicModel Agility { get; set; }
 
-        public int Intelligence { get; set; }
+        public CharacteristicModel Intelligence { get; set; }
 
-        public int Perception { get; set; }
+        public CharacteristicModel Perception { get; set; }
 
-        public int Willpower { get; set; }
+        public CharacteristicModel Willpower { get; set; }
 
-        public int Fellowship { get; set; }
+        public CharacteristicModel Fellowship { get; set; }
 
-        public int Influence { get; set; }
+        public CharacteristicModel Influence { get; set; }
     }
 }

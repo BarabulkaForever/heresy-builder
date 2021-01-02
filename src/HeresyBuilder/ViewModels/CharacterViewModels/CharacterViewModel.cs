@@ -89,83 +89,83 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
 
         #region Characteristics
 
-        public string WeaponSkill
+        public CharacteristicViewModel WeaponSkill
         {
             get
             {
-                return "WS " + Character.Characteristics.WeaponSkill;
+                return new CharacteristicViewModel(Character.Characteristics.WeaponSkill);
             }
         }
 
-        public string BallisticSkill
+        public CharacteristicViewModel BallisticSkill
         {
             get
             {
-                return "BS " + Character.Characteristics.BallisticSkill;
+                return new CharacteristicViewModel(Character.Characteristics.BallisticSkill);
             }
         }
 
-        public string Strength
+        public CharacteristicViewModel Strength
         {
             get
             {
-                return "Str " + Character.Characteristics.Strength;
+                return new CharacteristicViewModel(Character.Characteristics.Strength);
             }
         }
 
-        public string Toughness
+        public CharacteristicViewModel Toughness
         {
             get
             {
-                return "Tou " + Character.Characteristics.Toughness;
+                return new CharacteristicViewModel(Character.Characteristics.Toughness);
             }
         }
 
-        public string Agility
+        public CharacteristicViewModel Agility
         {
             get
             {
-                return "Agi " + Character.Characteristics.Agility;
+                return new CharacteristicViewModel(Character.Characteristics.Agility);
             }
         }
 
-        public string Intelligence
+        public CharacteristicViewModel Intelligence
         {
             get
             {
-                return "Int " + Character.Characteristics.Intelligence;
+                return new CharacteristicViewModel(Character.Characteristics.Intelligence);
             }
         }
 
-        public string Perception
+        public CharacteristicViewModel Perception
         {
             get
             {
-                return "Per " + Character.Characteristics.Perception;
+                return new CharacteristicViewModel(Character.Characteristics.Perception);
             }
         }
 
-        public string Willpower
+        public CharacteristicViewModel Willpower
         {
             get
             {
-                return "Wil " + Character.Characteristics.Willpower;
+                return new CharacteristicViewModel(Character.Characteristics.Willpower);
             }
         }
 
-        public string Fellowship
+        public CharacteristicViewModel Fellowship
         {
             get
             {
-                return "Fel " + Character.Characteristics.Fellowship;
+                return new CharacteristicViewModel(Character.Characteristics.Fellowship);
             }
         }
 
-        public string Influence
+        public CharacteristicViewModel Influence
         {
             get
             {
-                return "Inf " + Character.Characteristics.Influence;
+                return new CharacteristicViewModel(Character.Characteristics.Influence);
             }
         }
         #endregion

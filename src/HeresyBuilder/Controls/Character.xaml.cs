@@ -1,23 +1,10 @@
-﻿using HeresyBuilder.Controls.CharacterControls;
-using HeresyBuilder.Controls.Dialogs;
+﻿using HeresyBuilder.Controls.Dialogs;
 using HeresyBuilder.Singleton;
 using HeresyBuilder.ViewModels.CharacterViewModels;
 using HeresyBuilder.ViewModels.DialogViewMoldels;
 using MaterialDesignThemes.Wpf;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace HeresyBuilder.Controls
 {
@@ -57,6 +44,7 @@ namespace HeresyBuilder.Controls
                 }
             }));
         }
+
         private void ShowTalentsAdvansment(object sender, RoutedEventArgs e)
         {
             var view = new TalentsAdvancement();
@@ -68,10 +56,33 @@ namespace HeresyBuilder.Controls
                     var resp = (bool)args.Parameter;
                     if (resp)
                     {
-                        // TODO save talents
                         var newCharacterData = (view.DataContext as TalentsAdvancementViewModel);
 
                         CurrentCharacterData.Instance.Character.Talents = newCharacterData.Character.Talents;
+
+                        DataContext = null;
+                        DataContext = viewModel;
+                        viewModel.SpendXP(newCharacterData.SpendedXP);
+                        LoadTallents();
+                    }
+                }
+            }));
+        }
+
+        private void ShowCharacteristicsAdvansment(object sender, RoutedEventArgs e)
+        {
+            var view = new CharacteristicAdvancement();
+
+            DialogHost.Show(view, "RootDialog", new DialogClosingEventHandler((s, args) =>
+            {
+                if (args.Parameter is bool)
+                {
+                    var resp = (bool)args.Parameter;
+                    if (resp)
+                    {
+                        var newCharacterData = (view.DataContext as CharacteristicAdvancementViewModel);
+
+                        CurrentCharacterData.Instance.Character.Characteristics = newCharacterData.Character.Characteristics;
 
                         DataContext = null;
                         DataContext = viewModel;

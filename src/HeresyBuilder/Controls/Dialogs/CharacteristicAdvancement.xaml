@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="HeresyBuilder.Controls.Dialogs.CharacteristicAdvancement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:local="clr-namespace:HeresyBuilder.Controls.Dialogs" xmlns:charactercontrols="clr-namespace:HeresyBuilder.Controls.CharacterControls" xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+   
+    <Grid Margin="16">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="8*" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock FontWeight="Bold" FontSize="14" Grid.Row="0">Upgrade your skill.</TextBlock>
+
+        <StackPanel Grid.Row="1" Height="474" Width="538" >
+            <ScrollViewer  Height="474" Width="538"  VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label HorizontalAlignment="Center" Content="Characteristics" Grid.ColumnSpan="2" FontSize="24" />
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding WeaponSkill}" />
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding BallisticSkill}" />
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding Strength}" />
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding Toughness}" />
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding Agility}"/>
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding Intelligence}"/>
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding Perception}" />
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding Willpower}" />
+                    <charactercontrols:CharacteristicEditControl HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" CharacteristicName="{Binding Name}" CharacteristicLevel="{Binding Level, Mode=TwoWay}" CharacteristicValue="{Binding Value, Mode=TwoWay}" DataContext="{Binding Fellowship}" />
+                </Grid>
+            </ScrollViewer>
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" Margin="20 25 20 0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Text="{Binding XPToSpendText}"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Button IsEnabled="{Binding CanAccept}" IsDefault="True" Style="{DynamicResource MaterialDesignFlatButton}"
+                    Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
+                <Button.CommandParameter>
+                    <system:Boolean>True</system:Boolean>
+                </Button.CommandParameter>
+                ACCEPT
+            </Button>
+            <Button IsCancel="True" Margin="8 0 0 0" Style="{DynamicResource MaterialDesignFlatButton}"
+                    Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
+                <Button.CommandParameter>
+                    <system:Boolean>False</system:Boolean>
+                </Button.CommandParameter>
+                CANCEL
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

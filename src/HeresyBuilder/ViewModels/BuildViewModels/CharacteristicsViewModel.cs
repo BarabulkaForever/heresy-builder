@@ -148,43 +148,93 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             {
                 if (x.Characteristic == Characteristic.WeaponSkill)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.WeaponSkill = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.WeaponSkill = new CharacteristicModel 
+                    {
+                        CharacteristicType = Characteristic.WeaponSkill,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.BallisticSkill)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.BallisticSkill = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.BallisticSkill = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.BallisticSkill,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Strength)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Strength = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Strength = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Strength,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Toughness)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Toughness = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Toughness = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Toughness,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Agility)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Agility = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Agility = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Agility,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Intelligence)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Intelligence = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Intelligence = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Intelligence,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Perception)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Perception = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Perception = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Perception,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Willpower)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Willpower = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Willpower = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Willpower,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Fellowship)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Fellowship = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Fellowship = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Fellowship,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
                 else if (x.Characteristic == Characteristic.Influence)
                 {
-                    CurrentCharacterCreationData.Instance.Characteristics.Influence = x.CharacteristicValue;
+                    CurrentCharacterCreationData.Instance.Characteristics.Influence = new CharacteristicModel
+                    {
+                        CharacteristicType = Characteristic.Influence,
+                        CharacteristicLevel = CharacteristicLevel.None,
+                        Value = x.CharacteristicValue
+                    };
                 }
             });
         }
