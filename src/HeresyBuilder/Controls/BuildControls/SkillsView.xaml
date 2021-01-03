@@ -44,7 +44,7 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Top" Margin="10"
                         Foreground="White" TextWrapping="Wrap" 
-                        Text="skulls"/>
+                        Text="skills"/>
                 </StackPanel>
             </ScrollViewer>
             <Button 
