@@ -36,6 +36,8 @@ namespace HeresyBuilder.Models
 
         public List<List<string>> StartingTalentsToPick { get; set; }
 
+        public List<string> StartingTrait { get; set; }
+
         public List<string> StartingEquipment { get; set; }
 
         public List<List<string>> StartingEquipmentToPick { get; set; }
@@ -56,7 +58,7 @@ namespace HeresyBuilder.Models
                 foreach(var skillsSet in StartingSkillsToPick)
                 {
                     string[] asd = { dynamicSkills, string.Join(" or ", skillsSet) };
-                    dynamicSkills += string.Join(", ", asd);
+                    dynamicSkills = string.Join(", ", asd);
                 }
 
                 return statickSkills + dynamicSkills;
@@ -73,7 +75,7 @@ namespace HeresyBuilder.Models
                 foreach(var skillsSet in StartingEquipmentToPick)
                 {
                     string[] asd = { dynamicSkills, string.Join(" or ", skillsSet) };
-                    dynamicSkills += string.Join(", ", asd);
+                    dynamicSkills = string.Join(", ", asd);
                 }
 
                 return statickSkills + dynamicSkills;

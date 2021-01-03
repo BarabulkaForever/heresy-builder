@@ -213,7 +213,7 @@ namespace HeresyBuilder.Controls
                 {
                     NavigateToEquipmentTab.IsEnabled = true;
                     NavigateToEquipmentTab.IsChecked = true;
-                    (baseViewModel as TalentsViewModel).SaveTalents();
+                    (baseViewModel as TalentsViewModel).SaveTalentsAndTraits();
                     NavigateToEquipment(this, null);
                 }
             }

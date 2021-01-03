@@ -61,11 +61,20 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             }
         }
 
-        public void SaveTalents()
+        public void SaveTalentsAndTraits()
         {
             if (Valid)
             {
                 CurrentCharacterCreationData.Instance.Talents = Talents.Select(x => x.Talent).ToList();
+
+                var traits = new List<string>();
+
+                foreach(var trait in CurrentCharacterCreationData.Instance.Background.StartingTrait)
+                {
+                    traits.Add(trait);
+                }
+ 
+                CurrentCharacterCreationData.Instance.Traits = traits;
             }
         }
     }

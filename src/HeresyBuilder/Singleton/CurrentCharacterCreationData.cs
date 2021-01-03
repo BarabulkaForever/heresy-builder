@@ -41,6 +41,8 @@ namespace HeresyBuilder.Singleton
 
         public List<string> Talents { get; set; }
 
+        public List<string> Traits { get; set; }
+
         public List<string> Items { get; set; }
 
         public List<string> Skills { get; set; }
@@ -62,6 +64,7 @@ namespace HeresyBuilder.Singleton
                 Items = Items,
                 Skills = new Skills(Skills),
                 Talents = Talents,
+                Traits = Traits,
                 TotalFateThreshold = TotalFateThreshold,
                 TotalWounds = TotalWounds,
                 XPToSpend = 1000,

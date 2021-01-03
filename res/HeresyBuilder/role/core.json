@@ -63,7 +63,7 @@
   "code": "SEEKER",
   "name": "Seeker",
   "description": "An Acolyte that treads the path of the Seeker is driven by the hunt, relentless in his investigations. Where others might choose easy violence or give up the pursuit, the Seeker sees signs and clues to the passage of the prey, whether it is an individual fleeing from Imperial justice, or a secret hidden behind a web of lies. He can obsess over the unknown, never resting until a puzzle is solved or a chase completed. Sometimes the mystery or the manhunt can become more important to him than the actual eradication of a revealed heresy or capture of an escaped psyker, and he loses interest once he arrives at a solution or detains his prey. A Seeker is a natural detective and interrogator, ferreting out the truth wherever it might hide among the byzantine power structures of the Imperium and its labyrinth of cities and societies. Where others find only dead ends and false leads, the Seeker uses his perceptive senses and keen insight to discover vital clues, decipher plots, and resolve mysteries. It is this attention and obsession with detail which defines the Seeker, and whether or not he uses it to become a hunter or investigator, it continually haunts him, pushing him on to uncover the next truth, unravel the next lie, and catch the most elusive of prey. ",
-  "roleAptitude": ["Fellowship", "Intelligence", "Perception", "Social", "Keen IntuitionTech"],
+  "roleAptitude": ["Fellowship", "Intelligence", "Perception", "Social", "Tech"],
   "roleAptitudeToPick": [],
   "roleTalent": [],
   "roleTalentToPick": [["Keen Intuition", "Disarm"]],
@@ -78,5 +78,55 @@
   "roleTalent": [],
   "roleTalentToPick": [["Iron Jaw", "Rapid Reload"]],
   "roleBonus": "Expert at Violence: In addition to the normal uses of Fate points, after making a successful attack test, but before determining hits, a Warrior character may spend a Fate point to substitute his Weapon Skill (for melee) or Ballistic Skill (for ranged) bonus for the degrees of success scored on the attack test"
+},
+{
+  "code": "FANATIC",
+  "name": "Fanatic",
+  "description": "The Imperium thrives on belief. Belief drives the Adeptus Ministorum in its eforts to unite Mankind in worship of the Emperor. For most citizens, belief might be as simple as the forlorn idea that tomorrow might be a better day, or that they can expect a tomorrow at all. For a Fanatic, though, belief is all. It consumes his life, and the depth of his conviction creates the purity of utter certainty in his actions and utter obsessiveness towards his goals. Death holds no fear, and any setbacks only make him redouble his eforts. Convinced in the righteousness of his beliefs, no matter what they are, he strides fearlessly against his foes as an unstoppable force, and woe unto anyone or anything that dares bar his way. ",
+  "roleAptitude": ["Leadership", "Ofence", "Toughness", "Weapon Skill", "Willpower"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Deny the Witch", "Jaded"]],
+  "roleBonus": "Death to All Who Oppose Me!: In addition to the normal uses of Fate points (see page 293 of the DARK HERESY Core Rulebook), a Fanatic character may spend a Fate point to count as having the Hatred talent against his current foe for the duration of the encounter. Should he choose to leave combat against a Hated foe in that encounter, however, he gains 1 Insanity point. "
+},
+{
+  "code": "FANATIC",
+  "name": "Fanatic",
+  "description": "The Imperium thrives on belief. Belief drives the Adeptus Ministorum in its eforts to unite Mankind in worship of the Emperor. For most citizens, belief might be as simple as the forlorn idea that tomorrow might be a better day, or that they can expect a tomorrow at all. For a Fanatic, though, belief is all. It consumes his life, and the depth of his conviction creates the purity of utter certainty in his actions and utter obsessiveness towards his goals. Death holds no fear, and any setbacks only make him redouble his eforts. Convinced in the righteousness of his beliefs, no matter what they are, he strides fearlessly against his foes as an unstoppable force, and woe unto anyone or anything that dares bar his way. ",
+  "roleAptitude": ["Leadership", "Ofence", "Toughness", "Weapon Skill", "Willpower"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Deny the Witch", "Jaded"]],
+  "roleBonus": "Death to All Who Oppose Me!: In addition to the normal uses of Fate points (see page 293 of the DARK HERESY Core Rulebook), a Fanatic character may spend a Fate point to count as having the Hatred talent against his current foe for the duration of the encounter. Should he choose to leave combat against a Hated foe in that encounter, however, he gains 1 Insanity point. "
+},
+{
+  "code": "PENITENT",
+  "name": "Penitent",
+  "description": "Most heretics end their deluded lives burnt on righteous pyres, devoured by Daemons, or torn apart by loyal citizens, but for a small portion there are fates perhaps worse. A Penitent must continue living, both knowing his damnable transgressions against his fellow humans and denying himself cleansing death until he redeems his soul. Even this mental sufering is not enough—for many, similar punishment of the lesh is also necessary. He might obsessively lacerate his own skin with a small whip he carries in one hand, or he—humble even in his sufering—might employ such devices as an inner waistcoat of tiny barbed chainmail or gloves lined with burning chems. ",
+  "roleAptitude": ["Agility", "Fieldcraft", "Intelligence", "Ofence", "Toughness"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Die Hard", "Flagellant"]],
+  "roleBonus": "Cleansing Pain: Whenever a Penitent character sufers 1 or more points of damage (after reductions for Toughness bonus and Armour), he gains a +10 bonus to the irst test he makes before the end of his next turn."
+},
+{
+  "code": "ACE",
+  "name": "Ace",
+  "description": "In the Imperium, vehicles—like all machines—are much more than simple utilitarian devices to serve humans. Each is a sacred artefact of the Machine God, imbued with a spirit and a purpose. Those who excel in the operation of vehicles must understand this. To obtain the best results from any vehicle, the operator must honour and placate its spirit, and always treat it with the due respect. The difference between a merely skilled driver and a true Ace is a nigh-preternatural ability to commune with the spirit of a vehicle, allowing it to almost predict his actions, rather than respond to them. ",
+  "roleAptitude": ["Agility", "Finesse", "Perception", "Tech", "Willpower"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Hard Target", "Hotshot Pilot"]],
+  "roleBonus": "Right Stuff: In addition to the normal uses of Fate points (see page 293 of the Dark Heresy Core Rulebook), an Ace character may spend a Fate point to automatically succeed at an Operate or Survival skill test involving vehicles or living steeds with a number of degrees of success equal to his Agility bonus."
+},
+{
+  "code": "CRUSADER",
+  "name": "Crusader",
+  "description": "Against the predations of the Daemon, faith is the ultimate bulwark. Crusaders are stalwart defenders against the denizens of the Warp, righteous warriors who battle against the unholy with sword and shield. Skilled as they are with a blade or hammer, it is their strength of will that allows Crusaders to stand against the Daemon where others falter. While hell-forged blades and wicked claws can rend flesh and end lives, the greatest threat the Daemon poses is to the soul. To enter the fray against the denizens of the Warp, Crusaders must have faith as unyielding as adamantium. ",
+  "roleAptitude": ["Knowledge", "Offence", "Strength", "Toughness", "Willpower"],
+  "roleAptitudeToPick": [],
+  "roleTalent": [],
+  "roleTalentToPick": [["Bodyguard", "Deny the Witch"]],
+  "roleBonus": "Smite the Unholy: In addition to the normal uses of Fate points (see page 293 of the Dark Heresy Core Rulebook), a Crusader character can also spend a Fate Point to automatically pass a Fear test with a number of degrees of success equal to his Willpower bonus. In addition, whenever he inflicts a hit with a melee attack against a target with the Fear (X) trait, he inflicts X additional damage and counts his weapon’s penetration as being X higher."
 }
 ]
