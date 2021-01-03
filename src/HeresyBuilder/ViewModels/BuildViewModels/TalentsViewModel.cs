@@ -69,9 +69,12 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
 
                 var traits = new List<string>();
 
-                foreach(var trait in CurrentCharacterCreationData.Instance.Background.StartingTrait)
+                if (CurrentCharacterCreationData.Instance.Background.StartingTrait != null)
                 {
-                    traits.Add(trait);
+                    foreach(var trait in CurrentCharacterCreationData.Instance.Background.StartingTrait)
+                    {
+                        traits.Add(trait);
+                    }
                 }
  
                 CurrentCharacterCreationData.Instance.Traits = traits;

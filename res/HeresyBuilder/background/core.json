@@ -94,7 +94,7 @@
   "name": "Outcast",
   "description": "Even within the Imperium, where most are born into the same position for life, there are those that work their way free to make a life on their own terms. Some may have deliberately forsaken the role they were given, or slipped between the cracks of their ossified civilisation. They exist as criminals, vagabonds, and renegades on the fringes of Imperial life. These Outcasts live in the shadows of society, living by their wits and charm. They are able thieves, assassins, and bounty hunters; suspicion and fear often dogs their steps, as others know that where they tread, crime follows. Despite the epithet, Outcasts can be connected to all levels of Imperial life, and while their concerns are primarily for themselves, they can be enlisted to larger pursuits. They have connections, knowledge, and skills unheard of for proper Imperial citizens, and the willingness to use them through bribery, coercion, or other base appeals often more effective than simple calls to Imperial duty. They can also retain associations and bonds with their previous lives and organisations that allow them to operate across many strata of Imperial life. ",
   "startingSkills": ["Common Lore (Underworld)", "Deceive", "Dodge", "Stealth"],
-  "startingSkillsToPick": [["Acrobatics", "Sleight of Hand"]],
+  "startingSkillsToPick": [["Acrobatics", "Sleight Of Hand"]],
   "startingTalents": ["Weapon Training (Chain)"],
   "startingTalentsToPick": [["Weapon Training (Las)", "Weapon Training (Solid Projectile)"]],
   "startingEquipment": ["Chainsword", "Injector"],

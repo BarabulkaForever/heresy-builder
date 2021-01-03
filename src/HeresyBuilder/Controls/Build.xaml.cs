@@ -251,7 +251,11 @@ namespace HeresyBuilder.Controls
 
         private void SaveCharacter()
         {
-            _fileAccessService.SaveCharacter();
+            var character =  _fileAccessService.SaveCharacter();
+            CurrentCharacterData.Instance.Character = character;
+            MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
+            parentWindow.UnblockCharacterManagement();
+            parentWindow.MoveToCharacter();
         }
     }
 }

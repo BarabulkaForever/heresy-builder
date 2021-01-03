@@ -98,7 +98,7 @@ namespace HeresyBuilder.Services
             return roles;
         }
 
-        public void SaveCharacter()
+        public Character SaveCharacter()
         {
             var character = CurrentCharacterCreationData.Instance.ToCharacter();
             var characterJson = JsonConvert.SerializeObject(character);
@@ -111,6 +111,7 @@ namespace HeresyBuilder.Services
             Directory.CreateDirectory(characterPath);
             var characterJsonPath = Path.Combine(characterPath, character.Name + ".json");
             File.WriteAllText(characterJsonPath, characterJson);
+            return character;
         }
 
         public List<string> LoadCharacters()
