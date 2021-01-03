@@ -33,7 +33,7 @@
   "code": "HIERO",
   "name": "Hierophant",
   "description": "The Cult of the Emperor exists throughout the Imperium. The glory of the master of Mankind is found in the teachings of the Ministorum, the ancient secrets of the Machine God, and a million more faiths all linked to the veneration of the blessed Emperor. Hierophants are those dedicated to the Imperial Creed, as priests and confessors, clerics and wise men, or as orators and demagogues spreading His word and enforcing the tenets of the faith upon the teeming masses of humanity. As men of the Emperor, there is an aspect of the divine in all Hierophants, a spark of fervent conviction that drives them against the darkness and keeps the spirit of the Imperium alive even as it crumbles from without and within. With fire and swift justice, the Hierophant stands with ten thousand years of faith at his back, ready to strike down any who would oppose him and his god. He is defined above all else by his certitude and his relationship to the Emperor; this is his shield and his sword against the enemies of the Imperium, and where others succumb to doubt and fear, the Hierophant charges on, the word of the Emperor on his lips and an unshakable truth in his heart.",
-  "roleAptitude": ["Fellowship", "Offence, Social", "Toughness", "Willpower"],
+  "roleAptitude": ["Fellowship", "Offence", "Social", "Toughness", "Willpower"],
   "roleAptitudeToPick": [],
   "roleTalent": [],
   "roleTalentToPick": [["Double Team", "Hatred"]],
