@@ -275,6 +275,18 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
 
         #endregion
 
+        #region Apptitudes
+
+        public List<string> Apptitudes
+        {
+            get
+            {
+                return Character.Aptitudes;
+            }
+        }
+
+        #endregion
+
         public void AddXP(int newXP)
         {
             Character.XPToSpend += newXP;

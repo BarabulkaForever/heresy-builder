@@ -193,11 +193,15 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Label HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" FontSize="14" FontWeight="Bold" Content="Fate Points"/>
                         <Label HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" FontSize="14" FontWeight="Bold" Content="Wounds"/>
                         <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" FontSize="14" Content="{Binding FatePoints}"/>
                         <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" FontSize="14" Content="{Binding Wounds}"/>
+                        <Label HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2" FontSize="16" FontWeight="Bold" Content="Apptitudes"/>
+                        <ItemsControl Margin="20 10" Grid.ColumnSpan="2" Grid.Row="3" ItemsSource="{Binding Apptitudes}" FontSize="14" FontWeight="Bold"/>
                     </Grid>
 
                     <StackPanel Grid.Row="2" Margin="10" Grid.Column="1" Grid.ColumnSpan="2">
