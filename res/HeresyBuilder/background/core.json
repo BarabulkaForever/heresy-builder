@@ -49,7 +49,7 @@
   "name": "Adeptus Mechanicus",
   "description": "Much of Mankind’s mastery over technology has been forgotten, and what remains are closely guarded secrets, held in jealous hands of the Adeptus Mechanicus. Wrapped up in superstitious beliefs and rites, the knowledge of how to operate the Imperium’s most advanced devices falls to these followers of the Machine God. The Adeptus Mechanicus guards and oversees the ancient knowledge and the mysteries of making technology function, for even its dogmatic and superstitious understandings are far beyond those of anyone else in the Imperium. They embrace technology to such a degree that they try to transcend the flesh of their bodies with the purity of metal. To those outside the Mechanicum, they can appear unfeeling and emotionless, more akin to their blessed machines than to other humans, and most would welcome such views.",
   "startingSkills": ["Common Lore (Adeptus Mechanicus)", "Logic", "Security", "Tech-Use"],
-  "startingSkillsToPick": [["Awareness", "Operate"]],
+  "startingSkillsToPick": [["Awareness", "Operate(Pick One)"]],
   "startingTalents": ["Mechadendrite Use (Utility)","Weapon Training (Solid Projectile)"],
   "startingTalentsToPick": [],
   "startingTrait": ["Mechanicus Implants"],
@@ -87,7 +87,7 @@
   "startingEquipmentToPick": [["Lasgun", "Laspistol and sword"]],
   "backgroundBonus": "Hammer of the Emperor: When attacking a target that an ally attacked since the end of the Guardsman’s last turn, the Guardsman can re-roll any results of 1 or 2 on damage rolls.",
   "backgroundAptitude": [],
-  "backgroundAptitudeToPick": [["Fieldcraf", "Leadership"]]
+  "backgroundAptitudeToPick": [["Fieldcraft", "Leadership"]]
 },
 {
   "code": "OUTCAST",
@@ -101,7 +101,7 @@
   "startingEquipmentToPick": [["Autopistol", "Laspistol"], ["Armoured bodyglove", "Flak vest"], ["2 doses of obscura", "2 doses of slaught"]],
   "backgroundBonus": "Never Quit: An Outcast character counts his Toughness bonus as two higher for purposes of determining Fatigue.",
   "backgroundAptitude": [],
-  "backgroundAptitudeToPick": [["Fieldcraf", "Social"]]
+  "backgroundAptitudeToPick": [["Fieldcraft", "Social"]]
 },
 {
   "code": "SORORITAS",
