@@ -49,7 +49,7 @@
 
         <TextBlock Grid.Row="2" Margin="20 25 20 0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Text="{Binding XPToSpendText}"/>
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button IsEnabled="{Binding CanAccept}" IsDefault="True" Style="{DynamicResource MaterialDesignFlatButton}"
                     Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
                 <Button.CommandParameter>

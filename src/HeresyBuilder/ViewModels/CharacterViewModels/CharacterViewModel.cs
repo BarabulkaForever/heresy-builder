@@ -27,6 +27,12 @@ namespace HeresyBuilder.ViewModels.CharacterViewModels
             Character = CurrentCharacterData.Instance.Character;
         }
 
+        public void Save()
+        {
+            CurrentCharacterData.Instance.Character = Character;
+            _fileAccessService.SaveEditedCharacter(Character);
+        }
+
         #region Header
 
         public string Name

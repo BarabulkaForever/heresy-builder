@@ -102,7 +102,12 @@
                             <RowDefinition Height="AUTO"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Label HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Content="SKILLS" />
+                        <StackPanel Grid.ColumnSpan="2">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                                <Button Click="SaveCharacter" Content="Save Character" Margin="10" />
+                            </StackPanel>
+                            <Label HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Content="SKILLS" />
+                        </StackPanel>
                         <ItemsControl Margin="10" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding NormalSkills}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>

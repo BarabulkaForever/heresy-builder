@@ -52,43 +52,43 @@ namespace HeresyBuilder.Helpers
         {
             if (characteristic.Name.ToLower().Contains("Weapon skill".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.WeaponSkill.Value;
+                return characteristic.Value <= character.Characteristics.WeaponSkill.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Ballistic skill".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.BallisticSkill.Value;
+                return characteristic.Value <= character.Characteristics.BallisticSkill.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Strength".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Strength.Value;
+                return characteristic.Value <= character.Characteristics.Strength.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Toughness".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Toughness.Value;
+                return characteristic.Value <= character.Characteristics.Toughness.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Agility".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Agility.Value;
+                return characteristic.Value <= character.Characteristics.Agility.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Intelligence".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Intelligence.Value;
+                return characteristic.Value <= character.Characteristics.Intelligence.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Perception".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Perception.Value;
+                return characteristic.Value <= character.Characteristics.Perception.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Willpower".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Willpower.Value;
+                return characteristic.Value <= character.Characteristics.Willpower.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Fellowship".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Fellowship.Value;
+                return characteristic.Value <= character.Characteristics.Fellowship.Value;
             }
             else if (characteristic.Name.ToLower().Contains("Influence".ToLower()))
             {
-                return characteristic.Value < character.Characteristics.Influence.Value;
+                return characteristic.Value <= character.Characteristics.Influence.Value;
             }
             else
             {

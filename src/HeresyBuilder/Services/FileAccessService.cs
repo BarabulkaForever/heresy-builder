@@ -114,6 +114,21 @@ namespace HeresyBuilder.Services
             return character;
         }
 
+        public Character SaveEditedCharacter(Character character)
+        {
+            var characterJson = JsonConvert.SerializeObject(character);
+
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var heresyBuilderPath = Path.Combine(path, appPrefix);
+            var charactersPath = Path.Combine(heresyBuilderPath, charactersPrefix);
+            Directory.CreateDirectory(charactersPath);
+            var characterPath = Path.Combine(charactersPath, character.Name);
+            Directory.CreateDirectory(characterPath);
+            var characterJsonPath = Path.Combine(characterPath, character.Name + ".json");
+            File.WriteAllText(characterJsonPath, characterJson);
+            return character;
+        }
+
         public List<string> LoadCharacters()
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

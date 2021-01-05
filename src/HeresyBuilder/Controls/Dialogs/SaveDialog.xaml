@@ -30,7 +30,7 @@
             </TextBox.Text>
         </TextBox>
         <StackPanel Orientation="Horizontal" Grid.Row="3"
-                    Margin="0 16 0 0">
+                    Margin="0 16 0 0" HorizontalAlignment="Right">
             <Button IsEnabled="{Binding CanAccept}" IsDefault="True" Style="{DynamicResource MaterialDesignFlatButton}"
                     Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
                 <Button.CommandParameter>

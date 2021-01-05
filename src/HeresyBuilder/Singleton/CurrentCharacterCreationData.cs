@@ -60,7 +60,7 @@ namespace HeresyBuilder.Singleton
                 BackgroundCode = Background.Code,
                 RoleCode = Role.Code,
                 Characteristics = Characteristics,
-                Aptitudes = Aptitudes,
+                Aptitudes = Aptitudes.Select(x => x.Trim()).ToList(),
                 Items = Items,
                 Skills = new Skills(Skills),
                 Talents = Talents,

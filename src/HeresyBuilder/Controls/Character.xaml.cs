@@ -125,5 +125,13 @@ namespace HeresyBuilder.Controls
                 });
             }
         }
+
+        private void SaveCharacter(object sender, RoutedEventArgs e)
+        {
+            viewModel.Save();
+            var view = new SuccessControl();
+
+            DialogHost.Show(view, "RootDialog");
+        }
     }
 }
