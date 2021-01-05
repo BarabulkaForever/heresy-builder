@@ -53,6 +53,8 @@ namespace HeresyBuilder.Singleton
 
         public Character ToCharacter()
         {
+            Aptitudes.Add("General");
+
             var character = new Character 
             {
                 Name = Name,
