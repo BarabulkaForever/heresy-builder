@@ -117,7 +117,7 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
         {
             get 
             {
-                return Characteristics.Where(x => x.CharacteristicValue > 22 && x.CharacteristicValue <= 40).Count() > 0;
+                return Characteristics.Where(x => x.CharacteristicValue >= 22 && x.CharacteristicValue <= 40).Count() > 0;
             }
         }
 
