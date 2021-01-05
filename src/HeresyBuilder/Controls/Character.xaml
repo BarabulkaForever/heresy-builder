@@ -216,24 +216,12 @@
                 </Grid>
             </ScrollViewer>
         </materialDesign:TransitioningContent>
-        <!--<Button
-            Grid.Row="1" Grid.Column="1"
-            Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
-            HorizontalAlignment="Left"
-            Click="ShowAdvansment"
-            ToolTip="Add advansment">
-            <materialDesign:PackIcon
-                Kind="Plus"
-                Height="24"
-                Width="24" />
-        </Button>-->
+
         <materialDesign:PopupBox
             Grid.Row="1" Grid.Column="1"
             Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
             PlacementMode="TopAndAlignCentres"
             ToolTipService.Placement="Right"> 
-            <!--Opened="PopupBox_OnOpened"
-            Closed="PopupBox_OnClosed"-->
             <StackPanel>
                 <Button ToolTip="Skills" Click="ShowSkillsAdvansment">
                     <materialDesign:PackIcon

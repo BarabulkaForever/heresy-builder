@@ -36,8 +36,11 @@ namespace HeresyBuilder.ViewModels.BuildViewModels
             }
             set
             {
-                _aptitude = value;
-                SetPropertyChanged(nameof(Aptitude));
+                if (value != null)
+                {
+                    _aptitude = value;
+                    SetPropertyChanged(nameof(Aptitude));
+                }
             }
         }
 

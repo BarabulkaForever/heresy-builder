@@ -129,6 +129,9 @@
     <Compile Include="Controls\Dialogs\AddXPDialog.xaml.cs">
       <DependentUpon>AddXPDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Dialogs\ApptitudesPickerDialog.xaml.cs">
+      <DependentUpon>ApptitudesPickerDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Dialogs\CharacteristicAdvancement.xaml.cs">
       <DependentUpon>CharacteristicAdvancement.xaml</DependentUpon>
     </Compile>
@@ -173,6 +176,7 @@
     <Compile Include="Singleton\CurrentCharacterData.cs" />
     <Compile Include="Validators\NotEmptyValidationRule.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModels\AptitudeForDuplicatePickerViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\AptitudesViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\AptitudeViewModel.cs" />
     <Compile Include="ViewModels\BuildViewModels\BackgroundsViewModel.cs" />
@@ -191,6 +195,7 @@
     <Compile Include="ViewModels\CharacterViewModels\CharacterViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\SkillInListViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\TalentListViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewMoldels\ApptitudesPickerViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\CharacteristicAdvancementViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\LoadCharacterDialogViewModel.cs" />
     <Compile Include="ViewModels\DialogViewMoldels\SaveDialogViewModel.cs" />
@@ -261,6 +266,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialogs\AddXPDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dialogs\ApptitudesPickerDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

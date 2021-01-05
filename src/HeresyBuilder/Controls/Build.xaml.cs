@@ -201,10 +201,29 @@ namespace HeresyBuilder.Controls
             {
                 if ((baseViewModel as AptitudesViewModel).Valid)
                 {
-                    NavigateToTalentsTab.IsEnabled = true;
-                    NavigateToTalentsTab.IsChecked = true;
-                    (baseViewModel as AptitudesViewModel).SaveAptitudes();
-                    NavigateToTalents(this, null);
+                    if ((baseViewModel as AptitudesViewModel).HasDuplicates)
+                    {
+                        var view = new ApptitudesPickerDialog { DataContext = new ApptitudesPickerViewModel(baseViewModel as AptitudesViewModel) };
+
+                        DialogHost.Show(view, "RootDialog", new DialogClosingEventHandler((s, args) =>
+                        {
+                            if (args.Parameter is bool)
+                            {
+                                var resp = (bool)args.Parameter;
+                                if (resp)
+                                {
+                                    (baseViewModel as AptitudesViewModel).ChangeDuplicatedApptitudes((view.DataContext as ApptitudesPickerViewModel).Aptitudes.Cast<AptitudeViewModel>().ToList());
+                                }
+                            }
+                        }));
+                    }
+                    else
+                    {
+                        NavigateToTalentsTab.IsEnabled = true;
+                        NavigateToTalentsTab.IsChecked = true;
+                        (baseViewModel as AptitudesViewModel).SaveAptitudes();
+                        NavigateToTalents(this, null);
+                    }
                 }
             }
             else if (baseViewModel is TalentsViewModel)

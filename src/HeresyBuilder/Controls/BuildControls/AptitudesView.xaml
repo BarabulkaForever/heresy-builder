@@ -14,16 +14,16 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0" ItemsSource="{Binding Aptitudes}" Grid.RowSpan="2">
-            <ListBox.ItemTemplate>
+        <ItemsControl Grid.Column="0" ItemsSource="{Binding Aptitudes, Mode=TwoWay}" Grid.RowSpan="2">
+            <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <Label Margin="5" VerticalAlignment="Center" FontSize="16" Content="{Binding Aptitude}" Visibility="{Binding IsAptitudesToShow, Converter={StaticResource VisibleIfTrueConverter}}"/>
-                        <ComboBox Margin="5" ItemsSource="{Binding Aptitudes}" FontSize="16" SelectedItem="{Binding Aptitude}" Visibility="{Binding IsAptitudesToSellect, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <Label Margin="5" VerticalAlignment="Center" FontSize="16" Content="{Binding Aptitude, Mode=TwoWay}" Visibility="{Binding IsAptitudesToShow, Converter={StaticResource VisibleIfTrueConverter}}"/>
+                        <ComboBox Margin="5" ItemsSource="{Binding Aptitudes, Mode=TwoWay}" FontSize="16" SelectedItem="{Binding Aptitude, Mode=TwoWay}" Visibility="{Binding IsAptitudesToSellect, Converter={StaticResource VisibleIfTrueConverter}}"/>
                     </StackPanel>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.RowSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
