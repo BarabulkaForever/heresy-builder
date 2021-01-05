@@ -1420,7 +1420,7 @@
     "name": "Superior Chirurgeon",
     "prerequisites" : 
     {
-      "Characteristic": [{ "name" : "Agility", "value" : 40 }],
+      "Characteristic": [],
       "OneOffCharacteristics": [],
       "Skills": [{ "name": "Medicae", "level": 2 }],
       "Traits": [],
