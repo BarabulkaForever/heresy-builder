@@ -40,7 +40,7 @@ namespace HeresyBuilder.Controls.CharacterControls
                 this.IsLvlTwoCheckBox.IsChecked = this.IsLvlTwo;
                 this.IsLvlThreeCheckBox.IsChecked = this.IsLvlThree;
                 this.IsLvlFourCheckBox.IsChecked = this.IsLvlFour;
-                this.IsLvlFiveCheckBox.IsChecked = this.IsLvlFour;
+                this.IsLvlFiveCheckBox.IsChecked = this.IsLvlFive;
             });
         }
 

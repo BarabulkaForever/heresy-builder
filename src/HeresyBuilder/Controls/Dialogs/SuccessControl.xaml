@@ -12,9 +12,10 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBlock Margin="10" FontWeight="Bold" FontSize="14" Grid.Row="0">Succses!</TextBlock>
-        <TextBlock Margin="10" Grid.Row="1">You succsesfully save character!</TextBlock>
+        <TextBlock Margin="10" FontWeight="Bold" FontSize="14" Grid.Row="0">Success!</TextBlock>
+        <TextBlock Margin="10" Grid.Row="1">You successfully save character!</TextBlock>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2"
                     Margin="0 16 0 0">
             <Button IsEnabled="{Binding CanAccept}" IsDefault="True" Style="{DynamicResource MaterialDesignFlatButton}"
